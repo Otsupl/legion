@@ -1,5 +1,9 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    nav
+    {
+        height:70px;
+    }
     #nav
     {
         padding:20px;
@@ -7,6 +11,8 @@
         color:white;
         line-height:30px;
         height:70px;
+        position:fixed;
+        width:100%;
     }
     #nav::after
         {clear:both}
@@ -26,5 +32,5 @@
         margin:5px;
         line-height: 20px;
     }
-    
+
 }
