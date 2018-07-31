@@ -1,0 +1,34 @@
+body
+{
+    background-color: #131313;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #nav
+    {
+        padding:20px;
+        background-color:#890000;
+        color:white;
+        line-height:30px;
+        height:70px;
+    }
+    #nav::after
+        {clear:both}
+    #logo
+    {
+        float:left;
+        font-size:2em;
+        margin-left:10px;
+    }
+    #menu
+    {
+        float:right;
+    }
+    #menu>ul>li
+    {
+        float:left;
+        margin:5px;
+        line-height: 20px;
+    }
+    
+}
