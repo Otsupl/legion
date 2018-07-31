@@ -1,13 +1,9 @@
-body
-{
-    background-color: #131313;
-}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #nav
     {
         padding:20px;
-        background-color:#890000;
+        background-color:#a60000;
         color:white;
         line-height:30px;
         height:70px;

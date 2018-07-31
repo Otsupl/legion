@@ -16,7 +16,6 @@ html, body
 	width: 100% !important;
 	max-width: 100% !important;
     height: 100% !important;
-    font-family: 'Lato', sans-serif;
 }
 html {
     font-size: 1em;
@@ -26,7 +25,9 @@ html {
 }
 body {
   margin: 0;
+    background-color: #131313;
 }
+
 .aos-animate
 {
 	width: 100%;
