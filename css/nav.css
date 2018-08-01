@@ -34,6 +34,17 @@
     border-bottom: 1px solid #baab00;
 }
 
+#banner
+{
+    font-size: 12px;
+    background: #8a2323;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid #baab00;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -77,7 +88,6 @@
     #nav
     {
         padding:20px;
-        background-color:#a60000;
         color:white;
         line-height:30px;
         height:70px;
