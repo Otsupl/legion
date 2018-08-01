@@ -1,8 +1,78 @@
+#photo_container
+{
+    position:relative;
+}
 #photo
 {
     width:100%;
 }
+#phototext
+{
+    position:absolute;
+    bottom:0;
+    height:300px;
+    text-align:center;
+    width:100%;
+    background-color:#808080ab;
+}
+#phototext>h1
+{
+    color:#d6d6d6;
+    margin:60px 0 30px 0;
+}
+#phototext>h2
+{
+    color:#baab00;
+}
+#photo_container::after
+{
+    height:3px;
+    width:100%;
+    background-color:#baab00;
+}
+#freebanner h3
+{
+   line-height:2em;
+   background-color:#930000;
+   color:#d6d6d6;
+   margin:0;
+   text-align:center;
+   font-size:2em;
+}
+#description-section h3
+{
+    font-size:3.5em;
+    margin:0.6em 0;
+    color:#baab00;
+}
+.description
+{
+    text-align:center;
+}
+.description>p
+{
+    color:#d6d6d6;
+    width:70%;
+    margin: 0 auto 1.5em auto;
+}
+.description button
+{
+    padding:15px;
+    background-color:#baab00;
+    border:none;
+    font-weight:bolder;
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
+    nav
+    {
+        height:0!important;
+    }
+    .description
+    {
+        float:left;
+        width:50%;
+    }
+    #description-section::after
+        {clear:both}
 }

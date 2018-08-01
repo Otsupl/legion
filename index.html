@@ -23,52 +23,48 @@
 		<meta name="keywords" content="">
 		
 		<noscript><style> .jsonly { display: none } </style></noscript>
-		<script>document.body.className += ' ' + 'js';</script>
-		<script>
-			function openNav() {
-				document.getElementById("mySidenav").style.width = "250px";
-			}
-			
-			function closeNav() {
-				document.getElementById("mySidenav").style.width = "0";
-			}
-		</script>	 
+		<script>document.documentElement.className += ' js';</script>	 
 	</head>
 	<body>
 		<!-- Nawigacja -->
 		<nav>
             <div id="nav">
 				<a href='/' id="logo">LEGION</a>
-                <div id="burger" onclick="openNav()">&#9776;</div>
-                <div id="mySidenav" class="sidenav">
-					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					<a href="#">Główna</a>
-					<a href="#">O&nbsp;nas</a>
-					<a href="#">Co&nbsp;trenujemy?</a>
-					<a href="#">Grafik</a>
-					<a href="#">Cennik</a>
-				  </div>
+				<div id="outerburger">
+					<div id="burger" class="menu icon"></div>
+				</div>
+				<ul id="menu">
+					<li class="current"><a href="#">Główna</a></li>
+					<li><a href="#">O&nbsp;nas</a></li>
+					<li><a href="#">Co&nbsp;trenujemy?</a></li>
+					<li><a href="#">Grafik</a></li>
+					<li><a href="#">Cennik</a></li>
+				</ul>
             </div>
 		</nav>
 		<main>
-		  <h1>Lorem ipsum!</h1><!--po środku obrazka-->
 		  <div id="photo_container">
 		      <img id="photo" src="img/thai-chi.jpg">
+		      <div id="phototext">
+		      	<h1>Trenuj z nami i zjednocz swój umysł i ciało!</h1>
+		      	<h2>Stań się prawdziwym wojownikiem i lepszym człowiekiem.</h2>
+		      </div>
 		  </div>
-		  <div id="treningi"><!--pasek a elementy kwadraciki-->
-		      <ul>
-		          <li>Krav Maga</li>
-		          <li>Muai Boran</li>
-		          <li>Thai Chi</li>
-		          <li>Kung Fu</li>
-		      </ul>
+		  <div id="freebanner">
+		  	<h3>Zapraszamy na trening próbny za darmo!</h3>
 		  </div>
-		  <div id="osiagniecia">
-		      <a hrf="/about.html">zobacz wiecej</a>
-		  </div>
-		  <div id="historia">
-		      <a hrf="/historia.html">zobacz wiecej</a>
-		  </div>
+		  <section id="description-section">
+		  	<article class="description">
+		  		<h3>O klubie</h3>
+		  		<p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+		  		<button><a href="#">CZYTAJ DALEJ</a></button>
+		  	</article>
+		  	<article class="description">
+		  		<h3>Dlaczego my?</h3>
+				<p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+		  		<button><a href="#">CZYTAJ DALEJ</a></button>
+		  	</article>
+		  </section>
 		</main>
 		<footer>
 		  <div class="inner-footer"><div id="map">MAPA BUDYNKU</div></div>
