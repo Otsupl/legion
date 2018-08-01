@@ -24,6 +24,14 @@
     color: rgb(196, 196, 196);
 }
 
+#slider
+{
+    height: 200px;
+    background-image: url(../img/slider/min/1.jpg);
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
