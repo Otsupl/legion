@@ -24,25 +24,30 @@
 		
 		<noscript><style> .jsonly { display: none } </style></noscript>
 		<script>document.body.className += ' ' + 'js';</script>
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+			}
+			
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>	 
 	</head>
 	<body>
 		<!-- Nawigacja -->
 		<nav>
             <div id="nav">
-                <a href='/' id="logo">Legion</a>
-                <div id="outerburger">
-                    <div id="hamburger" class="menu icon"></div>
-                </div>
-                <div id="menu">
-                    <ul>
-                        <li><a class="current" href='/'>Start</a></li>
-                        <li><a href='o-nas'>O klubie</a></li>
-                        <li><a href='o-nas'>Osiągnięcia</a></li>
-                        <li><a href='cennik'>Harmonogram</a></li>
-                        <li><a href='cennik'>Cennik</a></li>
-                        <li><a href='kontakt'>Kontakt</a></li>
-                    </ul>
-                </div>
+				<a href='/' id="logo">LEGION</a>
+                <div id="burger" onclick="openNav()">&#9776;</div>
+                <div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="#">Główna</a>
+					<a href="#">O nas</a>
+					<a href="#">Co trenujemy?</a>
+					<a href="#">Grafik</a>
+					<a href="#">Cennik</a>
+				  </div>
             </div>
 		</nav>
 		<main>

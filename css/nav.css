@@ -1,3 +1,63 @@
+#nav
+{
+    width: 100%;
+    height: 70px;
+    background: #0b0b0b;
+    padding: 10px;
+}
+
+#logo
+{
+    color: #baab00;
+    font-size: 30px;
+    line-height: 50px;
+    float: left;
+}
+
+#burger
+{
+    float: right;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 40px;
+    right: 10px;
+    color: rgb(196, 196, 196);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(124, 124, 124);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #baab00;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     nav
