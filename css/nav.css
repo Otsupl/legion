@@ -30,6 +30,8 @@
     background-image: url(../img/slider/min/1.jpg);
     background-repeat:no-repeat;
     background-position: center center;
+    border-top: 1px solid #baab00;
+    border-bottom: 1px solid #baab00;
 }
 
 .sidenav {
