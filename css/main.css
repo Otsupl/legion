@@ -1,5 +1,7 @@
 /* ==========================================================================
    Google fonts available: 
+   Cinzel serif
+   Montserrat sans-serif
    ========================================================================== */
 * {
 	box-sizing: border-box;
@@ -22,6 +24,7 @@ html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 body {
   margin: 0;
