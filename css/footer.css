@@ -3,7 +3,7 @@ footer
     font-family: 'Cinzel', serif;
     font-weight: 700;
     text-align: center;
-    height: 260px;
+    height: 350px;
     background: rgb(0, 0, 0);
     color: white;
 }
@@ -15,7 +15,9 @@ footer h3
 
 footer a
 {
+    display: block;
     font-size: 20px;
+    margin-bottom: 20px;
     transition: 0.3s;
 }
 
@@ -51,7 +53,6 @@ footer i
     footer a
     {
         font-size: 25px;
-        display: block;
         margin-bottom: 20px;
     }
 

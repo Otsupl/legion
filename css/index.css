@@ -40,11 +40,13 @@
 {
     color:#d6d6d6;
     font-size: 22px;
+    transition: 0.3s;
 }
 #phototext>h2
 {
     color:#baab00;
     font-size: 16px;
+    transition: 0.3s;
 }
 #photo_container::after
 {
@@ -59,7 +61,6 @@
     background-color:#9300001e;
     line-height:2em;
     padding: 10px 5px 10px 5px;
-    transition: 0.3s;
 }
 
 #freebanner h3
@@ -67,6 +68,7 @@
    color:#d6d6d6;
    margin:0;
    font-size:15px;
+   transtiton: 0.3s;
 }
 
 #freebanner button:hover 
@@ -270,7 +272,7 @@
 {
     background-color: #131313;
     width: 50%;
-    height: 180px;
+    height: 10em;
     color: white;
     float: left;
     cursor: pointer;
@@ -339,12 +341,58 @@ button
     {
         width: 80%;
     }
+    
+    #abouttr h3 
+    {
+        font-size: 40px;
+    }   
+
+    #abouttr button 
+    {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .titem
+    {
+        height: 250px;
+    }
+
+
+    #trdesc
+    {
+        font-size: 20px;
+    }
 
 }
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
 
+    #phototext h1 
+    {
+        font-size: 2em;
+    }
+
+    #phototext h2 
+    {
+        font-size: 1.3em;
+    }
+
+    #freebanner h3
+    {
+        font-size: 25px;
+    }
+
+    .titem 
+    {
+        height: 300px;
+    }
+
+    .description
+    {
+        font-size: 20px;
+    }
 
 }
 
