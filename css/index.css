@@ -418,6 +418,26 @@ button
     {
         font-size: 26px;
     }
+    
+    #abouttr h3 
+    {
+        font-size: 3em;
+    }
+
+    #abouttr button 
+    {
+        padding: 20px;
+    }
+
+    #trdesc
+    {
+        font-size: 20px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
     nav
     {
@@ -439,6 +459,16 @@ button
     .pitem 
     {
         width: 60%;
+    }
+
+    .pitemdesc
+    {
+        font-size: 20px;
+    }
+    
+    .pitemprice 
+    {
+        font-size: 4em;
     }
 
 }
