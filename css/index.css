@@ -4,6 +4,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.3s;
 }
 
 #photo_container
@@ -200,6 +201,7 @@
     height: 220px;
     border: 1px solid white;
     color: white;
+    transition: 0.3s;
 }
 
 .pitemhead
@@ -287,15 +289,28 @@ button
 }
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
+
+    #container 
+    {
+        width: 80%;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
+
+
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+    #container 
+    {
+        width: 80%;
+    }
 
     #photo
     {
@@ -333,6 +348,12 @@ button
     {
         width: 33%;
     }
+
+    .pitem 
+    {
+        width: 60%;
+    }
+
 }
 
 /* Extra enormous devices (TV, 1700px and up) */

@@ -151,18 +151,17 @@
         top: unset;
         right: unset;
         padding-top: 0;
-        display: inline-block;
     }
     #menu a {
 		padding: 0;
-		line-height: 40px;
+        line-height: 40px;
+        font-size: 16px;
 	}
     #menu>li
     {
-		display: inline-block;
 		float:left;
 		padding:5px 10px;
-		transition: 0.3s;
+        transition: 0.3s;
 	}
     #menu>li:hover, #menu>li.current
     {
