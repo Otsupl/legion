@@ -285,6 +285,16 @@ button
     cursor: pointer;
 }
 
+footer
+{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-align: center;
+    height: 300px;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
