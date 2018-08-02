@@ -285,7 +285,13 @@ button
     transition: background 0.005s;
     cursor: pointer;
 }
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+}
 
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -327,4 +333,8 @@ button
     {
         width: 33%;
     }
+}
+
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
 }
