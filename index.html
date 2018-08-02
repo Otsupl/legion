@@ -56,10 +56,10 @@
 				<div id="scrollarrow"><i class="fas fa-arrow-circle-down"></i></div>
 		      </div>
 		  </div>
-		  <div id="freebanner">
+		  <div id="freebanner" class='accordion'>
 			  <h3>Zapraszamy na trening próbny za&nbsp;darmo!</h3>
-			  <button><a href="#">UMÓW SIĘ</a></button>
 		  </div>
+		  <div id="freebannerinfo" class='panel'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin sit amet lacus dapibus molestie. Donec accumsan sem nibh, ut gravida nulla interdum nec. Morbi blandit pulvinar nunc elementum aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 		  <div id ="container">
 		  <section id="description-section">
 		  	<article class="description">
@@ -137,6 +137,25 @@
         <script src="js/nav.js"></script>
         <script>
 			"use strict";
-        </script>
+		</script>
+		<!--Accordion-->
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight){
+			panel.style.maxHeight = null;
+			panel.style.padding = null;
+			} else {
+			panel.style.maxHeight = "500px";
+			panel.style.padding = "20px 0 20px 0";
+			} 
+		});
+		}
+	</script>
 	</body>
 </html>
