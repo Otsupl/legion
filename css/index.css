@@ -159,21 +159,19 @@
 
 .pitemhead
 {
-    font-size: 36px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: calc(23px + 3vw);
+    padding: 10px;
 }
 
 .pitemdesc
 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 15px 10px 15px 10px;
     color: #baab00;
 }
 
 .pitemprice
 {
-    font-size: 50px;
+    font-size: calc(30px + 4vw);
 }
 
 .titem
