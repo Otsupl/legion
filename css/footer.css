@@ -30,3 +30,34 @@ footer i
     vertical-align: middle;
     margin-right: 8px;
 }
+
+#right 
+{
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+
+    footer 
+    {
+        height: 430px;
+    }
+
+    footer i 
+    {
+        font-size: 60px;
+    }
+
+    footer a
+    {
+        font-size: 25px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #left 
+    {
+        float: left;
+        width: 50%;
+    }
+}
