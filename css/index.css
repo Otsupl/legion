@@ -286,38 +286,6 @@ button
     cursor: pointer;
 }
 
-footer
-{
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    text-align: center;
-    height: 250px;
-    background: rgb(0, 0, 0);
-    color: white;
-}
-
-footer h3 
-{
-    color: #baab00;
-}
-
-footer a
-{
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-footer a:hover
-{
-    color: #baab00;
-}
-
-footer i 
-{
-    font-size: 30px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
