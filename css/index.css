@@ -1,3 +1,11 @@
+#container
+{
+    text-align: center;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #photo_container
 {
     position:relative;
