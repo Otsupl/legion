@@ -197,6 +197,11 @@
     display: none;
 }
 
+#scrollup
+{
+    display: none;
+}
+
 .pitem
 {
     margin-bottom: 20px;
@@ -356,7 +361,26 @@ button
         color: #b3ad6f;
     }
 
+    #scrollup
+    {
+        display: block;
+        position: fixed;
+        color: white;
+        z-index: 99999;
+        font-size: 40px;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 10px 0px 10px;
+        background: rgba(63, 63, 63, 0.349);
+        cursor: pointer;
+        transition: 0.4s;
+        border-radius: 20px;
+    }
 
+    #scrollup:hover 
+    {
+        background: rgba(255, 0, 0, 0.253);
+    }
 
     nav
     {
