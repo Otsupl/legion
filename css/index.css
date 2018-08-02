@@ -192,6 +192,11 @@
     padding: 15px 20px 15px 20px;
 }
 
+#scrollarrow
+{
+    display: none;
+}
+
 .pitem
 {
     margin-bottom: 20px;
@@ -331,6 +336,27 @@ button
     {
         font-size: 20px;
     }
+
+    #scrollarrow 
+    {
+        display: block;
+        font-size: 50px;
+        color: #baab00;
+    }
+
+    #scrollarrow i 
+    {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #scrollarrow i:hover
+    {
+        font-size: 55px;
+        color: #b3ad6f;
+    }
+
+
 
     nav
     {
