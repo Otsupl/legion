@@ -119,6 +119,33 @@
     font-family: 'Cinzel', serif;
 }
 
+#mapimg
+{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/location/min/map.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+#locationdesc
+{
+    color: white;
+}
+
+#locationdesc p:first-child
+{
+    font-size: 22px;
+}
+
+#buildingimg
+{
+    height: 250px;
+    background-image: url(../img/location/min/building.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .pitem
 {
     margin-bottom: 20px;
