@@ -84,6 +84,37 @@
     font-family: 'Cinzel', serif;
     color:#baab00;
 }
+
+#trainingopts
+{
+    width: 100%;
+    background: white;
+}
+
+#training-section
+{
+    margin-top: 20px;
+}
+
+#training-section h3
+{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+}
+
+.titem
+{
+    width: 50%;
+    height: 200px;
+    line-height: 200px;
+    color: white;
+    position: relative;
+    float: left;
+    
+}
+
 .description
 {
     text-align:center;
@@ -151,4 +182,9 @@ button
     }
     #description-section::after
         {clear:both}
+
+    .titem 
+    {
+        width: 33%;
+    }
 }
