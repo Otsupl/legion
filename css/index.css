@@ -378,6 +378,8 @@ button
         left: 50px;
         font-weight: 700;
         font-family: 'Cinzel', serif;
+        background: rgba(0, 0, 0, 0.61);
+        padding: 10px;
     }
 
     #phototext>h1
@@ -535,4 +537,73 @@ button
 
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
+
+    #phototext 
+    {
+        height: 400px;
+    }
+
+    #phototext h1 
+    {
+        font-size: 40px;
+    }
+
+    #phototext h2
+    {
+        font-size: 35px;
+    }
+
+    #upperphototext 
+    {
+        font-size: 35px;
+    }
+
+    #trdesc
+    {
+        font-size: 30px;
+    }
+
+    #abouttr button 
+    {
+        padding: 30px;
+        font-size: 25px;
+    }
+
+    .titem
+    {
+        height: 300px;
+    }
+
+    .pitem 
+    {
+        width: 40%;
+        height: 300px;
+    }
+
+    .pitemhead
+    {
+        font-size: 3.5em;
+    }
+
+    .pitemdesc 
+    {
+        font-size: 30px;
+    }
+
+    .pitemprice 
+    {
+        font-size: 5em;
+    }
+
+    .description
+    {
+        font-size: 25px;
+    }
+
+    #freebannerinfo p 
+    {
+        font-size: 20px;
+        width: 40%;
+    }
+
 }
