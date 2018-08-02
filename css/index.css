@@ -370,9 +370,9 @@ button
         display: block;
         z-index: 999;
         font-size: 30px;
-        color: white;
+        color: #baab00;
         position: absolute;
-        top: 150px;
+        top: 120px;
         left: 50px;
         font-weight: 700;
         font-family: 'Cinzel', serif;
