@@ -27,7 +27,7 @@
     height: 25vh;
     text-align:center;
     width:100%;
-    background-color:#2c2c2cab;
+    background-color:#1b1b1bab;
     padding: 30px 20px 30px 20px;
 }
 
@@ -123,7 +123,9 @@
     background-image: url(../img/location/min/map.jpg);
     background-repeat: no-repeat;
     background-position: center; 
+    transition: 0.3s;
 }
+
 
 #locationdesc
 {
@@ -466,6 +468,34 @@ button
         background-image: url(../img/abouttr/mid.jpg);
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #mapimg
+    {
+        width: 100%;
+        height: 400px;
+        background-image: url(../img/location/mid/map.jpg);
+        background-repeat: no-repeat;
+        background-position: center; 
+    }   
+
+    #buildingimg
+    {
+        width: 100%;
+        height: 400px;
+        background-image: url(../img/location/mid/building.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #locationdesc 
+    {
+        font-size: 20px;
+    }
+
+    #locationdesc p:first-child
+    {
+        font-size: 36px;
     }
 
     nav
