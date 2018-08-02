@@ -409,6 +409,16 @@ button
         background: rgba(255, 0, 0, 0.253);
     }
 
+    #freebanner 
+    {
+        padding: 20px 0 20px 0;
+    }
+
+    #freebanner h3 
+    {
+        font-size: 26px;
+    }
+
     nav
     {
         height:0!important;
@@ -423,7 +433,7 @@ button
 
     .titem 
     {
-        width: 33%;
+        width: 20%;
     }
 
     .pitem 
