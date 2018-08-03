@@ -361,11 +361,6 @@ button
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
 
-    #phototext h1 
-    {
-        /* font-size: 2em; */
-    }
-
     #phototext h2 
     {
         font-size: 1.3em;
@@ -515,12 +510,12 @@ button
         display: table;
         width: 100%;
         border-spacing: 1.66vw;
+        table-layout: fixed;
     }
 
     .pitem
     {
         display: table-cell;
-        width: 30%;
         border-spacing: 0;
         position: relative;
     }
@@ -531,11 +526,6 @@ button
     .pitemprice
     {
         font-size: calc(15px + 1.6vw);
-        /* position: absolute; */
-        /* bottom: calc(7px + 1vw); */
-        /* left: 50%; */
-        /* transform: translate(-50%, 0); */
-        /* width: 100%; */
     }
     #priceitems::after
         {clear:both}
