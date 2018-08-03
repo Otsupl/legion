@@ -100,7 +100,8 @@
     font-weight: 700;
     font-family: 'Cinzel', serif;
 }
-
+#training-section::after
+    {clear:both;}
 
 #prices h3 
 {
@@ -138,13 +139,9 @@
 {
     font-size: 22px;
 }
-
-#buildingimg
+#building-container
 {
-    height: 250px;
-    background-image: url(../img/location/min/building.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    height:calc(100px + 20vw);
 }
 
 #abouttr
@@ -527,15 +524,6 @@ button
         background-image: url(../img/location/mid/map.jpg);
         background-repeat: no-repeat;
         background-position: center; 
-    }   
-
-    #buildingimg
-    {
-        width: 100%;
-        height: 400px;
-        background-image: url(../img/location/mid/building.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     #locationdesc 

@@ -31,6 +31,21 @@ body {
     background-color: #131313;
 }
 
+/*sprawia, że można wyśrodkować zdjęcie tak samo jak by było tłem diva*/
+.center-img-container
+{
+    overflow:hidden;
+    position:relative;
+}
+.center-img-container>img
+{
+    width:100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .aos-animate
 {
 	width: 100%;

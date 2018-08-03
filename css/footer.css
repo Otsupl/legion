@@ -33,7 +33,7 @@ footer i
     margin-right: 8px;
 }
 
-#right 
+footer .right 
 {
     display: none;
 }
@@ -56,9 +56,13 @@ footer i
         margin-bottom: 20px;
     }
 
-    #left 
+    footer .left 
     {
         float: left;
-        width: 50%;
+        width: 45%;
+        margin-left: 5%;
+        text-align: left;
     }
+    #footer-contact::after
+        {clear:both;}
 }
