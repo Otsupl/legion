@@ -76,9 +76,9 @@ strong
 {display: inline-block}
 a {
 	background-color: transparent;
-	-webkit-text-decoration-skip: objects;
 	text-decoration: none;
 	cursor: pointer;
+	display: inline-block;
 	color:currentColor;
 }
 ul, menu, dir {

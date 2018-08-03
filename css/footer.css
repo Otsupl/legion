@@ -16,7 +16,7 @@ footer h3
 footer a
 {
     display: block;
-    font-size: 20px;
+    font-size: calc(15px + 1vw);
     margin-bottom: 20px;
     transition: 0.3s;
 }
@@ -28,11 +28,12 @@ footer a:hover
 
 footer i 
 {
-    font-size: 30px;
+    font-size: calc(30px + 2vw);
     vertical-align: middle;
-    margin-right: 8px;
+    margin-right: calc(5px + 0.5vw);
 }
-
+.fa-map-marker-alt
+{margin-left:-5px}
 footer .right 
 {
     display: none;
@@ -44,18 +45,6 @@ footer .right
     {
         height: 430px;
     }
-
-    footer i 
-    {
-        font-size: 60px;
-    }
-
-    footer a
-    {
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-
     footer .left 
     {
         float: left;

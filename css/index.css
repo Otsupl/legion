@@ -14,23 +14,30 @@
 #photo
 {
     width:100%;
-    height: 50vh;
+    height: 60vh;
     background-image: url(../img/slider/min/1.jpg);
     background-repeat:no-repeat;
-	background-size: cover !important;
+    background-size: cover !important;
     background-position: center center;
+}
+#phototext-container
+{
+    position:absolute;
+    bottom:0;
+    height: 30vh;
+    text-align:center;
+    width:100%;
+    background-color:#1b1b1bab;
 }
 #phototext
 {
     position:absolute;
-    bottom:0;
-    height: 25vh;
-    text-align:center;
     width:100%;
-    background-color:#1b1b1bab;
-    padding: 30px 20px 30px 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
 #upperphototext
 {
     display: none;
@@ -39,13 +46,13 @@
 #phototext>h1
 {
     color:#d6d6d6;
-    font-size: 22px;
+    font-size: calc(10px + 1vh + 2vw);
     transition: 0.3s;
 }
 #phototext>h2
 {
     color:#baab00;
-    font-size: 16px;
+    font-size: calc(5px + 0.8vh + 1.5vw);
     transition: 0.3s;
 }
 #photo_container::after
@@ -60,7 +67,7 @@
     text-align: center;
     background-color:#9300001e;
     line-height:2em;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px;
 }
 
 #freebanner h3
@@ -68,12 +75,6 @@
    color:#d6d6d6;
    margin:0;
    font-size:15px;
-   transtiton: 0.3s;
-}
-
-#freebanner button:hover 
-{
-    background-color:#d0ff00;
 }
 
 #description-section h3
@@ -102,7 +103,6 @@
 }
 #training-section::after
     {clear:both;}
-
 #prices h3 
 {
     color: white;
@@ -119,17 +119,6 @@
     font-family: 'Cinzel', serif;
 }
 
-#mapimg
-{
-    width: 100%;
-    height: 200px;
-    background-image: url(../img/location/min/map.jpg);
-    background-repeat: no-repeat;
-    background-position: center; 
-    transition: 0.3s;
-}
-
-
 #locationdesc
 {
     color: white;
@@ -139,7 +128,7 @@
 {
     font-size: 22px;
 }
-#building-container
+#building-container,#mapimg
 {
     height:calc(100px + 20vw);
 }
@@ -238,31 +227,37 @@
 
 .pitem
 {
-    margin-bottom: 20px;
+    display: block;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 220px;
+    margin: 20px auto;
+    padding: calc(7px + 1vw);
     border: 1px solid white;
     color: white;
-    transition: 0.3s;
 }
 
 .pitemhead
 {
-    font-size: calc(23px + 3vw);
-    padding: 10px;
+    font-size: calc(30px + 1.5vw);
 }
 
 .pitemdesc
 {
-    padding: 15px 10px 15px 10px;
+    margin: 15px 10px;
     color: #baab00;
 }
-
+.pitem-gym
+{
+    margin: 15px 10px;
+    color: #da0000;
+    font-weight:700;
+}
+.pitem-gym>a
+{
+    color: #baab00;
+}
 .pitemprice
 {
-    font-size: calc(30px + 4vw);
+    font-size: calc(30px + 1.7vw);
 }
 
 .titem
@@ -368,7 +363,7 @@ button
 
     #phototext h1 
     {
-        font-size: 2em;
+        /* font-size: 2em; */
     }
 
     #phototext h2 
@@ -430,7 +425,6 @@ button
     #phototext>h1
     {
         margin:60px 0 30px 0;
-        font-size: 30px;
     }
     #phototext>h2
     {
@@ -516,16 +510,35 @@ button
         margin-left: auto;
         margin-right: auto;
     }
-
-    #mapimg
+    #priceitems
     {
+        display: table;
         width: 100%;
-        height: 400px;
-        background-image: url(../img/location/mid/map.jpg);
-        background-repeat: no-repeat;
-        background-position: center; 
+        border-spacing: 1.66vw;
     }
 
+    .pitem
+    {
+        display: table-cell;
+        width: 30%;
+        border-spacing: 0;
+        position: relative;
+    }
+    .pitemhead
+    {
+        font-size: calc(16px + 1vw);
+    }
+    .pitemprice
+    {
+        font-size: calc(15px + 1.6vw);
+        /* position: absolute; */
+        /* bottom: calc(7px + 1vw); */
+        /* left: 50%; */
+        /* transform: translate(-50%, 0); */
+        /* width: 100%; */
+    }
+    #priceitems::after
+        {clear:both}
     #locationdesc 
     {
         font-size: 20px;
@@ -553,20 +566,9 @@ button
         width: 20%;
     }
 
-    .pitem 
+    .pitemdesc, .pitem-gym
     {
-        width: 50%;
-        height: 280px;
-    }
-
-    .pitemdesc
-    {
-        font-size: 20px;
-    }
-    
-    .pitemprice 
-    {
-        font-size: 4em;
+        font-size: calc(12px + 0.7vw);
     }
 
 }
@@ -577,11 +579,6 @@ button
     #phototext 
     {
         height: 400px;
-    }
-
-    #phototext h1 
-    {
-        font-size: 40px;
     }
 
     #phototext h2
@@ -609,28 +606,7 @@ button
     {
         height: 300px;
     }
-
-    .pitem 
-    {
-        width: 40%;
-        height: 300px;
-    }
-
-    .pitemhead
-    {
-        font-size: 3.5em;
-    }
-
-    .pitemdesc 
-    {
-        font-size: 30px;
-    }
-
-    .pitemprice 
-    {
-        font-size: 5em;
-    }
-
+    
     .description
     {
         font-size: 25px;
