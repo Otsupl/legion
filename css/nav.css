@@ -5,6 +5,8 @@
     background-color: #0b0b0b;
     padding: 10px;
     color:#808080ab;
+    z-index: 10;
+    transition: 0.3s;
 }
 
 #logo
@@ -118,15 +120,18 @@
         height:90px;
         transition: background-color 0.4s ease-out;
     }
-    #nav
+    #nav.nav-transparent
+    {
+        background-color:transparent;
+    }
+    #nav,#nav.nav-active
     {
         padding:20px;
-        background-color:transparent;
+        background-color:#131313;
         line-height:50px;
         height: 90px;
         position:fixed;
         width:100%;
-        z-index: 10;
         color: white;
     }
     #nav::after
