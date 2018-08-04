@@ -24,14 +24,13 @@
 {
     position:absolute;
     bottom:0;
-    height: 30vh;
+    height: 35vh;
     text-align:center;
     width:100%;
     background-color:#1b1b1bab;
 }
 #phototext
 {
-    position:absolute;
     width:100%;
     position: absolute;
     top:50%;
@@ -46,14 +45,17 @@
 #phototext>h1
 {
     color:#d6d6d6;
-    font-size: calc(10px + 1vh + 2vw);
-    transition: 0.3s;
+    font-size: calc(8px + 1.5vh + 1.8vw);
+    margin: 0;
 }
 #phototext>h2
 {
     color:#baab00;
-    font-size: calc(5px + 0.8vh + 1.5vw);
-    transition: 0.3s;
+    font-size: calc(7px + 0.6vh + 1vw);
+    margin: 3vh 0;
+}
+#scrollarrow i
+{
 }
 #photo_container::after
 {
@@ -79,8 +81,8 @@
 
 #description-section h3
 {
-    font-size:2em;
-    margin:0.6em 0;
+    font-size: calc(20px + 1.5vw);
+    margin: calc(5px + 1.5vw) 0;
     font-weight: 700;
     font-family: 'Cinzel', serif;
     color:#baab00;
@@ -142,7 +144,7 @@
 #abouttr h3
 {
     color: white;
-    font-size: 1.5em;
+    font-size: calc(20px + 1.5vw);
     font-weight: 700;
     font-family: 'Cinzel', serif;
     padding: 0 10px 0 10px;
@@ -305,13 +307,15 @@
     color:#d6d6d6;
     width:70%;
     margin: 0 auto 1.5em auto;
+    font-size: calc(5px + 0.8vw);
 }
 .description button
 {
-    padding:15px;
+    padding: calc(2px + 0.5vw);
     background-color:#baab00;
     border:none;
     font-weight: 700;
+    font-size: calc(5px + 0.8vw);
     transition: background 1s;
     font-family: 'Cinzel', serif;
 }
@@ -333,12 +337,6 @@ button
     {
         width: 80%;
     }
-    
-    #abouttr h3 
-    {
-        font-size: 40px;
-    }   
-
     #abouttr button 
     {
         padding: 20px;
@@ -360,11 +358,6 @@ button
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
-
-    #phototext h2 
-    {
-        font-size: 1.3em;
-    }
 
     #freebanner h3
     {
@@ -396,11 +389,6 @@ button
     {
         height:100vh;
     }
-    
-    #phototext
-    {
-        height: 300px;
-    }
 
     #upperphototext 
     {
@@ -417,19 +405,9 @@ button
         padding: 10px;
     }
 
-    #phototext>h1
-    {
-        margin:60px 0 30px 0;
-    }
-    #phototext>h2
-    {
-        font-size: 20px;
-    }
-
     #scrollarrow 
     {
         display: block;
-        font-size: 50px;
         color: #baab00;
     }
 
@@ -437,11 +415,14 @@ button
     {
         cursor: pointer;
         transition: 0.3s;
+        font-size: calc(25px + 0.8vh + 1.5vw);
+        vertical-align: middle;
+        line-height: calc(30px + 0.8vh + 1.5vw);
     }
 
     #scrollarrow i:hover
     {
-        font-size: 55px;
+        font-size: calc(30px + 0.8vh + 1.5vw);
         color: #b3ad6f;
     }
 
@@ -475,12 +456,6 @@ button
     {
         font-size: 26px;
     }
-    
-    #abouttr h3 
-    {
-        font-size: 3em;
-    }
-
     #abouttr button 
     {
         padding: 20px;
@@ -565,16 +540,6 @@ button
 
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
-
-    #phototext 
-    {
-        height: 400px;
-    }
-
-    #phototext h2
-    {
-        font-size: 35px;
-    }
 
     #upperphototext 
     {
