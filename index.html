@@ -49,7 +49,7 @@
 				  <div id="phototext">
 					<h1>Trenuj z&nbsp;nami -&nbsp;zjednocz swój umysł i&nbsp;ciało!</h1>
 					<h2>Stań się&nbsp;prawdziwym wojownikiem i&nbsp;lepszym człowiekiem.</h2>
-					<div id="scrollarrow"><i class="fas fa-arrow-circle-down"></i></div>
+					<div id="scrollarrow" onclick="scrolldown()"><i class="fas fa-arrow-circle-down"></i></div>
 				  </div>
 		      </div>
 		  </div>
@@ -149,6 +149,14 @@
 		<!-- Skrypty -->
 		<script src="js/nav.js"></script>
 		<script src="js/scrollup.js"></script>
+		<script src="js/smoothscroll.js"></script>
+		<script>
+			function scrolldown()
+			{
+				var pcontainerheight = document.getElementById("photo_container").scrollHeight;
+				window.scroll({ top: (pcontainerheight-90), left: 0, behavior: 'smooth' });
+			}
+		</script>
         <script>
 			"use strict";
 		</script>
