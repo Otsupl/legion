@@ -54,9 +54,7 @@
     font-size: calc(7px + 0.6vh + 1vw);
     margin: 3vh 0;
 }
-#scrollarrow i
-{
-}
+
 #photo_container::after
 {
     height:3px;
@@ -307,7 +305,7 @@
     color:#d6d6d6;
     width:70%;
     margin: 0 auto 1.5em auto;
-    font-size: calc(5px + 0.8vw);
+    font-size: calc(10px + 0.8vw);
 }
 .description button
 {
