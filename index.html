@@ -162,9 +162,15 @@
 			window.addEventListener('scroll',()=>
 			{
 				if (document.body.scrollTop > document.getElementById("photo_container").scrollHeight-100 || document.documentElement.scrollTop > document.getElementById("photo_container").scrollHeight-100)
-					document.getElementById("scrollup").style.display = "block";
+				{
+					document.getElementById("scrollup").style.visibility = "visible";
+					document.getElementById("scrollup").style.opacity = "1";
+				}	
 				else
-					document.getElementById("scrollup").style.display = "none";
+				{
+				    document.getElementById("scrollup").style.visibility = "hidden";
+					document.getElementById("scrollup").style.opacity = "0";    
+				}                     
 			});
 		</script>
         <script>

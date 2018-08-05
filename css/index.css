@@ -428,7 +428,9 @@ button
 
     #scrollup
     {
-        display: none;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
         position: fixed;
         color: white;
         z-index: 99999;
@@ -438,7 +440,8 @@ button
         padding: 10px 10px 0px 10px;
         background: rgba(63, 63, 63, 0.349);
         cursor: pointer;
-        transition: 0.4s;
+        transition: background 0.4s;
+        transition: visibility 0.2s, opacity 0.2s linear;
         border-radius: 20px;
     }
 
