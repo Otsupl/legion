@@ -40,7 +40,7 @@
 				</ul>
             </div>
 		</nav>
-		<div id='scrollup' class='scroll'><i class="fas fa-arrow-up"></i></div>
+		<div id='scrollup' onclick="scrollup()"><i class="fas fa-arrow-up"></i></div>
 		<main>
 		  <div id="photo_container">
 			  <div id="photo"></div>
@@ -155,6 +155,10 @@
 			{
 				var pcontainerheight = document.getElementById("photo_container").scrollHeight;
 				window.scroll({ top: (pcontainerheight-90), left: 0, behavior: 'smooth' });
+			}
+			function scrollup()
+			{
+				window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 			}
 		</script>
         <script>
