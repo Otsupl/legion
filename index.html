@@ -40,7 +40,7 @@
 				</ul>
             </div>
 		</nav>
-		<div id='scrollup' onclick="scrollup()"><i class="fas fa-arrow-up"></i></div>
+		<div id='scrollup' class='hidden' onclick="scrollup()"><i class="fas fa-arrow-up"></i></div>
 		<main>
 		  <div id="photo_container">
 			  <div id="photo"></div>
@@ -153,13 +153,19 @@
 		<script>
 			function scrolldown()
 			{
-				var pcontainerheight = document.getElementById("photo_container").scrollHeight;
-				window.scroll({ top: (pcontainerheight-90), left: 0, behavior: 'smooth' });
+				window.scroll({ top: (document.getElementById("photo_container").scrollHeight-90), left: 0, behavior: 'smooth' });
 			}
 			function scrollup()
 			{
 				window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 			}
+			window.addEventListener('scroll',()=>
+			{
+				if (document.body.scrollTop > document.getElementById("photo_container").scrollHeight-100 || document.documentElement.scrollTop > document.getElementById("photo_container").scrollHeight-100)
+					document.getElementById("scrollup").style.display = "block";
+				else
+					document.getElementById("scrollup").style.display = "none";
+			});
 		</script>
         <script>
 			"use strict";
