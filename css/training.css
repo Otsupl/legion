@@ -5,6 +5,10 @@ body
     text-align: center;
 }
 
+div 
+{
+    transition: 0.2s;
+}
 
 .mart
 {
@@ -43,6 +47,11 @@ body
 #muayt
 {
     background: url(../img/marts/min/muayt.jpg) no-repeat center;
+}
+
+#taich
+{
+    background: url(../img/marts/min/taich.jpg) no-repeat center;
 }
 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
