@@ -15,11 +15,11 @@ body
 .martheader
 {
     padding: 2px;
-    background: rgba(0, 0, 0, 0.493);
+    background: rgba(0, 0, 0, 0.678);
     width: 60%;
     height: 40px;
     line-height: 40px;
-    margin: 10px auto 0 auto;
+    margin: 15vh auto 0 auto;
     color: white;
     font-size: 1.3em;
     font-weight: 700;
@@ -38,6 +38,11 @@ body
 #taekw
 {
     background: url(../img/marts/min/taekw.jpg) no-repeat center;
+}
+
+#muayt
+{
+    background: url(../img/marts/min/muayt.jpg) no-repeat center;
 }
 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
