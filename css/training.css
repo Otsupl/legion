@@ -14,6 +14,12 @@ div
 {
     height: 40vh;
     border-bottom: 1px #baab00 solid;
+    transition: background 0.3s;
+}
+
+.mart:hover 
+{
+    cursor: pointer;
 }
 
 .martheader
@@ -54,12 +60,28 @@ div
     background: url(../img/marts/min/taich.jpg) no-repeat center;
 }
 
+#taekw:hover 
+{
+    background: url(../img/marts/blur/min/taekw.jpg) no-repeat center;
+}
+
+#muayt:hover
+{
+    background: url(../img/marts/blur/min/muayt.jpg) no-repeat center;
+}
+
+#taich:hover
+{
+    background: url(../img/marts/blur/min/taich.jpg) no-repeat center;
+}
+
+
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
 
     .mart 
     {
-        height: 50vh;
+        height: 60vh;
     }
 
     .martheader
@@ -82,6 +104,21 @@ div
     #taich
     {
         background: url(../img/marts/mid/taich.jpg) no-repeat center;
+    }
+    
+    #taekw:hover 
+    {
+        background: url(../img/marts/blur/mid/taekw.jpg) no-repeat center;
+    }
+
+    #muayt:hover
+    {
+        background: url(../img/marts/blur/mid/muayt.jpg) no-repeat center;
+    }
+
+    #taich:hover
+    {
+        background: url(../img/marts/blur/mid/taich.jpg) no-repeat center;
     }
     }
 
@@ -107,6 +144,42 @@ div
     }
   
 }
+
+@media only screen and (min-width: 1400px)
+{
+    #taekw
+    {
+        background: url(../img/marts/max/taekw.jpg) no-repeat center;
+    }
+
+    #muayt
+    {
+        background: url(../img/marts/max/muayt.jpg) no-repeat center;
+    }
+
+    #taich
+    {
+        background: url(../img/marts/max/taich.jpg) no-repeat center;
+    }
+
+    
+    #taekw:hover 
+    {
+        background: url(../img/marts/blur/max/taekw.jpg) no-repeat center;
+    }
+
+    #muayt:hover
+    {
+        background: url(../img/marts/blur/max/muayt.jpg) no-repeat center;
+    }
+
+    #taich:hover
+    {
+        background: url(../img/marts/blur/max/taich.jpg) no-repeat center;
+    }
+
+}
+
 
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
