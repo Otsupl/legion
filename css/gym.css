@@ -1,0 +1,47 @@
+/*Extra small devices (small phones, 350px and down)*/
+
+body 
+{
+    text-align: center;
+}
+
+#gyminfo h2 
+{
+    font-size: 2em;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#gyminfo h1 
+{
+    font-size: 2em;
+    color: #baab00;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+}
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    #gyminfo
+    {
+        margin-top: 60px;
+    }    
+  
+}
+
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+}
