@@ -259,17 +259,25 @@
 {
     font-size: calc(30px + 1.7vw);
 }
-
+.titem-container
+{
+    width: 50%;
+    padding-top: 50%; /* 1:1 Aspect Ratio */
+    float: left;
+    position: relative;
+}
 .titem
 {
     background-color: #131313;
-    width: 50%;
-    height: 10em;
     color: white;
-    float: left;
     cursor: pointer;
     padding-top: 10px;
     transition: background 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .titem:hover 
@@ -304,7 +312,7 @@
 {
     color:#d6d6d6;
     width:70%;
-    margin: 0 auto 1.5em auto;
+    margin: 0 auto 1em auto;
     font-size: calc(10px + 0.8vw);
 }
 .description button
@@ -313,14 +321,14 @@
     background-color:#baab00;
     border:none;
     font-weight: 700;
-    font-size: calc(11px + 0.8vw);
-    transition: background 1s;
+    font-size: calc(9px + 0.8vw);
+    transition: background 0.5s;
     font-family: 'Cinzel', serif;
 }
 
 .description button:hover
 {
-    background-color:#d0ff00;
+    background-color: #ffec00;
 }
 
 button 
@@ -341,12 +349,6 @@ button
         font-size: 20px;
     }
 
-    .titem
-    {
-        height: 250px;
-    }
-
-
     #trdesc
     {
         font-size: 20px;
@@ -361,12 +363,6 @@ button
     {
         font-size: 25px;
     }
-
-    .titem 
-    {
-        height: 300px;
-    }
-
     .description
     {
         font-size: 20px;
@@ -527,9 +523,10 @@ button
     #description-section::after
         {clear:both}
 
-    .titem 
+    .titem-container
     {
         width: 20%;
+        padding-top: 20%; /* 1:1 Aspect Ratio */
     }
 
     .pitemdesc, .pitem-gym
@@ -557,12 +554,6 @@ button
         padding: 30px;
         font-size: 25px;
     }
-
-    .titem
-    {
-        height: 300px;
-    }
-    
     .description
     {
         font-size: 25px;
