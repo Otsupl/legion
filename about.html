@@ -24,7 +24,7 @@
 	<body>
 		<!-- Nawigacja -->
 		<nav id="navbar">
-            <div id="nav" class="nav-transparent">
+            <div id="nav">
 				<a href='/' id="logo">LEGION</a>
 				<div id="outerburger">
 					<div id="burger" class="menu icon"></div>
@@ -94,27 +94,8 @@
         <link rel="stylesheet" href="css/footer.css" type="text/css">
 		<!-- Skrypty -->
 		<script src="js/nav.js"></script>
-		<script src="js/scrollup.js"></script>
+		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
-		<script>
-			function scrollup()
-			{
-				window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-			}
-			window.addEventListener('scroll',()=>
-			{
-				if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
-				{
-					document.getElementById("scrollup").style.visibility = "visible";
-					document.getElementById("scrollup").style.opacity = "1";
-				}	
-				else
-				{
-				    document.getElementById("scrollup").style.visibility = "hidden";
-					document.getElementById("scrollup").style.opacity = "0";    
-				}                     
-			});
-		</script>
         <script>
 			"use strict";
 		</script>
