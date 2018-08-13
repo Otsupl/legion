@@ -175,7 +175,8 @@
 #trdesc
 {
     color: white;
-    padding: 15px 20px 15px 20px;
+    margin: 40px auto 20px auto;
+    font-size: calc(13px + 1vw);
 }
 
 #freebannerinfo
@@ -348,12 +349,6 @@ button
         padding: 20px;
         font-size: 20px;
     }
-
-    #trdesc
-    {
-        font-size: 20px;
-    }
-
 }
 
 /* Medium devices (landscape tablets, 800px and up) */
@@ -460,12 +455,7 @@ button
 
     #trdesc
     {
-        font-size: 20px;
         width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
 
 
@@ -543,12 +533,6 @@ button
     {
         font-size: 35px;
     }
-
-    #trdesc
-    {
-        font-size: 30px;
-    }
-
     #abouttr button 
     {
         padding: 30px;
