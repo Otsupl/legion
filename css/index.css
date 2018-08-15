@@ -153,14 +153,16 @@
     padding:10px;
     background-color:#baab00;
     border:none;
+    display: block;
+    margin: 20px auto;
     font-weight: 700;
-    transition: background 1s;
+    transition: background 0.5s;
     font-family: 'Cinzel', serif;
 }
 
 #abouttr button:hover 
 {
-    background-color:#d0ff00;
+    background-color: #ffec00;
 }
 
 #trphoto
@@ -448,6 +450,7 @@ button
     {
         font-size: 26px;
     }
+
     #abouttr button 
     {
         padding: 20px;
@@ -455,18 +458,29 @@ button
 
     #trdesc
     {
-        width: 60%;
+        width: calc(100% - 350px);
+        float: right;
     }
 
 
     #trphoto
     {
-        width: 600px;
-        height: 400px;
+        width: 300px;
+        height: 580px;
         background-image: url(../img/abouttr/mid.jpg);
+        background-repeat:no-repeat;
+        background-size: cover !important;
+        background-position: center center;
         margin-left: auto;
         margin-right: auto;
+        float: left;
     }
+
+    #abouttr::after
+    {
+        clear:both;
+    }
+    
     #priceitems
     {
         display: table;
