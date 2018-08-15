@@ -45,8 +45,38 @@
 			<section id="gyminfo">
 				<h2>Siłownia</h2>
 				<h1>MAX PAYNE GYM</h1>
-				
-
+				<section id="slider">
+				<div id="slidercontainer" class="slider">
+					<img src="img/gym/slider/max/1.jpg"/>
+					<img src="img/gym/slider/max/2.jpg"/>
+					<img src="img/gym/slider/max/3.jpg"/>
+				  </div>
+				</section>
+				<h3>Dla każdego członka klubu Legion</h2>
+				<h1>KARNET GRATIS</h1>
+				<h2>O siłowni</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci in quam laoreet sodales. Morbi faucibus eros posuere orci tincidunt auctor. Curabitur ac placerat nisl. Vestibulum congue, lacus in pharetra rutrum, erat nisl posuere tortor, sed molestie lorem metus ut magna. Etiam placerat massa sapien, ac viverra orci finibus ac. </p>
+				<h2>Sprzęt</h2>
+				<section id="gear">
+				<div class="parts">
+				<div class="part"><i class="fas fa-heartbeat" id="card"></i></br>CARDIO</div>
+				<div class="part"><ul>
+					<li><span class="num">2</span> BIEŻNIE</li>
+					<li><span class="num">1</span> ROWER</li>
+					<li><span class="num">4</span> CUDA NA KIJU</li>
+					<li><span class="num">4</span> WIOŚLARZE</li>
+				</ul></div>
+				</div>
+				<div class="parts">
+				<div class="part"><i class="fas fa-dumbbell" id="sil"></i></br>SIŁOWE</div>
+				<div class="part"><ul>
+						<li><span class="num">2</span> ŁAWKI PROSTE</li>
+						<li><span class="num">1</span> ŁAWKA SKOŚNA</li>
+						<li><span class="num">4</span> MODLITEWNIKI</li>
+						<li><span class="num">10</span> WAG HANTLI</li>
+					</ul></div>
+				</div>
+			</section>
 			</section>
 		</main>
 		<footer>
@@ -68,12 +98,43 @@
 		<link rel="stylesheet" href="css/gym.css" type="text/css">
         <link rel="stylesheet" href="css/nav.css" type="text/css">
         <link rel="stylesheet" href="css/index.css" type="text/css">
-        <link rel="stylesheet" href="css/footer.css" type="text/css">
+		<link rel="stylesheet" href="css/footer.css" type="text/css">
 		<!-- Skrypty -->
 		<script src="js/nav.js"></script>
 		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
+		<script src="js/simpleslider.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+		<!--This script makes sure that the slider can be manipulated using touch gestures on mobile devices, sadly, it uses hammer.js but you can't have everything in life, can you? :C ~M -->
+		<script>
+			var isNext = true;
+			var sliderElem = document.getElementById('slidercontainer');
+			var slider = simpleslider.getSlider({
+			container: sliderElem
+			});
+			var manager = new Hammer.Manager(sliderElem);
+			var Swipe = new Hammer.Swipe();
+
+			manager.add(Swipe);
+
+			manager.on('swipeleft', function() {
+			if (isNext) {
+				slider.reverse();
+				isNext = false;
+			}
+			slider.next();
+			});
+
+			manager.on('swiperight', function() {
+			if (!isNext) {
+				slider.reverse();
+				isNext = true;
+			}
+			slider.next();
+			});
+		</script>
         <script>
+			simpleslider.getSlider();
 			"use strict";
 		</script>
 	</body>

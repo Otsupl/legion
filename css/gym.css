@@ -5,9 +5,19 @@ body
     text-align: center;
 }
 
+
 #gyminfo h2 
 {
-    font-size: 2em;
+    font-size: calc(20px + 2.5vw);
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#gyminfo h3
+{
+    font-size: calc(10px + 1vw);
     color: white;
     font-family: 'Cinzel', serif;
     font-weight: 700;
@@ -16,11 +26,100 @@ body
 
 #gyminfo h1 
 {
-    font-size: 2em;
+    font-size: calc(20px + 3.3vw);
     color: #baab00;
     font-family: 'Cinzel', serif;
     font-weight: 700;
     margin-top: 0;
+}
+
+#gyminfo p 
+{
+    width: 80%;
+    font-size: calc(10px + 1.6vw);
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slidercontainer
+{
+    width: 100%;
+    height: calc(100px + 25vw);
+}
+
+#slidercontainer img 
+{
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    display: block;
+}
+
+
+.parts
+{
+    width: 90%;
+    height: calc(120px + 60vw);
+    margin: calc(5px + 0.2vw) auto 0 auto;
+}
+
+.parts:first-child
+{
+    border-bottom: 1px rgba(255, 255, 255, 0.096) dashed;
+}
+
+.parts::after
+{
+    clear: both;
+}
+
+.part
+{
+    float: left;
+    width: 50%;
+    height: 100%;
+    color: white;
+    font-size: calc(16px + 2vw);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.part:first-child
+{
+    padding-top: 26%;
+}
+
+.part:nth-child(2)
+{
+    font-size: calc(8px + 2vw);
+    padding-top: calc(10px + 12vw);
+}
+
+.part .num
+{
+    font-size: calc(18px + 2.3vw);
+    color: #baab00;
+}
+
+.part li 
+{
+    margin-bottom: calc(5px + 0.2vw);
+}
+
+.part i
+{
+    font-size: calc(45px + 15vw) !important;
+    margin-bottom: 20px;
+}
+
+.part #card
+{
+    color: rgb(131, 30, 30);
+}
+.part #sil
+{
+    color: rgb(202, 138, 0);
 }
 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
@@ -29,6 +128,52 @@ body
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
+
+    #gear::after
+    {
+        clear: both;
+    }
+
+    #gear 
+    {
+        margin: 50px 0 50px 0;
+    }
+
+    .parts 
+    {
+        float: left;
+        width: 50%;
+        height: 45vw;
+    }
+
+    .parts:first-child
+    {
+        border-right: 1px rgba(255, 255, 255, 0.096) dashed;
+        border-bottom: none;
+    }
+
+    .part i
+    {
+        font-size: calc(70px + 8vw) !important;
+        margin-bottom: 15px;
+    }
+
+    .part 
+    {
+        font-size: calc(8px + 1.7vw);
+    }
+
+    .part:nth-child(2)
+    {
+        font-size: calc(6px + 1.8vw);
+    }
+
+    .part .num
+    {
+        font-size: calc(17px + 2.1vw);
+    }
+
+
 }
 
 
@@ -39,6 +184,23 @@ body
     {
         margin-top: 60px;
     }    
+
+    #slidercontainer 
+    {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #slidercontainer img 
+    {
+        border: 1px #baab00 solid;
+    }
+
+    #gyminfo p 
+    {
+        width: 70%;
+    }
   
 }
 
