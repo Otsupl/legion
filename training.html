@@ -24,7 +24,7 @@
 	<body>
 		<!-- Nawigacja -->
 		<nav id="navbar">
-            <div id="nav" class="nav-transparent">
+            <div id="nav">
 				<a href='/' id="logo">LEGION</a>
 				<div id="outerburger">
 					<div id="burger" class="menu icon"></div>
