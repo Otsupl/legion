@@ -21,8 +21,8 @@
 {
 	display: block;
 	position:absolute;
-	top:0;
-	right:0;
+	top: 10px;
+	right: 10px;
 	cursor:pointer;
 	z-index:11;
 	margin:10px;

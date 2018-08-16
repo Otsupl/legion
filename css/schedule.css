@@ -1,0 +1,85 @@
+main
+{
+    margin-top: 70px;
+    padding:3%;
+    font-size: calc(10px + 0.8vw);
+}
+#select-container
+{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+}
+#select-container>div:nth-child(1)
+{
+    background-color:#baab00
+}
+#select-container>div
+{
+    display:inline-block;
+    padding:50px 10px;
+    width:calc(80px + 5vw);
+    border-style: solid;
+    border-width: 2px 0 2px 2px;
+    transition: 0.5s;
+}
+#select-container>div:last-child
+{
+    border-width: 2px;
+}
+#select-container>div:hover
+{
+    background-color:#e3d200;
+    cursor:pointer;
+}
+#table-container
+{
+    overflow:auto;
+}
+table
+{
+    margin:0 auto;
+    min-width:630px;
+}
+thead th:first-child
+{
+    position:relative;
+    font-size: calc(8px + 0.5vw);
+    height: calc(80px + 1vw);
+    width: calc(100px + 7vw);
+    background:linear-gradient(to bottom left, #baab00 50%,#e3d200 0);
+}
+#dow
+{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+#hours
+{
+    position:absolute;
+    bottom:10px;
+    left: 10px;
+}
+th
+{
+    background-color:#baab00
+}
+th,td
+{
+    padding:10px;
+}
+td:first-child
+{
+    background-color:#e3d200;
+    position:absolute;
+    width: calc(100px + 7vw);
+    margin-left:4px;
+}
+@media only screen and (min-width: 992px) {
+    main
+    {
+        margin-top: 90px;
+    }
+}
