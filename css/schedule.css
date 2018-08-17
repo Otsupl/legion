@@ -31,6 +31,18 @@ main
     {background-color:#a700ba}
 #select-container>div:nth-child(5):hover
     {background-color:#e000e3}
+#select-container>div:nth-child(6)
+    {background-color:#ba5700}
+#select-container>div:nth-child(6):hover
+    {background-color:#e37400}
+#select-container>div:nth-child(7)
+    {background-color:#885200}
+#select-container>div:nth-child(7):hover
+    {background-color:#b85600}
+#select-container>div:nth-child(8)
+    {background-color:#88005e}
+#select-container>div:nth-child(8):hover
+    {background-color:#b80032}
 #select-container>div
 {
     display:inline-block;
