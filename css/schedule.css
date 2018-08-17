@@ -36,31 +36,31 @@ main
     transition: 0.5s;
     cursor:pointer;
 }
-#select-container>div:nth-child(1)
+#select-container>div:nth-child(1),.muay-thai
     {background-color:#b40000}
 #select-container>div:nth-child(1):hover
     {background-color:#e30000}
-#select-container>div:nth-child(2)
+#select-container>div:nth-child(2),.krav-maga
     {background-color:#3eba00}
 #select-container>div:nth-child(2):hover
     {background-color:#37e300}
-#select-container>div:nth-child(3)
+#select-container>div:nth-child(3),.teakwondo
     {background-color:#0052ba}
 #select-container>div:nth-child(3):hover
     {background-color:#0079e3}
-#select-container>div:nth-child(4)
+#select-container>div:nth-child(4),.tai-chi
     {background-color:#a700ba}
 #select-container>div:nth-child(4):hover
     {background-color:#e000e3}
-#select-container>div:nth-child(5)
+#select-container>div:nth-child(5),.muay-boran
     {background-color:#cc6000}
 #select-container>div:nth-child(5):hover
     {background-color:#e37400}
-#select-container>div:nth-child(6)
+#select-container>div:nth-child(6),.boks
     {background-color:#734500}
 #select-container>div:nth-child(6):hover
     {background-color:#823d00}
-#select-container>div:nth-child(7)
+#select-container>div:nth-child(7),.wolna-sala
     {background-color:#88005e}
 #select-container>div:nth-child(7):hover
     {background-color:#b80032}
@@ -75,7 +75,6 @@ main
 table
 {
     margin:0 auto;
-    min-width:630px;
 }
 thead th:first-child
 {
