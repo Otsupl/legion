@@ -104,13 +104,20 @@ th
 th,td
 {
     padding:10px;
+    border-spacing: 0;
 }
 td:first-child
 {
     background-color:#e3d200;
-    position:absolute;
     width: calc(100px + 7vw);
-    margin-left:4px;
+    padding:0;
+}
+.inner-hours
+{
+    position:absolute;
+    background-color:#e3d200;
+    width: calc(100px + 7vw);
+    margin-top: -10px;
 }
 @media only screen and (min-width: 992px) {
     main
