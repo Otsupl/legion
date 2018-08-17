@@ -50,8 +50,10 @@
 				<table>
 					<tr>
 						<th>
-							<div class="devided" id="dow">Dzień tygodnia</div>
-							<div class="devided" id="hours">Godzina</div>
+							<div>
+								<div id="dow">Dzień tygodnia</div>
+								<div id="hours">Godzina</div>
+							</div>
 						</th>
 						<th>Poniedziałek</th>
 						<th>Wtorek</th>
@@ -140,11 +142,12 @@
 				let innerhours = document.getElementsByClassName('inner-hours');
 				for(let i=0; i<innerhours.length; i++)
 				{
-					innerhours[i].style.height = (innerhours[i].parentElement.scrollHeight) + 'px';
-					innerhours[i].style.lineHeight = (innerhours[i].parentElement.scrollHeight) + 'px';
-					innerhours[i].style.marginTop = '-' + (innerhours[i].parentElement.scrollHeight/2) + 'px';
+					innerhours[i].style.height = innerhours[i].parentElement.scrollHeight + 'px';
+					innerhours[i].style.lineHeight = innerhours[i].parentElement.scrollHeight + 'px';
+					innerhours[i].style.marginTop = '-' + innerhours[i].parentElement.scrollHeight/2 + 'px';
 				}
 			}
+			setHoursHeight();
 			/*żeby wysokość się dopasowała po zmianie wielkości okna*/
 			window.addEventListener('resize', function(event)
 			{

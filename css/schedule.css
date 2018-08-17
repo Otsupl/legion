@@ -79,11 +79,18 @@ table
 }
 th:first-child
 {
-    position:relative;
     font-size: calc(8px + 0.5vw);
     height: calc(80px + 1vw);
     width: calc(100px + 7vw);
     min-width: calc(100px + 7vw);
+}
+th:first-child>div
+{
+    position:absolute;
+    margin-left: -10px;
+    height: calc(80px + 1vw);
+    margin-top:calc(-40px - 0.5vw);
+    width: calc(100px + 7vw);
     background:linear-gradient(to bottom left, #baab00 50%,#e3d200 0);
 }
 #dow
@@ -91,6 +98,7 @@ th:first-child
     position:absolute;
     top:10px;
     right:10px;
+    display: inline-block;
 }
 #hours
 {
