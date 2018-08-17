@@ -87,10 +87,10 @@ th:first-child
 th:first-child>div
 {
     position:absolute;
-    margin-left: -10px;
+    margin-left: -18px;
     height: calc(80px + 1vw);
     margin-top:calc(-40px - 0.5vw);
-    width: calc(100px + 7vw);
+    width: calc(100px + 7vw + 8px);
     background:linear-gradient(to bottom left, #baab00 50%,#e3d200 0);
 }
 #dow
@@ -125,7 +125,8 @@ td:first-child
 {
     position:absolute;
     background-color:#e3d200;
-    width: calc(100px + 7vw);
+    width: calc(100px + 7vw + 8px);
+    margin-left: -8px;
     margin-top: -10px;
 }
 @media only screen and (min-width: 992px) {
