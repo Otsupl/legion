@@ -80,7 +80,7 @@
 #description-section h3
 {
     font-size: calc(20px + 1.5vw);
-    margin: calc(5px + 1.5vw) 0;
+    margin: calc(10px + 3vw) 0 calc(5px + 1.5vw) 0;
     font-weight: 700;
     font-family: 'Cinzel', serif;
     color:#baab00;
@@ -88,10 +88,10 @@
 
 #trainingopts
 {
-    width: 100%;
-    background: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* width: 100%; */
+    /* background: white; */
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
 }
 
 #training-section h3
@@ -130,7 +130,7 @@
 }
 #building-container,#mapimg
 {
-    height:calc(100px + 20vw);
+    height: calc(250px + 3vw);
 }
 
 #abouttr
@@ -272,6 +272,7 @@
 {
     height: 30px;
     line-height: 30px;
+    font-size: calc(13px + 0.5vw);
 }
 
 .description
@@ -282,9 +283,9 @@
 .description>p
 {
     color:#d6d6d6;
-    width:70%;
+    width: 80%;
     margin: 0 auto 1em auto;
-    font-size: calc(10px + 0.8vw);
+    font-size: calc(13px + 0.7vw);
 }
 .description button
 {
@@ -485,8 +486,8 @@ button
 
     .titem-container
     {
-        width: 20%;
-        padding-top: 20%; /* 1:1 Aspect Ratio */
+        width: 16.666%;
+        padding-top: 16.666%; /* 1:1 Aspect Ratio */
     }
 
     .pitemdesc, .pitem-gym
