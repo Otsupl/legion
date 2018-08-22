@@ -1,73 +1,16 @@
 main
 {
-    margin-top: 70px;
     padding:3%;
     font-size: calc(10px + 0.8vw);
 }
-#select-all
+h1
 {
-    width:calc(100% - 18px); /* 4px przerwy tworzy display: inline-block + 14, żeby się zrównało z tabelą*/
-    margin: 0 auto;
-    padding:10px;
-    transition: 0.5s;
-    cursor:pointer;
-    background-color:#baab00;
-}
-#select-all:hover
-    {background-color:#e3d200}
-#select-container
-{
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: calc(100% - 14px);
-    margin:auto
-}
-#select-container>div
-{
-    display:inline-block;
-    padding: calc(30px + 2vw) 2px;
-    width:14.2857%;
-    min-width: intrinsic;
-    min-width: max-content;
-    min-width: -moz-max-content;
-    min-width: -webkit-max-content;
-    border-style: solid;
-    border-width: 2px 0 2px 2px;
-    transition: 0.5s;
-    cursor:pointer;
-}
-#select-container>div:nth-child(1),.muay-thai
-    {background-color:#b40000}
-#select-container>div:nth-child(1):hover
-    {background-color:#e30000}
-#select-container>div:nth-child(2),.krav-maga
-    {background-color:#3eba00}
-#select-container>div:nth-child(2):hover
-    {background-color:#37e300}
-#select-container>div:nth-child(3),.teakwondo
-    {background-color:#0052ba}
-#select-container>div:nth-child(3):hover
-    {background-color:#0079e3}
-#select-container>div:nth-child(4),.tai-chi
-    {background-color:#a700ba}
-#select-container>div:nth-child(4):hover
-    {background-color:#e000e3}
-#select-container>div:nth-child(5),.muay-boran
-    {background-color:#cc6000}
-#select-container>div:nth-child(5):hover
-    {background-color:#e37400}
-#select-container>div:nth-child(6),.boks
-    {background-color:#734500}
-#select-container>div:nth-child(6):hover
-    {background-color:#823d00}
-#select-container>div:nth-child(7),.wolna-sala
-    {background-color:#88005e}
-#select-container>div:nth-child(7):hover
-    {background-color:#b80032}
-#select-container>div:last-child
-{
-    border-width: 2px;
+    color: white;
+    text-align:center;
+    font-size: calc(20px + 1.5vw);
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    padding: 0 10px 0 10px;
 }
 #table-container
 {
@@ -114,13 +57,44 @@ th,td
 {
     padding:10px;
     border-spacing: 0;
+    text-align:center;
 }
+.muay-thai
+    {background-color:#920000}
+.muay-thai:hover
+    {background-color:#bd0000}
+.krav-maga
+    {background-color:#202020;color:#d9d9d9}
+.krav-maga:hover
+    {background-color:#2a2a2a}
+.teakwondo
+    {background-color:#004194}
+.teakwondo:hover
+    {background-color:#0058a5}
+.tai-chi
+    {background-color:#115600}
+.tai-chi:hover
+    {background-color:#146500}
+.muay-boran
+    {background-color:#b43200}
+.muay-boran:hover
+    {background-color:#ce3900}
+.boks
+    {background-color:#734500}
+.boks:hover
+    {background-color:#823d00}
+.wolna-sala
+    {background-color:#88005e}
+.wolna-sala:hover
+    {background-color:#b80032}
 td:first-child
 {
     background-color:#e3d200;
     width: calc(100px + 7vw);
     padding:0;
 }
+td:hover
+{cursor:pointer}
 .inner-hours
 {
     position:absolute;
@@ -128,10 +102,4 @@ td:first-child
     width: calc(100px + 7vw + 8px);
     margin-left: -8px;
     margin-top: -10px;
-}
-@media only screen and (min-width: 992px) {
-    main
-    {
-        margin-top: 90px;
-    }
 }
