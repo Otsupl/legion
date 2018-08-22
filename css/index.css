@@ -103,14 +103,6 @@
 }
 #training-section::after
     {clear:both;}
-#prices h3 
-{
-    color: white;
-    font-size: 2em;
-    font-weight: 700;
-    font-family: 'Cinzel', serif;
-}
-
 #map h3
 {
     color: white;
@@ -196,40 +188,6 @@
     
 }
 
-.pitem
-{
-    display: block;
-    width: 80%;
-    margin: 20px auto;
-    padding: calc(7px + 1vw);
-    border: 1px solid white;
-    color: white;
-}
-
-.pitemhead
-{
-    font-size: calc(30px + 1.5vw);
-}
-
-.pitemdesc
-{
-    margin: 15px 10px;
-    color: #baab00;
-}
-.pitem-gym
-{
-    margin: 15px 10px;
-    color: #da0000;
-    font-weight:700;
-}
-.pitem-gym>a
-{
-    color: #baab00;
-}
-.pitemprice
-{
-    font-size: calc(30px + 1.7vw);
-}
 .titem-container
 {
     width: 50%;
@@ -438,30 +396,6 @@ button
         clear:both;
     }
     
-    #priceitems
-    {
-        display: table;
-        width: 100%;
-        border-spacing: 1.66vw;
-        table-layout: fixed;
-    }
-
-    .pitem
-    {
-        display: table-cell;
-        border-spacing: 0;
-        position: relative;
-    }
-    .pitemhead
-    {
-        font-size: calc(16px + 1vw);
-    }
-    .pitemprice
-    {
-        font-size: calc(15px + 1.6vw);
-    }
-    #priceitems::after
-        {clear:both}
     #locationdesc 
     {
         font-size: 20px;
@@ -488,11 +422,6 @@ button
     {
         width: 16.666%;
         padding-top: 16.666%; /* 1:1 Aspect Ratio */
-    }
-
-    .pitemdesc, .pitem-gym
-    {
-        font-size: calc(12px + 0.7vw);
     }
 
 }
