@@ -60,17 +60,17 @@ div
     background: url(../img/marts/min/taich.jpg) no-repeat center;
 }
 
-#taekw:hover 
+.taekwactive
 {
     background: url(../img/marts/blur/min/taekw.jpg) no-repeat center;
 }
 
-#muayt:hover
+.muaytactive
 {
     background: url(../img/marts/blur/min/muayt.jpg) no-repeat center;
 }
 
-#taich:hover
+.taichactive
 {
     background: url(../img/marts/blur/min/taich.jpg) no-repeat center;
 }
