@@ -93,7 +93,7 @@ td:first-child
     width: calc(100px + 7vw);
     padding:0;
 }
-td:hover
+td[class]:hover
 {cursor:pointer}
 .inner-hours
 {
