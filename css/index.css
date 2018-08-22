@@ -65,7 +65,7 @@
 #freebanner
 {
     text-align: center;
-    background-color:#9300001e;
+    background-color:#9300006e;
     line-height:2em;
     padding: 10px 5px;
 }
@@ -180,22 +180,6 @@
     margin: 40px auto 20px auto;
     font-size: calc(13px + 1vw);
 }
-
-#freebannerinfo
-{
-    color: white;
-    background-color:#9b4d4d86;
-    text-align: center;
-
-}
-
-#freebannerinfo p 
-{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #scrollarrow
 {
     display: none;
@@ -205,22 +189,6 @@
 {
     display: none;
 }
-
-.accordion {
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
-
-.active, .accordion:hover {
-    background-color:#9b4d4d86 !important;
-}
-
 .panel {
     max-height: 0;
     overflow: hidden;
@@ -285,7 +253,7 @@
 
 .titem:hover 
 {
-    background: rgba(255, 0, 0, 0.253);
+    background: #9300006e;
 }
 
 .titempic
@@ -371,11 +339,6 @@ button
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    #container 
-    {
-        width: 80%;
-    }
-
     #photo
     {
         height:100vh;
@@ -431,14 +394,13 @@ button
         padding: 10px 10px 0px 10px;
         background: rgba(63, 63, 63, 0.349);
         cursor: pointer;
-        transition: background 0.4s;
-        transition: visibility 0.2s, opacity 0.2s linear;
+        transition: visibility 0.2s, opacity 0.2s linear, background 0.4s;
         border-radius: 20px;
     }
 
     #scrollup:hover 
     {
-        background: rgba(255, 0, 0, 0.253);
+        background: #9300006e;
     }
 
     #freebanner 
@@ -450,12 +412,6 @@ button
     {
         font-size: 26px;
     }
-
-    #abouttr button 
-    {
-        padding: 20px;
-    }
-
     #trdesc
     {
         width: calc(100% - 350px);
