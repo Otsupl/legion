@@ -85,15 +85,6 @@
     font-family: 'Cinzel', serif;
     color:#baab00;
 }
-
-#trainingopts
-{
-    /* width: 100%; */
-    /* background: white; */
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
-}
-
 #training-section h3
 {
     color: white;
@@ -171,15 +162,6 @@
     color: white;
     margin: 40px auto 20px auto;
     font-size: calc(13px + 1vw);
-}
-#scrollarrow
-{
-    display: none;
-}
-
-#scrollup
-{
-    display: none;
 }
 .panel {
     max-height: 0;
@@ -316,50 +298,6 @@ button
         font-family: 'Cinzel', serif;
         background: rgba(0, 0, 0, 0.61);
         padding: 10px;
-    }
-
-    #scrollarrow 
-    {
-        display: block;
-        color: #baab00;
-    }
-
-    #scrollarrow i 
-    {
-        cursor: pointer;
-        transition: 0.3s;
-        font-size: calc(25px + 0.8vh + 1.5vw);
-        vertical-align: middle;
-        line-height: calc(30px + 0.8vh + 1.5vw);
-    }
-
-    #scrollarrow i:hover
-    {
-        font-size: calc(30px + 0.8vh + 1.5vw);
-        color: #b3ad6f;
-    }
-
-    #scrollup
-    {
-        display: block;
-        visibility: hidden;
-        opacity: 0;
-        position: fixed;
-        color: white;
-        z-index: 99999;
-        font-size: 40px;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 10px 0px 10px;
-        background: rgba(63, 63, 63, 0.349);
-        cursor: pointer;
-        transition: visibility 0.2s, opacity 0.2s linear, background 0.4s;
-        border-radius: 20px;
-    }
-
-    #scrollup:hover 
-    {
-        background: #9300006e;
     }
 
     #freebanner 

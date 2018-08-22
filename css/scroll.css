@@ -1,0 +1,58 @@
+
+#scrollarrow
+{
+    display: none;
+}
+
+#scrollup
+{
+    display: none;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    #scrollarrow 
+    {
+        display: block;
+        color: #baab00;
+    }
+
+    #scrollarrow i 
+    {
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: calc(25px + 0.8vh + 1.5vw);
+        vertical-align: middle;
+        line-height: calc(30px + 0.8vh + 1.5vw);
+    }
+
+    #scrollarrow i:hover
+    {
+        font-size: calc(30px + 0.8vh + 1.5vw);
+        color: #b3ad6f;
+    }
+
+    #scrollup
+    {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        color: white;
+        z-index: 99999;
+        font-size: 40px;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 10px 0px 10px;
+        background: rgba(63, 63, 63, 0.349);
+        cursor: pointer;
+        transition: visibility 0.2s, opacity 0.2s linear, background 0.4s;
+        border-radius: 20px;
+    }
+
+    #scrollup:hover 
+    {
+        background: #9300006e;
+    }
+
+}
