@@ -12,6 +12,22 @@ h1
     font-family: 'Cinzel', serif;
     padding: 0 10px 0 10px;
 }
+button
+{
+    padding: 15px;
+    background: #baab00;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: Cinzel, 'serif';
+    font-weight: 700;
+    margin-top: 20px;
+}
+button:hover 
+{
+    background: #f5e000;
+}
 #table-container
 {
     overflow:auto;
