@@ -180,7 +180,6 @@
 		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
         <script>
-			"use strict";
 			document.getElementById('cennik_button').addEventListener('click',(evt)=>
 			{
 				/*zapobiega sztywnemu przeskoczeniu do cennika, jeżeli działa js*/
@@ -189,7 +188,6 @@
 			});
 			document.getElementById('kontakt_button').addEventListener('click',(evt)=>
 			{
-				/*zapobiega sztywnemu przeskoczeniu do cennika, jeżeli działa js*/
 				evt.preventDefault();
 				skrol('kontakt');
 			});
@@ -204,6 +202,22 @@
 				/*scrolluje do cennika*/
 				window.scroll({ top: (document.getElementById(gdzie).getBoundingClientRect().top + window.scrollY), left: 0, behavior: 'smooth' });
 			}
+			window.addEventListener('scroll',()=>
+			{
+				"use strict";
+				var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
+				const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+				var elements = [document.getElementById('cennik'), document.getElementById('kontakt')];
+				for(let i=0; i< elements.length; i++)
+				{
+					var elementOffset = elements[i].getBoundingClientRect().top + window.scrollY;
+					var kontakt_elementOffset = elements[1].getBoundingClientRect().top + window.scrollY;
+					if(scrolled + 0.2*windowHeight > elementOffset && (!(scrolled + 0.2*windowHeight > kontakt_elementOffset) || i==1))
+						document.getElementById(elements[i].id + '_button').classList.add('current');
+					else 
+						document.getElementById(elements[i].id + '_button').classList.remove('current');
+				}
+			});
 		</script>
 	</body>
 </html>
