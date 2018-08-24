@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<!-- Nawigacja -->
-		<nav id="navbar">
+		<nav id="navbar" class='navbar-transparent'>
             <div id="nav" class="nav-transparent">
 				<a href='/' id="logo">LEGION</a>
 				<div id="outerburger">
@@ -34,10 +34,10 @@
 					<li><a href="about.html">O&nbsp;nas</a></li>
 					<li><a href="training.html">Co&nbsp;trenujemy?</a></li>
 					<li><a href="schedule.html">Grafik</a></li>
-					<li id="cennik_button"><a href="index.html#cennik">Cennik</a></li>
 					<li><a href="gym.html">Siłownia</a></li>
 					<li><a href="#">Galeria</a></li>
-					<li><a href="contact.html">Kontakt</a></li>
+					<li id="cennik_button"><a href="index.html#cennik">Cennik</a></li>
+					<li id="kontakt_button"><a href="index.html#kontakt">Kontakt</a></li>
 				</ul>
             </div>
 		</nav>
@@ -116,7 +116,8 @@
 					  <div id='trphoto'></div>
 					  <div id ='trdesc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin sit amet lacus dapibus molestie. Donec accumsan sem nibh, ut gravida nulla interdum nec. Morbi blandit pulvinar nunc elementum, consectetur adipiscing elit. Nam sollicitudin sit amet lacus dapibus molestie. Donec accumsan sem nibh, ut gravida nulla interdum nec. Morbi blandit pulvinar nunc elementum, consectetur adipiscing elit. Nam sollicitudin sit amet lacus dapibus molestie. Donec accumsan sem nibh, ut gravida nulla interdum nec. Morbi blandit pulvinar nunc elementum aliquam.<button><a href="about.html#trener">CZYTAJ DALEJ</a></button></div>
 			  </section>
-			  <section id="cennik">
+			  <div class='fakeid'><div id="cennik"></div></div>
+			  <section id="prices">
 				  <h3>CENNIK</h3>
 				  <div id="priceitems">
 					<div class="pitem">
@@ -137,6 +138,7 @@
 					</div>
 				  </div>
 			  </section>
+			  <div class='fakeid'><div id="kontakt"></div></div>
 			  <section id="map">
 				  <h3>JAK NAS ZNALEŹĆ?</h3>
 				  <div id="mapimg" class="center-img-container">
@@ -183,17 +185,25 @@
 			{
 				/*zapobiega sztywnemu przeskoczeniu do cennika, jeżeli działa js*/
 				evt.preventDefault();
-
+				skrol('cennik');
+			});
+			document.getElementById('kontakt_button').addEventListener('click',(evt)=>
+			{
+				/*zapobiega sztywnemu przeskoczeniu do cennika, jeżeli działa js*/
+				evt.preventDefault();
+				skrol('kontakt');
+			});
+			function skrol(gdzie)
+			{
 				/*dodaje #cennik na końcu adresu url, żeby można było go skopiować*/
 				if (history.pushState) {
-					var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '#cennik';
+					var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '#' + gdzie;
 					window.history.pushState({path:newurl},'',newurl);
 				}
 
 				/*scrolluje do cennika*/
-				window.scroll({ top: (document.getElementById("cennik").getBoundingClientRect().top + window.scrollY - 90), left: 0, behavior: 'smooth' });
-			});
-
+				window.scroll({ top: (document.getElementById(gdzie).getBoundingClientRect().top + window.scrollY), left: 0, behavior: 'smooth' });
+			}
 		</script>
 	</body>
 </html>
