@@ -46,13 +46,13 @@
 {
     color:#d6d6d6;
     font-size: calc(8px + 1.5vh + 1.8vw);
-    margin: 0;
+    margin: 0 3vw;
 }
 #phototext>h2
 {
     color:#baab00;
     font-size: calc(7px + 0.6vh + 1vw);
-    margin: 3vh 0;
+    margin: 3vh 3vw;
 }
 
 #photo_container::after
@@ -66,15 +66,16 @@
 {
     text-align: center;
     background-color:#9300006e;
-    line-height:2em;
     padding: 10px 5px;
 }
 
 #freebanner h3
 {
    color:#d6d6d6;
-   margin:0;
+   margin: calc(6px + 0.7vw) 3vw;
    font-size:15px;
+   font-size: calc(13px + 1vw);
+   line-height: 1.5em;
 }
 
 #description-section h3
@@ -172,9 +173,9 @@
 
 .titem-container
 {
-    width: 50%;
-    padding-top: 50%; /* 1:1 Aspect Ratio */
-    float: left;
+    width: calc(70px + 18%);
+    padding-top: calc(70px + 20%); /* 1:1 Aspect Ratio */
+    display: inline-block;
     position: relative;
 }
 .titem
@@ -212,7 +213,7 @@
 {
     height: 30px;
     line-height: 30px;
-    font-size: calc(13px + 0.5vw);
+    font-size: calc(13px + 0.7vw);
 }
 
 .description
@@ -296,7 +297,7 @@ button
 
     #container 
     {
-        width: 80%;
+        width: calc(70vw + 70px);
     }
     #abouttr button 
     {
@@ -308,10 +309,6 @@ button
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
 
-    #freebanner h3
-    {
-        font-size: 25px;
-    }
     .description
     {
         font-size: 20px;
@@ -341,16 +338,6 @@ button
         font-family: 'Cinzel', serif;
         background: rgba(0, 0, 0, 0.61);
         padding: 10px;
-    }
-
-    #freebanner 
-    {
-        padding: 20px 0 20px 0;
-    }
-
-    #freebanner h3 
-    {
-        font-size: 26px;
     }
     #trdesc
     {
@@ -396,10 +383,16 @@ button
 
     .titem-container
     {
-        width: 16.666%;
-        padding-top: 16.666%; /* 1:1 Aspect Ratio */
+        width: 15%;
+        padding-top: 15%; /* 1:1 Aspect Ratio */
     }
-
+    
+    .titemdesc
+    {
+        height: 30px;
+        line-height: 30px;
+        font-size: calc(12px + 0.5vw);
+    }
     #priceitems
     {
         display: table;

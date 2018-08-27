@@ -100,7 +100,7 @@ th,td
 .boks:hover
     {background-color:#823d00}
 .wolna-sala
-    {background-color:#88005e}
+    {background-color: #88005e;}
 .wolna-sala:hover
     {background-color:#b80032}
 td:first-child
