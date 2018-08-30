@@ -132,7 +132,7 @@
     {
         background-color:transparent;
     }
-    #nav,#nav.nav-active
+    #nav,#nav.nav-active,#nav:hover
     {
         padding:20px;
         background-color:#131313;

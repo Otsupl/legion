@@ -222,6 +222,8 @@
 				"use strict";
 				var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
 				const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+				
+				/*dodaje klase current do cennika lub kontaktu gdy są widoczne*/
 				var elements = [document.getElementById('cennik'), document.getElementById('kontakt')];
 				for(let i=0; i< elements.length; i++)
 				{
@@ -231,6 +233,14 @@
 						document.getElementById(elements[i].id + '_button').classList.add('current');
 					else 
 						document.getElementById(elements[i].id + '_button').classList.remove('current');
+				}
+
+				/*paralaksa dla slidera*/
+				var photos = document.getElementsByClassName('photo');
+				for(let i=0; i<photos.length; i++)
+				{
+					if(scrolled < windowHeight)
+						photos[i].style.top = 0.4*scrolled + 'px';
 				}
 			});
 			
