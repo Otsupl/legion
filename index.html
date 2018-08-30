@@ -193,6 +193,13 @@
 			});
 			function skrol(gdzie)
 			{
+				/*jeżeli nawigacja mobilna jest wysunięta, schowaj ją*/
+				if(document.getElementById("menu").classList.contains('nav-open'))
+				{
+					document.getElementById("menu").classList.toggle('nav-open');
+					document.getElementById('burger').classList.toggle('menu');
+					document.getElementById('burger').classList.toggle('close');
+				}
 				/*dodaje #cennik na końcu adresu url, żeby można było go skopiować*/
 				if (history.pushState) {
 					var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '#' + gdzie;
