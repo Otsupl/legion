@@ -57,7 +57,7 @@ body
 #marts h1 
 {
     color: #baab00;
-    font-size: 1.8em;
+    font-size: calc(20px + 2vw);
     font-weight: 700;
     font-family: 'Cinzel', serif;
 }
@@ -109,12 +109,6 @@ body
     {
         width:60%;
     }
-
-    #marts 
-    {
-        margin-top: 50px;
-    }
-    
     .js #taekw
     {
         background-image: url(../img/marts/mid/taekw.jpg);
