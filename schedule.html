@@ -221,6 +221,54 @@
 			{
 				setHoursHeight();
 			});
+			var boran = Array.prototype.slice.call(document.getElementsByClassName('muay-boran'));
+			var chi = Array.prototype.slice.call(document.getElementsByClassName('tai-chi'));
+			var thai = Array.prototype.slice.call(document.getElementsByClassName('muay-thai'));
+			var maga = Array.prototype.slice.call(document.getElementsByClassName('krav-maga'));
+			var sala = Array.prototype.slice.call(document.getElementsByClassName('wolna-sala'));
+			var crus = Array.prototype.slice.call(document.getElementsByClassName('montifera'));
+			var teakwondo = Array.prototype.slice.call(document.getElementsByClassName('teakwondo'));
+			var wszystko =  boran.concat(boran, chi, thai, maga, sala, crus, teakwondo);
+
+			for (let i = 0; i < wszystko.length; i++) 
+			{
+				wszystko[i].addEventListener("click", function() 
+				{
+					var desc_class = "";
+					switch(this.className)
+					{
+						case "muay-boran": desc_class = "boran"; break;
+						case "tai-chi": desc_class = "chi"; break;
+						case "muay-thai": desc_class = "thai"; break;
+						case "krav-maga": desc_class = "maga"; break;
+						case "wolna-sala": desc_class = "sala"; break;
+						case "montifera": desc_class = "crus"; break;
+						case "teakwondo": desc_class = "teakwondo"; break;
+					}
+					desc_class += '-desc';
+					let description = document.getElementById(desc_class);
+					if (!description.style.maxHeight)
+					{
+						description.style.visibility = "visible";
+						description.style.maxWidth = description.scrollWidth + "px";
+						description.style.maxHeight = description.scrollHeight + "px";
+						setTimeout( () => {description.classList.add('active')}, 2400);
+					}
+				});
+			}
+
+			var close_circle = document.getElementsByClassName("circle");
+
+			for (let i = 0; i < close_circle.length; i++) 
+			{
+				close_circle[i].addEventListener("click", function() 
+				{
+					let description = this.parentElement.parentElement
+					description.style.maxWidth = null;
+					description.style.maxHeight = null;
+					setTimeout( () => {description.style.visibility = "hidden";description.classList.remove('active');}, 2400);
+				});
+			}
 		</script>
 	</body>
 </html>

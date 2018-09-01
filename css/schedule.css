@@ -130,18 +130,21 @@ td[class]:hover
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
-    display:none;
     overflow:hidden;
+    max-height:0;
+    max-width:0;
+    transition: max-width 1s ease-in 0.2s, max-height 1s ease-out 1.4s;
+    border: 2px solid #baab00;
+    visibility:hidden;
 }
-#thai-desc
+.active.outerdesc
 {
-    display:block;
+	transition: max-height 1s ease-in 0.2s, max-width 1s ease-out 1.4s;
 }
 .desc
 {
     position:relative;
     background-color: #151515;
-    border: 2px solid #baab00;
     padding: 30px;
     text-align:center;
     color:white;
