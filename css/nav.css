@@ -11,6 +11,7 @@
     z-index: 10;
     transition: 0.3s;
 	position:fixed;
+	text-align:left;
 }
 
 #logo
