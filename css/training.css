@@ -4,39 +4,56 @@ body
 {
     text-align: center;
 }
-
-div 
-{
-    transition: 0.2s;
-}
-
 .mart
 {
-    height: 40vh;
+    height: 90vw;
     border-bottom: 1px #baab00 solid;
-    transition: background 0.3s;
+    transition: 0.3s;
+    background-repeat:no-repeat;
+    /*background-size: cover;*/
+    background-position: center center;
 }
 
-.mart:hover 
+.js .mart:hover 
 {
     cursor: pointer;
 }
 
+.centerdesc
+{
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
 .martheader
 {
-    padding: 2px;
-    background: rgba(0, 0, 0, 0.678);
+    display: inline-block;
     width: 60%;
-    height: 40px;
-    line-height: 40px;
-    margin: 15vh auto 0 auto;
+    height: 2em;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.678);
     color: white;
-    font-size: 1.5em;
-    font-weight: 700;
     font-family: 'Cinzel', serif;
+    font-size: calc(15px + 2vw);
+    line-height: 2em;
+    font-weight: 700;
 }
-
-
+.martdesc
+{
+    display: inline-block;
+    font-size:calc(8px + 1vw);
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+    margin-top:20px;
+    padding:20px 10px;
+}
+.js .accordion
+{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
 #marts h1 
 {
     color: #baab00;
@@ -45,34 +62,34 @@ div
     font-family: 'Cinzel', serif;
 }
 
-#taekw
+.js #taekw
 {
-    background: url(../img/marts/min/taekw.jpg) no-repeat center;
+    background-image: url(../img/marts/min/taekw.jpg);
 }
 
-#muayt
+.js #muayt
 {
-    background: url(../img/marts/min/muayt.jpg) no-repeat center;
+    background-image: url(../img/marts/min/muayt.jpg);
 }
 
-#taich
+.js #taich
 {
-    background: url(../img/marts/min/taich.jpg) no-repeat center;
+    background-image: url(../img/marts/min/taich.jpg);
 }
 
-#taekw:hover 
+#taekw, #taekw.active, #taekw:hover 
 {
-    background: url(../img/marts/blur/min/taekw.jpg) no-repeat center;
+    background-image: url(../img/marts/blur/min/taekw.jpg);
 }
 
-#muayt:hover
+#muayt, #muayt.active, #muayt:hover
 {
-    background: url(../img/marts/blur/min/muayt.jpg) no-repeat center;
+    background-image: url(../img/marts/blur/min/muayt.jpg);
 }
 
-#taich:hover
+#taich, #taich.active, #taich:hover
 {
-    background: url(../img/marts/blur/min/taich.jpg) no-repeat center;
+    background-image: url(../img/marts/blur/min/taich.jpg);
 }
 
 
@@ -81,14 +98,16 @@ div
 
     .mart 
     {
-        height: 60vh;
+        height: 50vw;
     }
 
     .martheader
     {
         width: 40%;
-        font-size: 2.2em;
-        position: relative;
+    }
+    .martdesc
+    {
+        width:60%;
     }
 
     #marts 
@@ -96,42 +115,36 @@ div
         margin-top: 50px;
     }
     
-    #taekw
+    .js #taekw
     {
-        background: url(../img/marts/mid/taekw.jpg) no-repeat center;
+        background-image: url(../img/marts/mid/taekw.jpg);
     }
 
-    #muayt
+    .js #muayt
     {
-        background: url(../img/marts/mid/muayt.jpg) no-repeat center;
+        background-image: url(../img/marts/mid/muayt.jpg);
     }
 
-    #taich
+    .js #taich
     {
-        background: url(../img/marts/mid/taich.jpg) no-repeat center;
-    }
-    
-    #taekw:hover 
-    {
-        background: url(../img/marts/blur/mid/taekw.jpg) no-repeat center;
+        background-image: url(../img/marts/mid/taich.jpg);
     }
 
-    #muayt:hover
+    #taekw, #taekw.active, #taekw:hover 
     {
-        background: url(../img/marts/blur/mid/muayt.jpg) no-repeat center;
+        background-image: url(../img/marts/blur/mid/taekw.jpg);
     }
 
-    #taich:hover
+    #muayt, #muayt.active, #muayt:hover
     {
-        background: url(../img/marts/blur/mid/taich.jpg) no-repeat center;
-    }
+        background-image: url(../img/marts/blur/mid/muayt.jpg);
     }
 
-/* Medium devices (landscape tablets, 800px and up) */
-@media only screen and (min-width: 800px) {
+    #taich, #taich.active, #taich:hover
+    {
+        background-image: url(../img/marts/blur/mid/taich.jpg);
+    }
 }
-
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
@@ -152,40 +165,34 @@ div
 
 @media only screen and (min-width: 1400px)
 {
-    #taekw
+    .js #taekw
     {
-        background: url(../img/marts/max/taekw.jpg) no-repeat center;
+        background-image: url(../img/marts/max/taekw.jpg);
     }
 
-    #muayt
+    .js #muayt
     {
-        background: url(../img/marts/max/muayt.jpg) no-repeat center;
+        background-image: url(../img/marts/max/muayt.jpg);
     }
 
-    #taich
+    .js #taich
     {
-        background: url(../img/marts/max/taich.jpg) no-repeat center;
+        background-image: url(../img/marts/max/taich.jpg);
     }
 
-    
-    #taekw:hover 
+    #taekw, #taekw.active, #taekw:hover 
     {
-        background: url(../img/marts/blur/max/taekw.jpg) no-repeat center;
+        background-image: url(../img/marts/blur/max/taekw.jpg);
     }
 
-    #muayt:hover
+    #muayt, #muayt.active, #muayt:hover
     {
-        background: url(../img/marts/blur/max/muayt.jpg) no-repeat center;
+        background-image: url(../img/marts/blur/max/muayt.jpg);
     }
 
-    #taich:hover
+    #taich, #taich.active, #taich:hover
     {
-        background: url(../img/marts/blur/max/taich.jpg) no-repeat center;
+        background-image: url(../img/marts/blur/max/taich.jpg);
     }
 
-}
-
-
-/* Extra enormous devices (TV, 1700px and up) */
-@media only screen and (min-width: 1700px) {
 }

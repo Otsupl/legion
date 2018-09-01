@@ -47,13 +47,28 @@
 			<h1>Co trenujemy?</h1>
 			<div id="container">
 				<div class="mart" id="taekw">
-					<div class="martheader">Taekwondo</div>
+					<div class="centerdesc">
+						<div class="martheader">Taekwondo</div>
+						<div class="accordion">
+							<div class="martdesc">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
+						</div>
+					</div>
 				</div>
 				<div class="mart" id="muayt">
-					<div class="martheader">Muay Thai</div>
+					<div class="centerdesc">
+						<div class="martheader">Muay Thai</div>
+						<div class="accordion">
+							<div class="martdesc">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
+						</div>
+					</div>
 				</div>
 				<div class="mart" id="taich">
-					<div class="martheader">Tai Chi</div>
+					<div class="centerdesc">
+						<div class="martheader">Tai Chi</div>
+						<div class="accordion">
+							<div class="martdesc">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -83,9 +98,20 @@
 		<script src="js/nav.js"></script>
 		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
-		<script src="js/training.js"></script>
         <script>
 			"use strict";
+			var mart = document.getElementsByClassName("mart");
+			for (let i = 0; i < mart.length; i++) {
+				mart[i].addEventListener("click", function() {
+					this.classList.toggle('active');
+				  let accordion = this.children[0].children[1];
+				  if (accordion.style.maxHeight){
+					accordion.style.maxHeight = null;
+				  } else {
+					accordion.style.maxHeight = accordion.scrollHeight + "px";
+				  } 
+				});
+			  }
 		</script>
 	</body>
 </html>
