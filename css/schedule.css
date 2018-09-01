@@ -119,3 +119,58 @@ td[class]:hover
     margin-left: -8px;
     margin-top: -10px;
 }
+
+/*------------------------------------------------------------------------------------*/
+/* ------------------------------------- opisy -------------------------------------- */
+/*------------------------------------------------------------------------------------*/
+
+.outerdesc
+{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    display:none;
+    overflow:hidden;
+}
+#thai-desc
+{
+    display:block;
+}
+.desc
+{
+    position:relative;
+    background-color: #151515;
+    border: 2px solid #baab00;
+    padding: 30px;
+    text-align:center;
+    color:white;
+    width: calc(130px + 30vw);
+}
+.desc-header
+{
+    font-size: calc(20px + 1.5vw);
+    font-weight: 700;
+    margin-top:10px;
+}
+.desc-txt
+{
+    margin-top:calc(20px + 0.6vw);
+}
+.circle
+{
+    background-color:#434343;
+    display:inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 20px;
+}
+.close-desc
+{
+    position:relative!important;
+    color:black;
+}
+.close-desc:hover
+{
+    cursor:pointer;
+}
