@@ -280,7 +280,7 @@
 					co.style.visibility = "visible";
 					co.style.maxWidth = co.scrollWidth + "px";
 					co.style.maxHeight = co.scrollHeight + "px";
-					setTimeout(()=>{co.classList.add('active');co.classList.remove('working')}, 2400);
+					setTimeout(()=>{co.classList.add('active');co.classList.remove('working')}, 1600);
 				}
 			}
 			function zamknij(co)
@@ -290,7 +290,7 @@
 					co.classList.add('working');
 					co.style.maxWidth = null;
 					co.style.maxHeight = null;
-					setTimeout(()=>{co.style.visibility = "hidden";co.classList.remove('active');co.classList.remove('working')}, 2400);
+					setTimeout(()=>{co.style.visibility = "hidden";co.classList.remove('active');co.classList.remove('working')}, 1600);
 				}
 			}
 		</script>
