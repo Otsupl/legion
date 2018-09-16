@@ -14,11 +14,34 @@ body {
 
 #header
 {
-    margin:10000px 0;
-    height: 30vw;
+    height: 50vw;
     background-image: url(../img/abouttr/history.jpg);
+    color: white;
 }
-
+#header>div
+{
+    background-color: #00000096;
+    height: 100%;
+}
+#header h1
+{
+    font-size: calc(30px + 2vw);
+    color: #baab00;
+}
+#header h2
+{
+    font-size: calc(17px + 1vw);
+}
+#oferta h2
+{
+    font-size: calc(20px + 1.2vw);
+    margin-bottom:0.6em
+}
+#oferta ul>li
+{
+    font-size: calc(13px + 0.7vw);
+    margin:0.2em
+}
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
 }

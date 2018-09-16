@@ -45,6 +45,14 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.centered
+{
+	position:relative;
+	top:50%;
+	left:50%;
+    transform: translate(-50%, -50%);
+}
 .aos-animate
 {
 	width: 100%;
