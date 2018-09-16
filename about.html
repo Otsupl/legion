@@ -124,7 +124,7 @@
 						if((pOffset > scrolled + windowHeight) || (pOffset + paralaksy[i].scrollHeight < scrolled)) 
 							continue;
 						if(paralaksy[i].classList.contains('parralax-slow'))
-							paralaksy[i].style.backgroundPosition = '50% '+Math.round(-200 + (pOffset - scrolled)*0.7)+'px';
+							paralaksy[i].style.backgroundPosition = '50% calc(100px - 35vw + '+Math.round((pOffset - scrolled)*0.7)+'px)';
 						else
 							paralaksy[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
 					}
