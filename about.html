@@ -117,28 +117,33 @@
 					const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 					const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
 
-					for(let i=0; i<zwykla.length; i++)
+					if(zwykla)
 					{
-						let pOffset = zwykla[i].getBoundingClientRect().top + window.scrollY;
+						for(let i=0; i<zwykla.length; i++)
+						{
+							let pOffset = zwykla[i].getBoundingClientRect().top + window.scrollY;
 
-						if((pOffset > scrolled + windowHeight) || (pOffset + zwykla[i].scrollHeight < scrolled)) 
-							continue;
-						if(zwykla[i].classList.contains('parallax-slow'))
-							zwykla[i].style.backgroundPosition = '50% calc(100px - 35vw + '+Math.round((pOffset - scrolled)*0.7)+'px)';
-						else
-							zwykla[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
+							if((pOffset > scrolled + windowHeight) || (pOffset + zwykla[i].scrollHeight < scrolled)) 
+								continue;
+							if(zwykla[i].classList.contains('parallax-slow'))
+								zwykla[i].style.backgroundPosition = '50% calc(100px - 35vw + '+Math.round((pOffset - scrolled)*0.7)+'px)';
+							else
+								zwykla[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
+						}
 					}
-
-					for(let i=0; i<tekst.length; i++)
+					if(tekst)
 					{
-						let pOffset = tekst[i].getBoundingClientRect().top + window.scrollY;
+						for(let i=0; i<tekst.length; i++)
+						{
+							let pOffset = tekst[i].getBoundingClientRect().top + window.scrollY;
 
-						if((pOffset > scrolled + windowHeight) || (pOffset + tekst[i].scrollHeight < scrolled)) 
-							continue;
-						if(tekst[i].classList.contains('parallax-short'))
-							tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/80))+'px';
-						else
-							tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)*0.07*(windowWidth/1000))+'px';
+							if((pOffset > scrolled + windowHeight) || (pOffset + tekst[i].scrollHeight < scrolled)) 
+								continue;
+							if(tekst[i].classList.contains('parallax-short'))
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/80))+'px';
+							else
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)*0.07*(windowWidth/1000))+'px';
+						}
 					}
 				}
         	}
