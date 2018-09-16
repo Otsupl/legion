@@ -50,30 +50,30 @@ body {
     font-size: calc(20px + 1.8vw);
     color: #c1b888;
 }
-#trener
+#trener-desc
 {
     background-image: url(../img/abouttr/chiny.jpg);
     color: white;
     text-align: none;
     display: inline-block;
 }
-#trener>div
+#trener-desc>div
 {
     width:80%;
     margin:20px auto;
 }
-#trener>div>div
+#trener-desc>div>div
 {
     padding:10px;
     border-radius:calc(10px + 1vw);
     background-color: #3f3f3fd9;
 }
-#trener h3
+#trener-desc h3
 {
     font-size: calc(12px + 0.9vw);
     margin:0.6em;
 }
-#trener p
+#trener-desc p
 {
     font-size: calc(11px + 0.6vw);
 }
@@ -91,13 +91,13 @@ body {
 @media only screen and (min-width: 992px) {
     .parallax-slow
     {background-position: 50% calc(100px - 35vw)}
-    #trener
+    #trener-desc
     {
         position:relative;
         height: calc(300px + 30vw);
         display: block;
     }
-    #trener .history
+    #trener-desc .history
     {
         position:absolute;
         top:20px;
@@ -106,7 +106,7 @@ body {
         transform:translate(-50%, 0);
         margin:auto;
     }
-    #trener .now
+    #trener-desc .now
     {
         position:absolute;
         bottom:80px;
