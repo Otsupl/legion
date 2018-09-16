@@ -3,7 +3,6 @@
 body {
     text-align: center;
 }
-
 .parallax
 {
     background-attachment: fixed;
@@ -11,7 +10,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #header
 {
     height: calc(350px + 20vw);
@@ -63,6 +61,9 @@ body {
 {
     width:80%;
     margin:20px auto;
+}
+#trener>div>div
+{
     padding:10px;
     border-radius:calc(10px + 1vw);
     background-color: #3f3f3fd9;
@@ -88,7 +89,8 @@ body {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+    .parallax-slow
+    {background-position: 50% calc(100px - 35vw)}
     #trener
     {
         position:relative;
@@ -103,9 +105,6 @@ body {
         left:50%;
         transform:translate(-50%, 0);
         margin:auto;
-        padding:10px;
-        border-radius:calc(10px + 1vw);
-        background-color: #3f3f3fd9;
     }
     #trener .now
     {
@@ -114,9 +113,10 @@ body {
         right:20px;
         margin: 0;
         width: 25%;
-        padding:10px;
-        border-radius:calc(10px + 1vw);
-        background-color: #3f3f3fd9;
+    }
+    .parallax-text
+    {
+        position:relative;
     }
 }
 
