@@ -107,41 +107,48 @@
 		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
         <script>
-			"use strict";
-			var paralaksy = document.getElementsByClassName('parallax');
-			var paralaksy_text = document.getElementsByClassName('parallax-text');
-			
-			window.addEventListener('scroll',()=>
-			{
+        	function paralaksa(zwykla, tekst)
+        	{
+				"use strict";
 				if(window.matchMedia("(min-width: 992px)"))/*odpala tylko na desktopie*/
 				{
 					var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
 					const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 
-					for(let i=0; i<paralaksy.length; i++)
+					for(let i=0; i<zwykla.length; i++)
 					{
-						let pOffset = paralaksy[i].getBoundingClientRect().top + window.scrollY;
+						let pOffset = zwykla[i].getBoundingClientRect().top + window.scrollY;
 
-						if((pOffset > scrolled + windowHeight) || (pOffset + paralaksy[i].scrollHeight < scrolled)) 
+						if((pOffset > scrolled + windowHeight) || (pOffset + zwykla[i].scrollHeight < scrolled)) 
 							continue;
-						if(paralaksy[i].classList.contains('parallax-slow'))
-							paralaksy[i].style.backgroundPosition = '50% calc(100px - 35vw + '+Math.round((pOffset - scrolled)*0.7)+'px)';
+						if(zwykla[i].classList.contains('parallax-slow'))
+							zwykla[i].style.backgroundPosition = '50% calc(100px - 35vw + '+Math.round((pOffset - scrolled)*0.7)+'px)';
 						else
-							paralaksy[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
+							zwykla[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
 					}
 
-					for(let i=0; i<paralaksy_text.length; i++)
+					for(let i=0; i<tekst.length; i++)
 					{
-						let pOffset = paralaksy_text[i].getBoundingClientRect().top + window.scrollY;
+						let pOffset = tekst[i].getBoundingClientRect().top + window.scrollY;
 
-						if((pOffset > scrolled + windowHeight) || (pOffset + paralaksy_text[i].scrollHeight < scrolled)) 
+						if((pOffset > scrolled + windowHeight) || (pOffset + tekst[i].scrollHeight < scrolled)) 
 							continue;
-						if(paralaksy_text[i].classList.contains('parallax-short'))
-							paralaksy_text[i].style.top = Math.round((scrolled + windowHeight - pOffset)*0.085)+'px';
+						if(tekst[i].classList.contains('parallax-short'))
+							tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)*0.085)+'px';
 						else
-							paralaksy_text[i].style.top = Math.round((scrolled + windowHeight - pOffset)*0.12)+'px';
+							tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)*0.12)+'px';
 					}
 				}
+        	}
+			var paralaksy = document.getElementsByClassName('parallax');
+			var paralaksy_text = document.getElementsByClassName('parallax-text');
+			window.addEventListener('scroll',()=>
+			{
+				paralaksa(paralaksy, paralaksy_text);
+			});
+			window.addEventListener('load',()=>
+			{
+				paralaksa(paralaksy, paralaksy_text);
 			});
 		</script>
 	</body>
