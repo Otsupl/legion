@@ -7,7 +7,7 @@ body {
 .parallax
 {
     background-attachment: fixed;
-    background-position: 50% 0;
+    background-position: 50% 36px;
     background-repeat: no-repeat;
     background-size: cover;
 }
