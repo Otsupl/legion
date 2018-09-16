@@ -7,15 +7,16 @@ body {
 .parallax
 {
     background-attachment: fixed;
-    background-position: 50% 36px;
+    background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #header
 {
-    height: 50vw;
-    background-image: url(../img/abouttr/history.jpg);
+    height: calc(350px + 20vw);
+    background-image: url(../img/abouttr/wudang.jpg);
+    background-position: 50% 36px;
     color: white;
 }
 #header>div
@@ -42,6 +43,30 @@ body {
     font-size: calc(13px + 0.7vw);
     margin:0.2em
 }
+#trener-header
+{
+    padding:30px;
+}
+#trener-header h2
+{
+    font-size: calc(20px + 1.8vw);
+    color: #c1b888;
+}
+#trener
+{
+    background-image: url(../img/abouttr/chiny.jpg);
+    color: white;
+    text-align: none;
+    display: inline-block;
+}
+#trener>div
+{
+    width:80%;
+    margin:20px auto;
+    padding:10px;
+    border-radius:calc(10px + 1vw);
+    background-color: #3f3f3fd9;
+}
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
 }
@@ -55,6 +80,35 @@ body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
+    #trener
+    {
+        position:relative;
+        height: calc(300px + 30vw);
+        display: block;
+    }
+    #trener .history
+    {
+        position:absolute;
+        top:20px;
+        width:80%;
+        left:50%;
+        transform:translate(-50%, 0);
+        margin:auto;
+        padding:10px;
+        border-radius:calc(10px + 1vw);
+        background-color: #3f3f3fd9;
+    }
+    #trener .now
+    {
+        position:absolute;
+        bottom:80px;
+        right:20px;
+        margin: 0;
+        width: 20%;
+        padding:10px;
+        border-radius:calc(10px + 1vw);
+        background-color: #3f3f3fd9;
+    }
 }
 
 /* Extra enormous devices (TV, 1700px and up) */

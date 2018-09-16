@@ -64,6 +64,23 @@
 				</ul>
 			</div>
 		  </section>
+		  <section id='trener-header'>
+		  	<h2>Trener Przemysław Hanuman Danowski</h2>
+		  </section>
+		  <section id="trener" class='parallax parralax-slow'>
+			<div class="history" class="parallax-text">
+				<div>
+				  <h3>Uczył się u najlepszych</h3>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi. Aliquam efficitur hendrerit elementum. Etiam tempus lacus at mi egestas convallis. Duis et purus nibh.</p>
+				</div>
+			</div>
+			<div class="now" class="parallax-text">
+				<div>
+				  <h3>Posiada ogromne umiejętności i wiedzę</h3>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi.</p>
+				</div>
+			</div>
+		  </section>
 		</main>
 		<footer>
 			<h3>Klub sztuk walk LEGION</h3>
@@ -95,16 +112,22 @@
 
 			window.addEventListener('scroll',()=>
 			{
-				var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
-				const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-
-				for(let i=0; i<paralaksy.length; i++)
+				if(window.matchMedia("(min-width: 992px)"))/*odpala tylko na desktopie*/
 				{
-					let pOffset = paralaksy[i].getBoundingClientRect().top + window.scrollY;
+					var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
+					const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 
-					if((pOffset > scrolled + windowHeight) || (pOffset + paralaksy[i].scrollHeight < scrolled)) 
-						continue;
-					paralaksy[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
+					for(let i=0; i<paralaksy.length; i++)
+					{
+						let pOffset = paralaksy[i].getBoundingClientRect().top + window.scrollY;
+
+						if((pOffset > scrolled + windowHeight) || (pOffset + paralaksy[i].scrollHeight < scrolled)) 
+							continue;
+						if(paralaksy[i].classList.contains('parralax-slow'))
+							paralaksy[i].style.backgroundPosition = '50% '+Math.round(-200 + (pOffset - scrolled)*0.7)+'px';
+						else
+							paralaksy[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
+					}
 				}
 			});
 		</script>
