@@ -96,7 +96,7 @@
 				</div>
 			</div>
 			<div class="achievement a-2 desc">
-				<div class="parallax-text parallax-long">
+				<div class="parallax-text parallax-extra-short">
 				  <h3>Sit amet dolor sit</h3>
 				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin consectetur adipiscing elit. Nulla sollicitudin lacus lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi.</p>
 				</div>
@@ -168,15 +168,53 @@
 							if((pOffset > scrolled + windowHeight) || (pOffset + tekst[i].scrollHeight < scrolled)) 
 								continue;
 							else if(tekst[i].classList.contains('parallax-extra-extra-long'))
-								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/350))+'px';
+								tekst[i].style.top = Math.round(
+										(scrolled + windowHeight - pOffset) /((
+											10 /(
+												( windowWidth*windowWidth/2 )/1000000
+											) - 15/Math.pow(windowWidth/1000, 4)
+										)*0.4)
+									)+'px';
 							else if(tekst[i].classList.contains('parallax-extra-long'))
-								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/200))+'px';
+								tekst[i].style.top = Math.round(
+										(scrolled + windowHeight - pOffset) /((
+											10 /(
+												( windowWidth*windowWidth/2 )/1000000
+											) - 15/Math.pow(windowWidth/1000, 4)
+										)*0.6)
+									)+'px';
 							else if(tekst[i].classList.contains('parallax-long'))
-								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/150))+'px';
+								tekst[i].style.top = Math.round(
+										(scrolled + windowHeight - pOffset) /((
+											10 /(
+												( windowWidth*windowWidth/2 )/1000000
+											) - 15/Math.pow(windowWidth/1000, 4)
+										)*1.5)
+									)+'px';
 							else if(tekst[i].classList.contains('parallax-normal'))
-								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/100))+'px';
+								tekst[i].style.top = Math.round(
+										(scrolled + windowHeight - pOffset) /((
+											10 /(
+												( windowWidth*windowWidth/2 )/1000000
+											) - 15/Math.pow(windowWidth/1000, 4)
+										)*1.6)
+									)+'px';
 							else if(tekst[i].classList.contains('parallax-short'))
-								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/80))+'px';
+								tekst[i].style.top = Math.round(
+										(scrolled + windowHeight - pOffset) /((
+											10 /(
+												( windowWidth*windowWidth/2 )/1000000
+											) - 15/Math.pow(windowWidth/1000, 4)
+										)*1.8)
+									)+'px';
+							else if(tekst[i].classList.contains('parallax-extra-short'))
+								tekst[i].style.top = Math.round(
+										(scrolled + windowHeight - pOffset) /((
+											10 /(
+												( windowWidth*windowWidth/2 )/1000000
+											) - 15/Math.pow(windowWidth/1000, 4)
+										)*2.6)
+									)+'px';
 						}
 					}
 				}
