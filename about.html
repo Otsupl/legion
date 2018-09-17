@@ -64,25 +64,53 @@
 				</ul>
 			</div>
 		  </section>
-		  <div class='fakeid'><div id="trener"></div></div>
-		  <section id='trener-header'>
+
+		  <section class='header'>
+		  	<div class='fakeid'><div id="trener"></div></div>
 		  	<h2>Trener Przemysław Hanuman Danowski</h2>
 		  </section>
 		  <section id="trener-desc" class='parallax parallax-slow'>
-			<div class="history">
-				<div class="parallax-text parallax-long">
+			<div class="history desc">
+				<div class="parallax-text parallax-normal">
 				  <h3>Uczył się u najlepszych</h3>
 				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi. Aliquam efficitur hendrerit elementum. Etiam tempus lacus at mi egestas convallis. Duis et purus nibh.</p>
 				</div>
 			</div>
-			<div class="now">
+			<div class="now desc">
 				<div class="parallax-text parallax-short">
 				  <h3>Posiada ogromne umiejętności i wiedzę</h3>
 				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi.</p>
 				</div>
 			</div>
 		  </section>
+
+		  <section class='header'>
+		  	<div class='fakeid'><div id="historia"></div></div>
+		  	<h2>Nasze sukcesy</h2>
+		  </section>
+		  <section id="historia-desc">
+			<div class="achievement a-1 desc">
+				<div class="parallax-text parallax-extra-extra-long">
+				  <h3>Lorem Ipsum adipiscing elit</h3>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi. Aliquam efficitur hendrerit elementum. Etiam tempus lacus at mi egestas convallis. Duis et purus nibh.</p>
+				</div>
+			</div>
+			<div class="achievement a-2 desc">
+				<div class="parallax-text parallax-long">
+				  <h3>Sit amet dolor sit</h3>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin consectetur adipiscing elit. Nulla sollicitudin lacus lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi.</p>
+				</div>
+			</div>
+			<div class="achievement a-3 desc">
+				<div class="parallax-text parallax-short">
+				  <h3>Sit amet dolor sit</h3>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin consectetur adipiscing elit. sollicitudin consectetur adipiscing elit. Nulla sollicitudin lacus lacus sit amet lacinia Nulla sollicitudin lacus lacus sit amet lacinia placerat. Aenean pharetra convallis semper. Nunc leo neque, rutrum eget odio quis, pulvinar tempor mi.</p>
+				</div>
+			</div>
+		  </section>
+
 		</main>
+
 		<footer>
 			<h3>Klub sztuk walk LEGION</h3>
 			<h4>&copy;Wszelkie prawa zastrzeżone</h4>
@@ -139,10 +167,16 @@
 
 							if((pOffset > scrolled + windowHeight) || (pOffset + tekst[i].scrollHeight < scrolled)) 
 								continue;
-							if(tekst[i].classList.contains('parallax-short'))
+							else if(tekst[i].classList.contains('parallax-extra-extra-long'))
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/350))+'px';
+							else if(tekst[i].classList.contains('parallax-extra-long'))
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/200))+'px';
+							else if(tekst[i].classList.contains('parallax-long'))
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/150))+'px';
+							else if(tekst[i].classList.contains('parallax-normal'))
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/100))+'px';
+							else if(tekst[i].classList.contains('parallax-short'))
 								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)/(windowWidth/80))+'px';
-							else
-								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset)*0.07*(windowWidth/1000))+'px';
 						}
 					}
 				}

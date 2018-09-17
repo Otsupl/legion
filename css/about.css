@@ -48,11 +48,11 @@ body {
     font-size: calc(13px + 0.7vw);
     margin:0.2em
 }
-#trener-header
+.header
 {
     padding:30px;
 }
-#trener-header h2
+.header h2
 {
     font-size: calc(20px + 1.8vw);
     color: #c1b888;
@@ -64,25 +64,32 @@ body {
     text-align: none;
     display: inline-block;
 }
-#trener-desc>div
-{
-    width:80%;
-    margin:20px auto;
-}
-#trener-desc>div>div
+.desc>div
 {
     padding:10px;
     border-radius:calc(10px + 1vw);
     background-color: #3f3f3fd9;
+    width:80%;
+    margin:20px auto;
 }
-#trener-desc h3
+.desc h3
 {
     font-size: calc(12px + 0.9vw);
-    margin:0.6em;
+    margin: 0.6em 0;
 }
-#trener-desc p
+.desc p
 {
     font-size: calc(11px + 0.6vw);
+    margin: 0.6em 0;
+}
+#historia-desc
+{
+    background-image: url(../img/abouttr/skaly.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: inline-block;
 }
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
@@ -101,12 +108,13 @@ body {
     #trener-desc
     {
         position:relative;
-        height: calc(300px + 30vw);
+        height: calc(450px + 20vw);
         display: block;
     }
+    .desc
+    {position:absolute}
     #trener-desc .history
     {
-        position:absolute;
         top:20px;
         width:80%;
         left:50%;
@@ -115,15 +123,37 @@ body {
     }
     #trener-desc .now
     {
-        position:absolute;
         bottom:80px;
         right:20px;
         margin: 0;
-        width: 25%;
+        width: 30%;
     }
     .parallax-text
     {
         position:relative;
+    }
+    #historia-desc
+    {
+        position:relative;
+        height: calc(500px + 40vw);
+        display: block;
+    }
+    .a-1
+    {
+        left:10%;
+        width:40%;
+    }
+    .a-2
+    {
+        left: 65%;
+        width:30%;
+        top: calc(70px + 7vw);
+    }
+    .a-3
+    {
+        left: 30%;
+        width:50%;
+        top: calc(200px + 35vw);
     }
 }
 

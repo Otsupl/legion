@@ -31,6 +31,10 @@ body {
     background-color: #131313;
 }
 
+.absolute
+{position:absolute}
+.relative
+{position:relative}
 /*sprawia, że można wyśrodkować zdjęcie tak samo jak by było tłem diva*/
 .center-img-container
 {
