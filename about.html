@@ -69,7 +69,7 @@
 		  	<div class='fakeid'><div id="trener"></div></div>
 		  	<h2>Trener Przemysław Hanuman Danowski</h2>
 		  </section>
-		  <section id="trener-desc" class='parallax parallax-slow'>
+		  <section id="trener-desc" class='parallax parallax-slow parallax-top'>
 			<div class="history desc">
 				<div class="parallax-text parallax-normal">
 				  <h3>Uczył się u najlepszych</h3>
@@ -88,7 +88,7 @@
 		  	<div class='fakeid'><div id="historia"></div></div>
 		  	<h2>Nasze sukcesy</h2>
 		  </section>
-		  <section id="historia-desc">
+		  <section id="historia-desc" class='parallax parallax-slow'>
 			<div class="achievement a-1 desc">
 				<div class="parallax-text parallax-extra-extra-long">
 				  <h3>Lorem Ipsum adipiscing elit</h3>
@@ -159,7 +159,12 @@
 							if((pOffset > scrolled + windowHeight) || (pOffset + zwykla[i].scrollHeight < scrolled)) 
 								continue;
 							if(zwykla[i].classList.contains('parallax-slow'))
-								zwykla[i].style.backgroundPosition = '50% calc(100px - 35vw + '+Math.round((pOffset - scrolled)*0.7)+'px)';
+							{
+								if(zwykla[i].classList.contains('parallax-top'))
+									zwykla[i].style.backgroundPosition = '50% calc(100px - 35vw + '+Math.round((pOffset - scrolled)*0.7)+'px)';
+								else
+									zwykla[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.7 + 70)+'px';
+							}
 							else
 								zwykla[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
 						}
