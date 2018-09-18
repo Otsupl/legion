@@ -106,7 +106,7 @@ th,td
 td:first-child
 {
     background-color:#e3d200;
-    width: calc(100px + 7vw);
+    width: calc(100px + 7vw + 8px);
     padding:0;
 }
 td[class]:hover
