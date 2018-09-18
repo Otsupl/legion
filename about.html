@@ -145,6 +145,11 @@
 					const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 					const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
 
+					function calc_p(size)
+					{
+						return (1200000 / Math.pow(windowWidth, 2) + Math.pow(windowWidth, 2)/2000000)*(1500/windowWidth)*size;
+					}
+
 					if(zwykla)
 					{
 						for(let i=0; i<zwykla.length; i++)
@@ -159,6 +164,7 @@
 								zwykla[i].style.backgroundPosition = '50% '+Math.round((pOffset - scrolled)*0.4)+'px';
 						}
 					}
+
 					if(tekst)
 					{
 						for(let i=0; i<tekst.length; i++)
@@ -168,53 +174,17 @@
 							if((pOffset > scrolled + windowHeight) || (pOffset + tekst[i].scrollHeight < scrolled)) 
 								continue;
 							else if(tekst[i].classList.contains('parallax-extra-extra-long'))
-								tekst[i].style.top = Math.round(
-										(scrolled + windowHeight - pOffset) /((
-											10 /(
-												( windowWidth*windowWidth/2 )/1000000
-											) - 15/Math.pow(windowWidth/1000, 4)
-										)*0.4)
-									)+'px';
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset) / calc_p(1.5))+'px';
 							else if(tekst[i].classList.contains('parallax-extra-long'))
-								tekst[i].style.top = Math.round(
-										(scrolled + windowHeight - pOffset) /((
-											10 /(
-												( windowWidth*windowWidth/2 )/1000000
-											) - 15/Math.pow(windowWidth/1000, 4)
-										)*0.6)
-									)+'px';
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset) / calc_p(2.5))+'px';
 							else if(tekst[i].classList.contains('parallax-long'))
-								tekst[i].style.top = Math.round(
-										(scrolled + windowHeight - pOffset) /((
-											10 /(
-												( windowWidth*windowWidth/2 )/1000000
-											) - 15/Math.pow(windowWidth/1000, 4)
-										)*1.5)
-									)+'px';
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset) / calc_p(4))+'px';
 							else if(tekst[i].classList.contains('parallax-normal'))
-								tekst[i].style.top = Math.round(
-										(scrolled + windowHeight - pOffset) /((
-											10 /(
-												( windowWidth*windowWidth/2 )/1000000
-											) - 15/Math.pow(windowWidth/1000, 4)
-										)*1.6)
-									)+'px';
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset) / calc_p(5.5))+'px';
 							else if(tekst[i].classList.contains('parallax-short'))
-								tekst[i].style.top = Math.round(
-										(scrolled + windowHeight - pOffset) /((
-											10 /(
-												( windowWidth*windowWidth/2 )/1000000
-											) - 15/Math.pow(windowWidth/1000, 4)
-										)*1.8)
-									)+'px';
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset) / calc_p(6.5))+'px';
 							else if(tekst[i].classList.contains('parallax-extra-short'))
-								tekst[i].style.top = Math.round(
-										(scrolled + windowHeight - pOffset) /((
-											10 /(
-												( windowWidth*windowWidth/2 )/1000000
-											) - 15/Math.pow(windowWidth/1000, 4)
-										)*2.6)
-									)+'px';
+								tekst[i].style.top = Math.round((scrolled + windowHeight - pOffset) / calc_p(8))+'px';
 						}
 					}
 				}
