@@ -44,7 +44,30 @@
 		<div id='scrollup' class='hidden' onclick="scrollup()"><i class="fas fa-arrow-up"></i></div>
 		<main>
 		  <div id ="container">
-			
+			<?php
+			$photos = opendir("img/inner-photos");
+			// get each entry
+			while($entryName = readdir($photos)) {
+				$dirArray[] = $entryName;
+			}
+			// close directory
+			closedir($photos);
+			//	count elements in array
+			$indexCount	= count($dirArray);
+			?>
+
+			<ul>
+				<?php
+				// loop through the array of files and print them all in a list
+				for($i=0; $i < $indexCount; $i++) {
+					$extension = substr($dirArray[$i], -3);
+					if ($extension == 'jpg'){
+						echo '<li><img src="img/inner-photos/' . $dirArray[$i] . '" alt="Image" />';
+					}	
+				}
+				?>
+			</ul>	
+
 		  </div>
 		</main>
 		<footer>

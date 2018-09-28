@@ -1,0 +1,6 @@
+#container
+{
+    margin: 100px auto 0 auto;
+    width: calc(70px + 70vw);
+    height: 100px;
+}
