@@ -139,11 +139,12 @@
         	function paralaksa(zwykla, tekst)
         	{
 				"use strict";
-				if(window.matchMedia("(min-width: 992px)"))/*odpala tylko na desktopie*/
+				var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+
+				if(windowWidth > 992)/*odpala tylko na desktopie*/
 				{
 					var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
 					const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-					const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
 
 					function calc_p(size)
 					{
