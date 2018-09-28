@@ -133,13 +133,13 @@ td[class]:hover
     overflow:hidden;
     max-height:0;
     max-width:0;
-    transition: max-width 0.6s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.1s, max-height 0.7s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.9s;
+    transition: max-width 0.4s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0s, max-height 0.5s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.4s;
     border: 2px solid #baab00;
     visibility:hidden;
 }
 .active.outerdesc
 {
-	transition: max-height 0.7s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.1s, max-width 0.6s cubic-bezier(0.53, 0.02, 0.46, 0.96) 1s;
+	transition: max-height 0.5s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0s, max-width 0.4s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.5s;
 }
 .desc
 {

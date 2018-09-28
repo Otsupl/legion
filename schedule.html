@@ -121,7 +121,7 @@
 
 			<div id="boran-desc" class="outerdesc">
 				<div class="desc">
-					<div class="desc-header"></div>
+					<div class="desc-header">Muay Boran</div>
 					<div class="desc-txt">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
 					<div class="circle">
 						<div class="close-desc close icon"></div>
@@ -131,7 +131,7 @@
 
 			<div id="maga-desc" class="outerdesc">
 				<div class="desc">
-					<div class="desc-header"></div>
+					<div class="desc-header">Krav Maga</div>
 					<div class="desc-txt">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
 					<div class="circle">
 						<div class="close-desc close icon"></div>
@@ -141,7 +141,7 @@
 
 			<div id="chi-desc" class="outerdesc">
 				<div class="desc">
-					<div class="desc-header"></div>
+					<div class="desc-header">Tai Chi</div>
 					<div class="desc-txt">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
 					<div class="circle">
 						<div class="close-desc close icon"></div>
@@ -151,7 +151,7 @@
 
 			<div id="teakwondo-desc" class="outerdesc">
 				<div class="desc">
-					<div class="desc-header"></div>
+					<div class="desc-header">Teakwondo</div>
 					<div class="desc-txt">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
 					<div class="circle">
 						<div class="close-desc close icon"></div>
@@ -161,7 +161,7 @@
 			
 			<div id="crus-desc" class="outerdesc">
 				<div class="desc">
-					<div class="desc-header"></div>
+					<div class="desc-header">Monifera Crus.</div>
 					<div class="desc-txt">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
 					<div class="circle">
 						<div class="close-desc close icon"></div>
@@ -171,7 +171,7 @@
 			
 			<div id="sala-desc" class="outerdesc">
 				<div class="desc">
-					<div class="desc-header"></div>
+					<div class="desc-header">Wolna Sala</div>
 					<div class="desc-txt">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
 					<div class="circle">
 						<div class="close-desc close icon"></div>
@@ -252,7 +252,7 @@
 					{
 						if(otwarty.id != desc_class){
 							zamknij(document.getElementsByClassName('active')[0]);
-							setTimeout(()=>{otworz(description)}, 2400);
+							setTimeout(()=>{otworz(description)}, 1000);
 						}
 					}
 					else if(!document.getElementsByClassName('working')[0])
@@ -280,7 +280,7 @@
 					co.style.visibility = "visible";
 					co.style.maxWidth = co.scrollWidth + "px";
 					co.style.maxHeight = co.scrollHeight + "px";
-					setTimeout(()=>{co.classList.add('active');co.classList.remove('working')}, 1600);
+					setTimeout(()=>{co.classList.add('active');co.classList.remove('working')}, 900);
 				}
 			}
 			function zamknij(co)
@@ -290,7 +290,7 @@
 					co.classList.add('working');
 					co.style.maxWidth = null;
 					co.style.maxHeight = null;
-					setTimeout(()=>{co.style.visibility = "hidden";co.classList.remove('active');co.classList.remove('working')}, 1600);
+					setTimeout(()=>{co.style.visibility = "hidden";co.classList.remove('active');co.classList.remove('working')}, 900);
 				}
 			}
 		</script>
