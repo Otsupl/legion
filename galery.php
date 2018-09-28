@@ -43,6 +43,14 @@
 		</nav>
 		<div id='scrollup' class='hidden' onclick="scrollup()"><i class="fas fa-arrow-up"></i></div>
 		<main>
+			<div id="full_view">
+				<div class="outer-full-image">
+					<div id="full_image"></div>
+					<div class="circle">
+						<div class="close-desc close icon"></div>
+					</div>
+				</div>
+			</div>
 		  <div id ="container">
 			<?php
 			$photos = opendir("img/inner-photos");
@@ -112,7 +120,16 @@
 		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
         <script>
-        	
+			imgs = document.getElementsByTagName('img');
+			for(i=0; i<imgs.length; i++) {
+				imgs[i].addEventListener('click',(event)=>
+				{
+					var full_img = document.createElement('img');
+					full_img.src = event.target.getAttribute('src');
+					full_img.classList.add('full-img');
+					document.getElementById('full_image').appendChild(full_img);
+				});
+			}
 		</script>
 	</body>
 </html>
