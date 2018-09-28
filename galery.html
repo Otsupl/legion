@@ -23,8 +23,8 @@
 	</head>
 	<body>
 		<!-- Nawigacja -->
-		<nav id="navbar">
-            <div id="nav">
+		<nav id="navbar" class='navbar-transparent'>
+            <div id="nav" class="nav-transparent">
 				<a href='/' id="logo">LEGION</a>
 				<div id="outerburger">
 					<div id="burger" class="menu icon"></div>
@@ -32,10 +32,10 @@
 				<ul id="menu">
 					<li><a href="index.html">Główna</a></li>
 					<li><a href="about.html">O&nbsp;nas</a></li>
-					<li class="current"><a href="training.html">Co&nbsp;trenujemy?</a></li>
+					<li><a href="training.html">Co&nbsp;trenujemy?</a></li>
 					<li><a href="schedule.html">Grafik</a></li>
 					<li><a href="gym.html">Siłownia</a></li>
-					<li><a href="galery.html">Galeria</a></li>
+					<li class="current"><a href="galery.html">Galeria</a></li>
 					<li><a href="index.html#cennik">Cennik</a></li>
 					<li><a href="index.html#kontakt">Kontakt</a></li>
 				</ul>
@@ -43,36 +43,9 @@
 		</nav>
 		<div id='scrollup' class='hidden' onclick="scrollup()"><i class="fas fa-arrow-up"></i></div>
 		<main>
-		  <section id="marts">
-			<h1>Co trenujemy?</h1>
-			<div id="container">
-				<div class="mart" id="taekw">
-					<div class="centerdesc">
-						<div class="martheader">Taekwondo</div>
-						<div class="accordion">
-							<div class="martdesc">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
-						</div>
-					</div>
-				</div>
-				<div class="mart" id="muayt">
-					<div class="centerdesc">
-						<div class="martheader">Muay Thai</div>
-						<div class="accordion">
-							<div class="martdesc">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
-						</div>
-					</div>
-				</div>
-				<div class="mart" id="taich">
-					<div class="centerdesc">
-						<div class="martheader">Tai Chi</div>
-						<div class="accordion">
-							<div class="martdesc">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		  </section>
+		  <div id ="container">
+			
+		  </div>
 		</main>
 		<footer>
 			<h3>Klub sztuk walk LEGION</h3>
@@ -89,29 +62,14 @@
 			</div>
 			<p>Design by <a href='https://otsu.pl'>Otsu.pl</a></p>
 		</footer>
-		<link rel="stylesheet" href="css/main.css" type="text/css">
-        <link rel="stylesheet" href="css/scroll.css" type="text/css">
-		<link rel="stylesheet" href="css/training.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/nav.css" type="text/css">
+        <link rel="stylesheet" href="css/galery.css" type="text/css">
+        <link rel="stylesheet" href="css/scroll.css" type="text/css">
         <link rel="stylesheet" href="css/footer.css" type="text/css">
 		<!-- Skrypty -->
 		<script src="js/nav.js"></script>
-		<script src="js/scroll.js"></script>
-		<script src="js/smoothscroll.js"></script>
         <script>
-			"use strict";
-			var mart = document.getElementsByClassName("mart");
-			for (let i = 0; i < mart.length; i++) {
-				mart[i].addEventListener("click", function() {
-					this.classList.toggle('active');
-				  let accordion = this.children[0].children[1];
-				  if (accordion.style.maxHeight){
-					accordion.style.maxHeight = null;
-				  } else {
-					accordion.style.maxHeight = accordion.scrollHeight + "px";
-				  } 
-				});
-			  }
 		</script>
 	</body>
 </html>
