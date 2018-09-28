@@ -1,6 +1,28 @@
 #container
 {
-    margin: 100px auto 0 auto;
+    margin: 20px auto 0 auto;
     width: calc(70px + 70vw);
-    height: 100px;
+}
+#container::after
+{
+    clear:both;
+}
+#container>ul
+{
+    width: 100%;
+    float: left;
+}
+#container>ul>li>img
+{
+	width: 100%;
+	padding:4px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	
+	#container>ul
+	{
+        width: 25%;
+	}
 }

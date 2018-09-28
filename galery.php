@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<!-- Nawigacja -->
-		<nav id="navbar" class='navbar-transparent'>
+		<nav id="navbar">
             <div id="nav" class="nav-transparent">
 				<a href='/' id="logo">LEGION</a>
 				<div id="outerburger">
@@ -56,18 +56,35 @@
 			$indexCount	= count($dirArray);
 			?>
 
-			<ul>
-				<?php
-				// loop through the array of files and print them all in a list
-				for($i=0; $i < $indexCount; $i++) {
-					$extension = substr($dirArray[$i], -3);
-					if ($extension == 'jpg'){
-						echo '<li><img src="img/inner-photos/' . $dirArray[$i] . '" alt="Image" />';
-					}	
+			<?php
+			function isJpg($file)
+			{
+				if (substr($file, -3) == 'jpg')
+					return true;
+				return false;
+			}
+			// loop through the array of files and print them all in a list
+			$reszta = $indexCount % 4;
+			$position = 0;
+			for($i=1; $i <= 4; $i++) {
+				echo '<ul>';
+				
+				for(; $position < $i*floor($indexCount/4); $position++) {
+					if(isJpg($dirArray[$position]))
+						echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
 				}
-				?>
-			</ul>	
-
+				if($reszta>0)
+				{
+					if(isJpg($dirArray[$position]))
+					{
+						echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
+						$reszta--;
+					}
+					$position++;
+				}
+				echo '</ul>';
+			}
+			?>
 		  </div>
 		</main>
 		<footer>
