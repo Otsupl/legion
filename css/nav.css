@@ -139,7 +139,7 @@
         background-color:#131313;
         line-height:50px;
         height: 90px;
-        width:100%;
+        width:100% !important;
         color: white;
     }
     #nav::after
@@ -156,7 +156,7 @@
     {
         float:right;
         height: 50px;
-        width: auto;
+        width: auto !important;
         position: relative;
         z-index: 11;
         background-color: transparent;
