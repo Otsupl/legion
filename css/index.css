@@ -10,6 +10,7 @@
 #photo_container
 {
     position:relative;
+    overflow: hidden;
 }
 #photos
 {
