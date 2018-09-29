@@ -1,3 +1,18 @@
+#przyciemniacz
+{
+	position:fixed;
+	height:100vh;
+	width:100vw;
+	background-color: #000000ed;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 4;
+	transition: opacity 0.9s;
+}
+#przyciemniacz.aktywny
+{
+	opacity:1;
+}
 #full_view
 {
     position:fixed;
@@ -10,6 +25,7 @@
     transition: max-width 0.4s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0s, max-height 0.5s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.4s;
     border: 2px solid #baab00;
     visibility:hidden;
+    z-index: 5;
 }
 #full_view.active
 {

@@ -43,6 +43,7 @@
 		</nav>
 		<div id='scrollup' class='hidden' onclick="scrollup()"><i class="fas fa-arrow-up"></i></div>
 		<main>
+			<div id="przyciemniacz"></div>
 			<div id="full_view">
 				<div class="outer-full-image">
 					<div id="full_image"></div>
@@ -121,6 +122,7 @@
 		<script src="js/smoothscroll.js"></script>
         <script>
 			var imgs = document.getElementsByTagName('img');
+			var przyciemniacz = document.getElementById('przyciemniacz');
 			for(i=0; i<imgs.length; i++) 
 			{
 				imgs[i].addEventListener('click',(event)=>
@@ -156,11 +158,13 @@
 			{
 				if (!co.style.maxHeight)
 				{
+					przyciemniacz.classList.add('aktywny');
+					przyciemniacz.style.visibility='visible';
 					var full_img = document.createElement('img');
 					full_img.src = e.target.getAttribute('src');
 					full_img.classList.add('full-img');
 					full_image.appendChild(full_img);
-					
+
 					co.classList.add('working');
 					co.style.visibility = "visible";
 					co.style.maxWidth = co.scrollWidth + "px";
@@ -172,11 +176,13 @@
 			{
 				if(co.style.maxHeight)
 				{
+					przyciemniacz.classList.remove('aktywny');
 					co.classList.add('working');
 					co.style.maxWidth = null;
 					co.style.maxHeight = null;
 					setTimeout(()=>
 						{
+							przyciemniacz.style.visibility='hidden';
 							co.style.visibility = "hidden";
 							co.classList.remove('active');
 							co.classList.remove('working');
