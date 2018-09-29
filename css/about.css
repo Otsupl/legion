@@ -13,7 +13,6 @@ body {
 {
     height: calc(350px + 20vw);
     background-image: url(../img/abouttr/wudang.jpg);
-    background-position: 50% 36px;
     color: white;
 }
 #header>div
@@ -114,6 +113,10 @@ body {
     }
     .parallax-slow
     {background-position: 50% calc(100px - 35vw)}
+    #header
+    {
+        background-position: 50% 36px;
+    }
     #trener-desc
     {
         position:relative;
