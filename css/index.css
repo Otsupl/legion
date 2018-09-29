@@ -199,7 +199,6 @@
 {
     background-color: #131313;
     color: white;
-    cursor: pointer;
     padding-top: 10px;
     transition: background 0.3s;
     position: absolute;
@@ -207,11 +206,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-}
-
-.titem:hover 
-{
-    background: #9300006e;
 }
 
 .titempic
