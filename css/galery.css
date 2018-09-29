@@ -99,19 +99,30 @@
 {
     width: 100%;
     float: left;
+    margin: 0 4px;
+}
+#container ul>li
+{
+    width: 100%;
+    overflow:hidden;
+	margin: 4px 0;
 }
 #container ul>li>img
 {
 	width: 100%;
-	padding:4px;
+	transition: 0.2s;
 	cursor:pointer;
+}
+#container ul>li>img:hover
+{
+	width:120%;
 }
 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
 	#container .devider
 	{
-        width: 50%;
+        width: calc(50% - 8px);
 	}
 }
 
@@ -120,6 +131,6 @@
 	
 	#container ul
 	{
-        width: 50%;
+        width: calc(50% - 8px);
 	}
 }
