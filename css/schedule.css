@@ -123,7 +123,23 @@ td[class]:hover
 /*------------------------------------------------------------------------------------*/
 /* ------------------------------------- opisy -------------------------------------- */
 /*------------------------------------------------------------------------------------*/
-
+#przyciemniacz
+{
+	position:fixed;
+	background-color: #000000ed;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 4;
+	transition: opacity 0.9s;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#przyciemniacz.aktywny
+{
+	opacity:1;
+}
 .outerdesc
 {
     position:fixed;
@@ -136,6 +152,7 @@ td[class]:hover
     transition: max-width 0.4s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0s, max-height 0.5s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.4s;
     border: 2px solid #baab00;
     visibility:hidden;
+    z-index:5;
 }
 .active.outerdesc
 {

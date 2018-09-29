@@ -154,7 +154,7 @@
 					co.style.visibility = "visible";
 					co.style.maxWidth = co.scrollWidth + "px";
 					co.style.maxHeight = co.scrollHeight + "px";
-					setTimeout(()=>{co.classList.add('active');co.classList.remove('working')}, 900);
+					setTimeout(()=>{co.classList.add('active')}, 900);
 				}
 			}
 			function zamknij(co)
@@ -169,7 +169,6 @@
 							przyciemniacz.style.visibility='hidden';
 							co.style.visibility = "hidden";
 							co.classList.remove('active');
-							co.classList.remove('working');
 							if(document.getElementsByClassName("full-img")[0])
 							{
 								var inner_img = document.getElementsByClassName("full-img")[0];

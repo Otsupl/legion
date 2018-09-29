@@ -108,7 +108,7 @@
 				</table>
 			</div>
 			<button onclick="window.location.href='img/grafik.jpg'" download>Otwórz jako zdjęcie</button>
-
+			<div id="przyciemniacz"></div>
 			<div id="thai-desc" class="outerdesc">
 				<div class="desc">
 					<div class="desc-header">Muay Thai</div>
@@ -246,24 +246,12 @@
 						case "teakwondo": desc_class = "teakwondo"; break;
 					}
 					desc_class += '-desc';
-					let description = document.getElementById(desc_class);
-					let otwarty = document.getElementsByClassName('active')[0];
-					if(otwarty)
-					{
-						if(otwarty.id != desc_class){
-							zamknij(document.getElementsByClassName('active')[0]);
-							setTimeout(()=>{otworz(description)}, 1000);
-						}
-					}
-					else if(!document.getElementsByClassName('working')[0])
-					{
-						otworz(description);
-					}
+					let desc = document.getElementById(desc_class);
+					otworz(desc);
 				});
 			}
 
 			var close_circle = document.getElementsByClassName("circle");
-
 			for (let i = 0; i < close_circle.length; i++) 
 			{
 				close_circle[i].addEventListener("click", function() 
@@ -272,25 +260,34 @@
 					zamknij(description);
 				});
 			}
+			przyciemniacz.addEventListener("click", function() 
+			{
+				zamknij(document.getElementsByClassName('active')[0]);
+			});
 			function otworz(co)
 			{
 				if (!co.style.maxHeight)
 				{
-					co.classList.add('working');
+					przyciemniacz.classList.add('aktywny');
+					przyciemniacz.style.visibility='visible';
 					co.style.visibility = "visible";
 					co.style.maxWidth = co.scrollWidth + "px";
 					co.style.maxHeight = co.scrollHeight + "px";
-					setTimeout(()=>{co.classList.add('active');co.classList.remove('working')}, 900);
+					setTimeout(()=>{co.classList.add('active');}, 900);
 				}
 			}
 			function zamknij(co)
 			{
 				if(co.style.maxHeight)
 				{
-					co.classList.add('working');
+					przyciemniacz.classList.remove('aktywny');
 					co.style.maxWidth = null;
 					co.style.maxHeight = null;
-					setTimeout(()=>{co.style.visibility = "hidden";co.classList.remove('active');co.classList.remove('working')}, 900);
+					setTimeout(()=>{
+							przyciemniacz.style.visibility='hidden';
+							co.style.visibility = "hidden";
+							co.classList.remove('active');
+						}, 900);
 				}
 			}
 		</script>
