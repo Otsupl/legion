@@ -194,8 +194,19 @@
 					}
 				}
         	}
+
 			var paralaksy = document.getElementsByClassName('parallax');
 			var paralaksy_text = document.getElementsByClassName('parallax-text');
+
+        	/*usuwa style inline na mobilnych*/
+			window.matchMedia("(max-width: 992px)").addListener(()=>
+			{
+				"use strict";
+				for(let i=0; i<paralaksy.length; i++)
+					paralaksy[i].style.cssText = "";
+				for(let i=0; i<paralaksy_text.length; i++)
+					paralaksy_text[i].style.cssText = "";
+			});
 			window.addEventListener('scroll',()=>
 			{
 				paralaksa(paralaksy, paralaksy_text);
@@ -204,6 +215,7 @@
 			{
 				paralaksa(paralaksy, paralaksy_text);
 			});
+
 		</script>
 	</body>
 </html>
