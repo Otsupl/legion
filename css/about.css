@@ -24,6 +24,7 @@ body {
 #header h1
 {
     font-size: calc(30px + 4vw);
+    font-family: 'Cinzel', serif;
     margin: 0.5em;
     color: #baab00;
     text-shadow:
@@ -40,6 +41,7 @@ body {
 #oferta h2
 {
     font-size: calc(20px + 1.2vw);
+    font-family: 'Cinzel', serif;
     margin-bottom:0.6em
 }
 #oferta ul>li
@@ -54,7 +56,8 @@ body {
 .header h2
 {
     font-size: calc(20px + 1.8vw);
-    color: #c1b888;
+    font-family: 'Cinzel', serif;
+    color: #baab00;
 }
 #trener-desc
 {
