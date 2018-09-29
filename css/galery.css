@@ -5,9 +5,15 @@
     left:50%;
     transform:translate(-50%, -50%);
     overflow:hidden;
+    max-height:0;
+    max-width:0;
     transition: max-width 0.4s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0s, max-height 0.5s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.4s;
     border: 2px solid #baab00;
-    /*visibility:hidden;*/
+    visibility:hidden;
+}
+#full_view.active
+{
+	transition: max-height 0.5s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0s, max-width 0.4s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.5s;
 }
 .outer-full-image
 {
@@ -18,7 +24,7 @@
 }
 .full-img
 {
-	max-width:calc(70px + 70vw);
+	max-width: calc(70px + 70vw);
 	max-height:calc(100vh - 250px);/* 90 od nawidacji - 60 z paddingu outera - 55 z kółka - 35 luzu*/
 }
 

@@ -120,15 +120,73 @@
 		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
         <script>
-			imgs = document.getElementsByTagName('img');
-			for(i=0; i<imgs.length; i++) {
+			var imgs = document.getElementsByTagName('img');
+			for(i=0; i<imgs.length; i++) 
+			{
 				imgs[i].addEventListener('click',(event)=>
 				{
-					var full_img = document.createElement('img');
-					full_img.src = event.target.getAttribute('src');
-					full_img.classList.add('full-img');
-					document.getElementById('full_image').appendChild(full_img);
+					var full_view = document.getElementById('full_view');
+					var otwarty = document.getElementsByClassName('active')[0];
+					if(otwarty)
+					{
+						if(otwarty != full_view){
+							zamknij(document.getElementsByClassName('active')[0]);
+							setTimeout(()=>{otworz(full_view, event)}, 1000);
+						}
+					}
+					else if(!document.getElementsByClassName('working')[0])
+					{
+						otworz(full_view, event);
+					}
 				});
+			}
+
+			var close_circle = document.getElementsByClassName("circle");
+
+			for (let i = 0; i < close_circle.length; i++) 
+			{
+				close_circle[i].addEventListener("click", function() 
+				{
+					let description = this.parentElement.parentElement;
+					zamknij(description);
+				});
+			}
+			var full_image = document.getElementById('full_image');
+			function otworz(co, e)
+			{
+				if (!co.style.maxHeight)
+				{
+					var full_img = document.createElement('img');
+					full_img.src = e.target.getAttribute('src');
+					full_img.classList.add('full-img');
+					full_image.appendChild(full_img);
+					
+					co.classList.add('working');
+					co.style.visibility = "visible";
+					co.style.maxWidth = co.scrollWidth + "px";
+					co.style.maxHeight = co.scrollHeight + "px";
+					setTimeout(()=>{co.classList.add('active');co.classList.remove('working')}, 900);
+				}
+			}
+			function zamknij(co)
+			{
+				if(co.style.maxHeight)
+				{
+					co.classList.add('working');
+					co.style.maxWidth = null;
+					co.style.maxHeight = null;
+					setTimeout(()=>
+						{
+							co.style.visibility = "hidden";
+							co.classList.remove('active');
+							co.classList.remove('working');
+							if(document.getElementsByClassName("full-img")[0])
+							{
+								var inner_img = document.getElementsByClassName("full-img")[0];
+								full_image.removeChild(inner_img);
+							}
+						}, 900);
+				}
 			}
 		</script>
 	</body>
