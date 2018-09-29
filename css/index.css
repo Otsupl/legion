@@ -301,7 +301,7 @@ button
     color: #da0000;
     font-weight:700;
 }
-.pitem-gym>a
+.pitem-gym>a>span
 {
     color: #baab00;
 }
