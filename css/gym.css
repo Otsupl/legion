@@ -56,7 +56,6 @@ body
     display: block;
 }
 
-
 .parts
 {
     width: 90%;
@@ -181,14 +180,9 @@ body
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    #gyminfo
-    {
-        margin-top: 60px;
-    }    
-
     #slidercontainer 
     {
-        width: 70%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }

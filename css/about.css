@@ -69,14 +69,16 @@ body {
 .desc>div
 {
     padding:10px;
-    border-radius:calc(10px + 1vw);
-    background-color: #3f3f3fd9;
+    border-radius:calc(1px + 0.5vw);
+    background-color: #0b0b0ba1;
+    border: 1px solid #baab0082;
     width:80%;
     margin:20px auto;
 }
 .desc h3
 {
     font-size: calc(12px + 0.9vw);
+    font-family: 'Cinzel', serif;
     margin: 0.6em 0;
 }
 .desc p

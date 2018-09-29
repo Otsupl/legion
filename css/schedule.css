@@ -161,7 +161,7 @@ td[class]:hover
 .desc
 {
     position:relative;
-    background-color: #151515;
+    background-color: #151515bd;
     padding: 30px;
     text-align:center;
     color:white;
