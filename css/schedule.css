@@ -150,7 +150,7 @@ td[class]:hover
     max-height:0;
     max-width:0;
     transition: max-width 0.4s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0s, max-height 0.5s cubic-bezier(0.53, 0.02, 0.46, 0.96) 0.4s;
-    border: 2px solid #baab00;
+    border: 1px solid #baab00;
     visibility:hidden;
     z-index:5;
 }

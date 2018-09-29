@@ -15,6 +15,7 @@ footer h3
 footer a
 {
     display: inline-block;
+    width: 100%;
     font-size: calc(15px + 1vw);
     margin-bottom: 20px;
     transition: 0.3s;
