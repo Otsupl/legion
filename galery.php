@@ -75,23 +75,27 @@
 			// loop through the array of files and print them all in a list
 			$reszta = $indexCount % 4;
 			$position = 0;
-			for($i=1; $i <= 4; $i++) {
-				echo '<ul>';
-				
-				for(; $position < $i*floor($indexCount/4); $position++) {
-					if(isJpg($dirArray[$position]))
-						echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
-				}
-				if($reszta>0)
-				{
-					if(isJpg($dirArray[$position]))
-					{
-						echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
-						$reszta--;
+			for($i=0; $i < 2; $i++) {
+				echo '<div class="devider">';
+				for($j=1; $j <= 2; $j++) {
+					echo '<ul>';
+
+					for(; $position < ($i*2 + $j)*floor($indexCount/4); $position++) {
+						if(isJpg($dirArray[$position]))
+							echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
 					}
-					$position++;
+					if($reszta>0)
+					{
+						if(isJpg($dirArray[$position]))
+						{
+							echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
+							$reszta--;
+						}
+						$position++;
+					}
+					echo '</ul>';
 				}
-				echo '</ul>';
+				echo '</div>';
 			}
 			?>
 		  </div>
