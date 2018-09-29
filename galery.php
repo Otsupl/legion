@@ -47,8 +47,8 @@
 			<div id="full_view">
 				<div class="outer-full-image">
 					<div id="full_image"></div>
-					<div class="circle">
-						<div class="close-desc close icon"></div>
+					<div id="close-circle">
+						<div class="close-img close icon"></div>
 					</div>
 				</div>
 			</div>
@@ -123,36 +123,22 @@
         <script>
 			var imgs = document.getElementsByTagName('img');
 			var przyciemniacz = document.getElementById('przyciemniacz');
+			var full_view = document.getElementById('full_view');
 			for(i=0; i<imgs.length; i++) 
 			{
 				imgs[i].addEventListener('click',(event)=>
 				{
-					var full_view = document.getElementById('full_view');
-					var otwarty = document.getElementsByClassName('active')[0];
-					if(otwarty)
-					{
-						if(otwarty != full_view){
-							zamknij(document.getElementsByClassName('active')[0]);
-							setTimeout(()=>{otworz(full_view, event)}, 1000);
-						}
-					}
-					else if(!document.getElementsByClassName('working')[0])
-					{
-						otworz(full_view, event);
-					}
+					otworz(full_view, event);
 				});
 			}
-
-			var close_circle = document.getElementsByClassName("circle");
-
-			for (let i = 0; i < close_circle.length; i++) 
+			document.getElementById("close-circle").addEventListener("click", function() 
 			{
-				close_circle[i].addEventListener("click", function() 
-				{
-					let description = this.parentElement.parentElement;
-					zamknij(description);
-				});
-			}
+				zamknij(full_view);
+			});
+			przyciemniacz.addEventListener("click", function() 
+			{
+				zamknij(full_view);
+			});
 			var full_image = document.getElementById('full_image');
 			function otworz(co, e)
 			{
@@ -165,7 +151,6 @@
 					full_img.classList.add('full-img');
 					full_image.appendChild(full_img);
 
-					co.classList.add('working');
 					co.style.visibility = "visible";
 					co.style.maxWidth = co.scrollWidth + "px";
 					co.style.maxHeight = co.scrollHeight + "px";
@@ -177,7 +162,6 @@
 				if(co.style.maxHeight)
 				{
 					przyciemniacz.classList.remove('aktywny');
-					co.classList.add('working');
 					co.style.maxWidth = null;
 					co.style.maxHeight = null;
 					setTimeout(()=>
