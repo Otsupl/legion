@@ -198,7 +198,6 @@
 }
 .titem
 {
-    background-color: #131313;
     color: white;
     padding-top: 10px;
     transition: background 0.3s;
@@ -207,6 +206,11 @@
     left: 0;
     bottom: 0;
     right: 0;
+    cursor:pointer;
+}
+.titem:hover
+{
+    background-color: #9300006e;
 }
 
 .titempic
