@@ -323,7 +323,13 @@
 			var isNext = true;
 			var sliderElem = document.getElementById('photos');
 			var slider = simpleslider.getSlider({
-			container: sliderElem
+			container: sliderElem,
+			prop: 'opacity',
+      		duration: 1,
+			unit: '',
+			init: 0,
+			show: 1,
+			end: 0
 			});
 		</script>
 	</body>
