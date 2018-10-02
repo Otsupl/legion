@@ -198,10 +198,12 @@
         <link rel="stylesheet" href="css/scroll.css" type="text/css">
         <link rel="stylesheet" href="css/schedule.css" type="text/css">
         <link rel="stylesheet" href="css/footer.css" type="text/css">
+        <link rel="stylesheet" href="css/descs.css" type="text/css">
 		<!-- Skrypty -->
 		<script src="js/nav.js"></script>
 		<script src="js/scroll.js"></script>
 		<script src="js/smoothscroll.js"></script>
+		<script src="js/descs.js"></script>
         <script>
 			function setHoursHeight()
 			{
@@ -220,75 +222,6 @@
 			{
 				setHoursHeight();
 			});
-			var boran = Array.prototype.slice.call(document.getElementsByClassName('muay-boran'));
-			var chi = Array.prototype.slice.call(document.getElementsByClassName('tai-chi'));
-			var thai = Array.prototype.slice.call(document.getElementsByClassName('muay-thai'));
-			var maga = Array.prototype.slice.call(document.getElementsByClassName('krav-maga'));
-			var sala = Array.prototype.slice.call(document.getElementsByClassName('wolna-sala'));
-			var crus = Array.prototype.slice.call(document.getElementsByClassName('montifera'));
-			var teakwondo = Array.prototype.slice.call(document.getElementsByClassName('teakwondo'));
-			var wszystko =  boran.concat(boran, chi, thai, maga, sala, crus, teakwondo);
-
-			for (let i = 0; i < wszystko.length; i++) 
-			{
-				wszystko[i].addEventListener("click", function() 
-				{
-					var desc_class = "";
-					switch(this.className)
-					{
-						case "muay-boran": desc_class = "boran"; break;
-						case "tai-chi": desc_class = "chi"; break;
-						case "muay-thai": desc_class = "thai"; break;
-						case "krav-maga": desc_class = "maga"; break;
-						case "wolna-sala": desc_class = "sala"; break;
-						case "montifera": desc_class = "crus"; break;
-						case "teakwondo": desc_class = "teakwondo"; break;
-					}
-					desc_class += '-desc';
-					let desc = document.getElementById(desc_class);
-					otworz(desc);
-				});
-			}
-
-			var close_circle = document.getElementsByClassName("circle");
-			for (let i = 0; i < close_circle.length; i++) 
-			{
-				close_circle[i].addEventListener("click", function() 
-				{
-					let description = this.parentElement.parentElement;
-					zamknij(description);
-				});
-			}
-			przyciemniacz.addEventListener("click", function() 
-			{
-				zamknij(document.getElementsByClassName('active')[0]);
-			});
-			function otworz(co)
-			{
-				if (!co.style.maxHeight)
-				{
-					przyciemniacz.classList.add('aktywny');
-					przyciemniacz.style.visibility='visible';
-					co.style.visibility = "visible";
-					co.style.maxWidth = co.scrollWidth + "px";
-					co.style.maxHeight = co.scrollHeight + "px";
-					setTimeout(()=>{co.classList.add('active');}, 900);
-				}
-			}
-			function zamknij(co)
-			{
-				if(co.style.maxHeight)
-				{
-					przyciemniacz.classList.remove('aktywny');
-					co.style.maxWidth = null;
-					co.style.maxHeight = null;
-					setTimeout(()=>{
-							przyciemniacz.style.visibility='hidden';
-							co.style.visibility = "hidden";
-							co.classList.remove('active');
-						}, 900);
-				}
-			}
 		</script>
 	</body>
 </html>
