@@ -90,8 +90,9 @@
 	{clear:both;}
 #container .devider
 {
-    width: 100%;
-    float: left;
+	width: calc(50% - 8px);
+	float: left;
+	margin: 0 4px;
 }
 #container .devider::after
 	{clear:both;}
@@ -122,6 +123,10 @@
 @media only screen and (min-width: 640px) {
 	#container .devider
 	{
+		margin: 0px;
+	}
+	#container ul
+	{
         width: calc(50% - 8px);
 	}
 }
@@ -129,8 +134,4 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
-	#container ul
-	{
-        width: calc(50% - 8px);
-	}
 }
