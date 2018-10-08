@@ -53,7 +53,7 @@
 			</div>
 		  <div id ="container">
 			<?php
-			$photos = opendir("img/inner-photos");
+			$photos = opendir("img/inner-photos/min-compressed");
 			// get each entry
 			while($entryName = readdir($photos)) {
 				$dirArray[] = $entryName;
@@ -81,13 +81,13 @@
 
 					for(; $position < ($i*2 + $j)*floor($indexCount/4); $position++) {
 						if(isJpg($dirArray[$position]))
-							echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
+							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" id="'.$dirArray[$position].'"/></li>';
 					}
 					if($reszta>0)
 					{
 						if(isJpg($dirArray[$position]))
 						{
-							echo '<li><img src="img/inner-photos/' . $dirArray[$position] . '" alt="Image" /></li>';
+							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" id="'.$dirArray[$position].'"/></li>';
 							$reszta--;
 						}
 						$position++;
@@ -150,14 +150,17 @@
 					przyciemniacz.classList.add('aktywny');
 					przyciemniacz.style.visibility='visible';
 					var full_img = document.createElement('img');
-					full_img.src = e.target.getAttribute('src');
+					full_img.src = "img/inner-photos/compressed/"+e.target.getAttribute('id');
 					full_img.classList.add('full-img');
-					full_image.appendChild(full_img);
+					full_img.onload = function()
+					{
+						full_image.appendChild(full_img);
 
-					co.style.visibility = "visible";
-					co.style.maxWidth = co.scrollWidth + "px";
-					co.style.maxHeight = co.scrollHeight + "px";
-					setTimeout(()=>{co.classList.add('active')}, 900);
+						co.style.visibility = "visible";
+						co.style.maxWidth = co.scrollWidth + "px";
+						co.style.maxHeight = co.scrollHeight + "px";
+						setTimeout(()=>{co.classList.add('active')}, 900);
+					}
 				}
 			}
 			function zamknij(co)
