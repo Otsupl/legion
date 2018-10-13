@@ -25,17 +25,31 @@
     background-position: center center;
 }
 #slide1
-{background-image: url(../img/slider/min/1.jpg)}
+{background-image: url(../img/slider/1.jpg)}
 #slide2
-{background-image: url(../img/slider/min/2.jpg)}
+{background-image: url(../img/slider/2.jpg)}
 #slide3
-{background-image: url(../img/slider/min/3.jpg)}
+{background-image: url(../img/slider/3.jpg)}
 #slide4
-{background-image: url(../img/slider/min/4.jpg)}
+{background-image: url(../img/slider/4.jpg)}
 #slide5
-{background-image: url(../img/slider/min/5.jpg)}
+{background-image: url(../img/slider/5.jpg)}
 #slide6
+{background-image: url(../img/slider/6.jpg)}
+/*jeżeli jest js - ładujemy zdjęcia po pobraniu*/
+.js #slide1
+{background-image: url(../img/slider/min/1.jpg)}
+.js #slide2
+{background-image: url(../img/slider/min/2.jpg)}
+.js #slide3
+{background-image: url(../img/slider/min/3.jpg)}
+.js #slide4
+{background-image: url(../img/slider/min/4.jpg)}
+.js #slide5
+{background-image: url(../img/slider/min/5.jpg)}
+.js #slide6
 {background-image: url(../img/slider/min/6.jpg)}
+
 #phototext-container
 {
     position:absolute;
@@ -320,19 +334,6 @@ button
         padding: 20px;
         font-size: 20px;
     }
-    
-    #slide1
-    {background-image: url(../img/slider/1.jpg)}
-    #slide2
-    {background-image: url(../img/slider/2.jpg)}
-    #slide3
-    {background-image: url(../img/slider/3.jpg)}
-    #slide4
-    {background-image: url(../img/slider/4.jpg)}
-    #slide5
-    {background-image: url(../img/slider/5.jpg)}
-    #slide6
-    {background-image: url(../img/slider/6.jpg)}
 }
 
 /* Medium devices (landscape tablets, 800px and up) */

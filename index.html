@@ -270,6 +270,20 @@
 				evt.preventDefault();
 				skrol('kontakt');
 			});
+
+			function bind_images()
+			{
+				"use strict";
+				let slides = [new Image(), new Image(), new Image(), new Image(), new Image(), new Image()];
+				for(let i=0; i<slides.length; i++)
+				{
+					slides[i].src = "img/slider/"+i+".jpg";
+					slides[i].onload = function() {document.getElementById('slide'+i).style.backgroundImage = 'url('+this.src+')'};
+				}
+			}
+			window.addEventListener("load",()=>{
+				bind_images();
+			});
 			function skrol(gdzie)
 			{
 				/*jeżeli nawigacja mobilna jest wysunięta, schowaj ją*/
