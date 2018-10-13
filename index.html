@@ -277,8 +277,8 @@
 				let slides = [new Image(), new Image(), new Image(), new Image(), new Image(), new Image()];
 				for(let i=0; i<slides.length; i++)
 				{
-					slides[i].src = "img/slider/"+i+".jpg";
-					slides[i].onload = function() {document.getElementById('slide'+i).style.backgroundImage = 'url('+this.src+')'};
+					slides[i].src = "img/slider/"+(i+1)+".jpg";
+					slides[i].onload = function() {document.getElementById('slide'+(i+1)).style.backgroundImage = 'url('+this.src+')'};
 				}
 			}
 			function skrol(gdzie)
