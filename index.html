@@ -281,9 +281,6 @@
 					slides[i].onload = function() {document.getElementById('slide'+i).style.backgroundImage = 'url('+this.src+')'};
 				}
 			}
-			window.addEventListener("load",()=>{
-				bind_images();
-			});
 			function skrol(gdzie)
 			{
 				/*jeżeli nawigacja mobilna jest wysunięta, schowaj ją*/
@@ -302,7 +299,8 @@
 				/*scrolluje do cennika*/
 				window.scroll({ top: (document.getElementById(gdzie).getBoundingClientRect().top + window.scrollY), left: 0, behavior: 'smooth' });
 			}
-			window.addEventListener('scroll',()=>
+
+			function update_view()
 			{
 				"use strict";
 				var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
@@ -332,6 +330,14 @@
 							photos[i].style.top = 0.4*scrolled + 'px';
 					}
 				}
+			}
+			window.addEventListener("load",()=>{
+				bind_images();
+				update_view();
+			});
+			window.addEventListener('scroll',()=>
+			{
+				update_view();
 			});
 			
 			var isNext = true;
