@@ -3,23 +3,23 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="canonical" href="https://legion.pl">
-		
+
 		<link href="https://fonts.googleapis.com/css?family=Cinzel:700|Montserrat&amp;subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 		<meta name="apple-mobile-web-app-title" content="Legion">
 		<meta name="application-name" content="Legion">
-		
+
 		<link rel="manifest" href="manifest.json">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<title>Legion</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		
+
 		<noscript><style> .jsonly { display: none } </style></noscript>
-		<script>document.documentElement.className += ' js';</script>	 
-		
+		<script>document.documentElement.className += ' js';</script>
+
 	</head>
 	<body>
 		<!-- Nawigacja -->
@@ -111,7 +111,7 @@
 						<div class="desc-txt">Nunc a vehicula ante. Vivamus consectetur eget lectus eu interdum. Donec eu tempor massa. Suspendisse viverra ut lectus et tincidunt. In in ligula lobortis, egestas odio quis, tincidunt turpis.</div>
 						<div class="circle">
 							<div class="close-desc close icon"></div>
-						</div>	
+						</div>
 					</div>
 				</div>
 
@@ -305,7 +305,7 @@
 				"use strict";
 				var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
 				var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-				
+
 				/*dodaje klase current do cennika lub kontaktu gdy są widoczne*/
 				var elements = [document.getElementById('cennik'), document.getElementById('kontakt')];
 				for(let i=0; i< elements.length; i++)
@@ -314,7 +314,7 @@
 					var kontakt_elementOffset = elements[1].getBoundingClientRect().top + window.scrollY;
 					if(scrolled + 0.2*windowHeight > elementOffset && (!(scrolled + 0.2*windowHeight > kontakt_elementOffset) || i==1))
 						document.getElementById(elements[i].id + '_button').classList.add('current');
-					else 
+					else
 						document.getElementById(elements[i].id + '_button').classList.remove('current');
 				}
 
@@ -339,11 +339,12 @@
 			{
 				update_view();
 			});
-			
+
 			var isNext = true;
 			var sliderElem = document.getElementById('photos');
 			var slider = simpleslider.getSlider({
 				container: sliderElem,
+				delay: 6,
 				prop: 'opacity',
 				unit: '',
 				init: 0,
