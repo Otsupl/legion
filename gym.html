@@ -104,7 +104,8 @@
 			var isNext = true;
 			var sliderElem = document.getElementById('slidercontainer');
 			var slider = simpleslider.getSlider({
-			container: sliderElem
+			container: sliderElem,
+			delay: 5
 			});
 			var manager = new Hammer.Manager(sliderElem);
 			var Swipe = new Hammer.Swipe();
