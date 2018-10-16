@@ -1,12 +1,12 @@
 /*Extra small devices (small phones, 350px and down)*/
 
-body 
+body
 {
     text-align: center;
 }
 
 
-#gyminfo h2 
+#gyminfo h2
 {
     font-size: calc(20px + 2vw);
     color: white;
@@ -24,7 +24,7 @@ body
     margin-bottom: 0;
 }
 
-#gyminfo h1 
+#gyminfo h1
 {
     font-size: calc(20px + 3vw);
     color: #baab00;
@@ -33,7 +33,7 @@ body
     margin-top: 0;
 }
 
-#gyminfo p 
+#gyminfo p
 {
     width: 80%;
     font-size: calc(10px + 1.3vw);
@@ -48,12 +48,24 @@ body
     height: calc(100px + 25vw);
 }
 
-#slidercontainer img 
+#slidercontainer img
 {
     height: auto;
     max-width: 100%;
     width: auto;
     display: block;
+}
+
+#scprice
+{
+  font-family: 'Lato',sans-serif;
+}
+
+#priceelem
+{
+  outline: 1px white solid;
+  width: 40%;
+  margin: 0 auto 0 auto;
 }
 
 .parts
@@ -101,7 +113,7 @@ body
     color: #baab00;
 }
 
-.part li 
+.part li
 {
     margin-bottom: calc(5px + 0.2vw);
 }
@@ -133,12 +145,12 @@ body
         clear: both;
     }
 
-    #gear 
+    #gear
     {
         margin: 50px 0 50px 0;
     }
 
-    .parts 
+    .parts
     {
         float: left;
         width: 50%;
@@ -158,7 +170,7 @@ body
         margin-bottom: 15px;
     }
 
-    .part 
+    .part
     {
         font-size: calc(8px + 1.7vw);
     }
@@ -180,30 +192,30 @@ body
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    #slidercontainer 
+    #slidercontainer
     {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    #slidercontainer img 
+    #slidercontainer img
     {
         border: 1px #baab00 solid;
     }
 
-    #gyminfo p 
+    #gyminfo p
     {
         width: 65%;
     }
 
-    #gear 
+    #gear
     {
         width: 85%;
         margin-left: auto;
         margin-right: auto;
     }
-  
+
 }
 
 /* Extra enormous devices (TV, 1700px and up) */
