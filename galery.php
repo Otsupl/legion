@@ -81,13 +81,13 @@
 
 					for(; $position < ($i*2 + $j)*floor($indexCount/4); $position++) {
 						if(isJpg($dirArray[$position]))
-							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" id="'.$dirArray[$position].'"/></li>';
+							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
 					}
 					if($reszta>0)
 					{
 						if(isJpg($dirArray[$position]))
 						{
-							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" id="'.$dirArray[$position].'"/></li>';
+							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
 							$reszta--;
 						}
 						$position++;
@@ -150,7 +150,7 @@
 					przyciemniacz.classList.add('aktywny');
 					przyciemniacz.style.visibility='visible';
 					var full_img = document.createElement('img');
-					full_img.src = "img/inner-photos/compressed/"+e.target.getAttribute('id');
+					full_img.src = "img/inner-photos/compressed/"+e.target.getAttribute('img_name');
 					full_img.classList.add('full-img');
 					full_img.onload = function()
 					{
