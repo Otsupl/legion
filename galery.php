@@ -77,18 +77,23 @@
 			for($i=0; $i < 2; $i++) {
 				echo '<div class="devider">';
 				for($j=1; $j <= 2; $j++) {
+					$img_id = 0;
 					echo '<ul>';
 
 					for(; $position < ($i*2 + $j)*floor($indexCount/4); $position++) {
 						if(isJpg($dirArray[$position]))
-							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
+						{
+							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" id="'.($img_id+($i*2)+$j).'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
+							$img_id+=4;
+						}
 					}
 					if($reszta>0)
 					{
 						if(isJpg($dirArray[$position]))
 						{
-							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
+							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" id="'.($img_id+($i*2)+$j).'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
 							$reszta--;
+							$img_id+=4;
 						}
 						$position++;
 					}
