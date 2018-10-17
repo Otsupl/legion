@@ -71,31 +71,25 @@
 					return true;
 				return false;
 			}
-			// loop through the array of files and print them all in a list
-			$reszta = $indexCount % 4;
 			$position = 0;
-			for($i=0; $i < 2; $i++) {
+			for($i=0; $i < 2; $i++) 
+			{
 				echo '<div class="devider">';
-				for($j=1; $j <= 2; $j++) {
-					$img_id = 0;
+				for($j=1; $j <= 2; $j++) 
+				{
 					echo '<ul>';
-
-					for(; $position < ($i*2 + $j)*floor($indexCount/4); $position++) {
-						if(isJpg($dirArray[$position]))
-						{
-							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" id="'.($img_id+($i*2)+$j).'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
-							$img_id+=4;
-						}
-					}
-					if($reszta>0)
+					$img_id = 0;
+					while($position <= ceil(($indexCount/4)*($i*2 + $j)) && $position < $indexCount)
 					{
-						if(isJpg($dirArray[$position]))
+						do
 						{
-							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" id="'.($img_id+($i*2)+$j).'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
-							$reszta--;
-							$img_id+=4;
-						}
-						$position++;
+							if(isJpg($dirArray[$position]))
+							{
+								echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" id="'.($img_id+($i*2)+$j).'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
+								$img_id+=4;
+							}
+							$position++;
+						}while(isset($dirArray[$position]) && !isJpg($dirArray[$position]) && $position <= ceil( ($indexCount/4)*($i*2 + $j) ) && $position < $indexCount);
 					}
 					echo '</ul>';
 				}
