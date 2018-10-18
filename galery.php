@@ -133,13 +133,23 @@
 			var imgs = document.getElementsByTagName('img');
 			var przyciemniacz = document.getElementById('przyciemniacz');
 			var full_view = document.getElementById('full_view');
+			var full_image = document.getElementById('full_image');
 			for(i=0; i<imgs.length; i++) 
 			{
 				imgs[i].addEventListener('click',(event)=>
 				{
-					otworz(full_view, event);
+					otworz(full_view, event.target || event.srcElement);
 				});
 			}
+			function change_img(arrow) 
+			{
+				var direction = (arrow.classList.contains('left') ? -1 : 1);
+					var id = document.getElementsByClassName('full-img')[0].getAttribute('img_id')+direction;
+					full_image.innerHTML = '';
+					otworz(full_view, document.getElementById(id));
+			}
+			document.getElementsByClassName("arrow")[0].addEventListener("click", function(e){change_img(e.target || e.srcElement)});
+			document.getElementsByClassName("arrow")[1].addEventListener("click", function(e){change_img(e.target || e.srcElement)});
 			document.getElementById("close-circle").addEventListener("click", function() 
 			{
 				zamknij(full_view);
@@ -148,25 +158,22 @@
 			{
 				zamknij(full_view);
 			});
-			var full_image = document.getElementById('full_image');
 			function otworz(co, e)
 			{
-				if (!co.style.maxHeight)
+				przyciemniacz.classList.add('aktywny');
+				przyciemniacz.style.visibility='visible';
+				var full_img = document.createElement('img');
+				full_img.src = "img/inner-photos/compressed/"+e.getAttribute('img_name');
+				full_img.setAttribute('img_id', e.getAttribute('id'));
+				full_img.classList.add('full-img');
+				full_img.onload = function()
 				{
-					przyciemniacz.classList.add('aktywny');
-					przyciemniacz.style.visibility='visible';
-					var full_img = document.createElement('img');
-					full_img.src = "img/inner-photos/compressed/"+e.target.getAttribute('img_name');
-					full_img.classList.add('full-img');
-					full_img.onload = function()
-					{
-						full_image.appendChild(full_img);
+					full_image.appendChild(full_img);
 
-						co.style.visibility = "visible";
-						co.style.maxWidth = co.scrollWidth + "px";
-						co.style.maxHeight = co.scrollHeight + "px";
-						setTimeout(()=>{co.classList.add('active')}, 900);
-					}
+					co.style.visibility = "visible";
+					co.style.maxWidth = co.scrollWidth + "px";
+					co.style.maxHeight = co.scrollHeight + "px";
+					setTimeout(()=>{co.classList.add('active')}, 900);
 				}
 			}
 			function zamknij(co)
