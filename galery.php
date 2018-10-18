@@ -71,7 +71,7 @@
 					return true;
 				return false;
 			}
-			$position = 0;
+			$position = $fake_img = $all_fake_img = $poprzedni = 0;
 			for($i=0; $i < 2; $i++) 
 			{
 				echo '<div class="devider">';
@@ -79,19 +79,36 @@
 				{
 					echo '<ul>';
 					$img_id = 0;
-					while($position <= ceil(($indexCount/4)*($i*2 + $j)) && $position < $indexCount)
+					$zostalo = 4-$i*2-$j;
+					while($position-$fake_img-$poprzedni < 
+					($zostalo > 0 ?
+					ceil(($indexCount-$fake_img-$poprzedni-ceil(($indexCount-$fake_img)/4))/(4-$i*2-$j)) :
+					ceil(($indexCount-$fake_img)/4)
+					)
+					&& $position < $indexCount)
 					{
-						do
+						echo '<script>
+						console.log("$wszystkie: '.($indexCount-$fake_img).', $poprzedni: '.$poprzedni.', (4-$i*2-$j): '.(4-$i*2-$j).'")
+						console.log("lewa: '.($position-$fake_img-$poprzedni).'")
+						console.log("prawa: '.(($zostalo > 0 ?
+					ceil(($indexCount-$fake_img-$poprzedni-ceil(($indexCount-$fake_img)/4))/(4-$i*2-$j)) :
+					ceil(($indexCount-$fake_img)/4)
+					)).'")
+						</script>';
+						if(isset($dirArray[$position]) && isJpg($dirArray[$position]))
 						{
-							if(isJpg($dirArray[$position]))
-							{
-								echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" id="'.($img_id+($i*2)+$j).'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
-								$img_id+=4;
-							}
-							$position++;
-						}while(isset($dirArray[$position]) && !isJpg($dirArray[$position]) && $position <= ceil( ($indexCount/4)*($i*2 + $j) ) && $position < $indexCount);
+							echo '<script>
+							console.log("id: '.($img_id+$i*2+$j).'")
+							</script>';
+							echo '<li><img src="img/inner-photos/min-compressed/'.$dirArray[$position].'" id="'.($img_id+$i*2+$j).'" alt="Zdjęcie klubu" img_name="'.$dirArray[$position].'"/></li>';
+							$img_id+=4;
+						}
+						else
+							$fake_img++;
+						$position++;
 					}
 					echo '</ul>';
+					$poprzedni = $position-1-$fake_img;
 				}
 				echo '</div>';
 			}
