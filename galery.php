@@ -46,8 +46,12 @@
 			<div id="full_view">
 				<div class="outer-full-image">
 					<div id="full_image"></div>
-					<div id="close-circle">
-						<div class="close-img close icon"></div>
+					<div id="img_navigation">
+						<div class="arrow left"></div>
+						<div id="close-circle">
+							<div class="close-img close icon"></div>
+						</div>
+						<div class="arrow right"></div>
 					</div>
 				</div>
 			</div>

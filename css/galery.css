@@ -41,25 +41,52 @@
 }
 .full-img
 {
-    padding: calc(2px + 2vw) calc(2px + 2vw) 0  calc(2px + 2vw);
+    padding: calc(2px + 2vw) calc(5px + 2vw) 0  calc(2px + 2vw);
     max-width: calc(90vw);
-    max-height:calc(98vh - 182px);/* 90 od nawidacji - 60 z paddingu outera - 55 z kółka - 35 luzu*/
+    max-height:calc(96.6vh - 162px);/* 90 od nawidacji - 60 z paddingu outera - z kółka - 35 luzu*/
 }
 
+.arrow
+{
+	position:relative;
+	top:-22.5px;
+    border: solid #383838;
+    border-width: 0 9px 9px 0;
+    display: inline-block;
+    padding: 8px;
+    margin: 0;
+}
+.arrow.left
+{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left:-10px;
+}
+.arrow.right
+{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right:-10px;
+}
 #close-circle
 {
+    margin: calc(5px + 0.7vw) 0 calc(5px + 0.7vw) 0;
     background-color: #383838;
     display:inline-block;
     border-radius: 50%;
     padding: 10px;
-    margin: 15px 0 15px 0;
+}
+#img_navigation>div
+{
+	cursor:pointer;
     transition:0.2s;
 }
 #close-circle:hover
-{
-	transform:scale(1.15);
-    cursor:pointer;
-}
+	{transform:scale(1.15)}
+.arrow.left:hover
+	{transform:rotate(135deg) scale(1.15)}
+.arrow.right:hover
+	{transform:rotate(-45deg) scale(1.15)}
 #close-circle .close-img.close.icon {
     position:relative;
     color:black;
