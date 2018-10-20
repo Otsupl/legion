@@ -311,14 +311,21 @@
 
 				var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
 
+				var photos = document.getElementsByClassName('photo');
 				if(windowWidth > 992)/*odpala tylko na desktopie*/
 				{
 					/*paralaksa dla slidera*/
-					var photos = document.getElementsByClassName('photo');
 					for(let i=0; i<photos.length; i++)
 					{
 						if(scrolled < windowHeight)
 							photos[i].style.top = 0.4*scrolled + 'px';
+					}
+				}
+				else
+				{
+					for(let i=0; i<photos.length; i++)
+					{
+						photos[i].style.top = '';
 					}
 				}
 			}
