@@ -102,6 +102,7 @@
 				}
 				echo '</div>';
 			}
+			echo '<div id="max_img_id" max_img_id='.($indexCount-$fake_img).'></div>'
 			?>
 		  </div>
 		</main>
@@ -167,8 +168,18 @@
 				full_img.setAttribute('img_id', e.getAttribute('id'));
 				full_img.classList.add('full-img');
 				
-				console.log("full_img: ");
-				console.log(full_img);
+				console.log("full_img.getAttribute('img_id'):");
+				console.log(full_img.getAttribute("img_id"));
+				console.log("document.getElementById('max_img_id').getAttribute('max_img_id'):");
+				console.log(document.getElementById("max_img_id").getAttribute('max_img_id'));
+				
+				document.querySelector(".arrow.left").style.visibility = "visible";
+				document.querySelector(".arrow.right").style.visibility = "visible";
+				if(full_img.getAttribute("img_id") == 1)
+					document.querySelector(".arrow.left").style.visibility = "hidden";
+				else if(full_img.getAttribute("img_id")  == document.getElementById("max_img_id").getAttribute('max_img_id'))
+					document.querySelector(".arrow.right").style.visibility = "hidden";
+				
 				full_img.onload = function()
 				{
 					full_image.innerHTML = '';
