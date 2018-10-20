@@ -168,11 +168,6 @@
 				full_img.setAttribute('img_id', e.getAttribute('id'));
 				full_img.classList.add('full-img');
 				
-				console.log("full_img.getAttribute('img_id'):");
-				console.log(full_img.getAttribute("img_id"));
-				console.log("document.getElementById('max_img_id').getAttribute('max_img_id'):");
-				console.log(document.getElementById("max_img_id").getAttribute('max_img_id'));
-				
 				document.querySelector(".arrow.left").style.visibility = "visible";
 				document.querySelector(".arrow.right").style.visibility = "visible";
 				if(full_img.getAttribute("img_id") == 1)
