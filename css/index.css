@@ -82,7 +82,7 @@
 #phototext>h2
 {
     color:#baab00;
-    font-size: calc(7px + 0.6vh + 1vw);
+    font-size: calc(8px + 0.6vh + 1vw);
     margin: 3vh 3vw;
 }
 
@@ -195,6 +195,7 @@
     color: white;
     margin: 40px auto 20px auto;
     font-size: calc(13px + 1vw);
+    padding: 0 3px;
 }
 .panel {
     max-height: 0;
@@ -254,9 +255,9 @@
 .description>p
 {
     color:#d6d6d6;
-    width: 80%;
+    width: calc(70px + 60vw);
     margin: 0 auto 1em auto;
-    font-size: calc(13px + 0.7vw);
+    font-size: calc(15px + 0.7vw);
 }
 .description button
 {
@@ -369,6 +370,11 @@ button
         font-family: 'Cinzel', serif;
         background: rgba(0, 0, 0, 0.61);
         padding: 10px;
+    }
+    
+    .description>p
+    {
+        width: 80%;
     }
     #trdesc
     {

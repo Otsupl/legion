@@ -18,7 +18,7 @@
 .outerdesc
 {
     position:fixed;
-    top:50%;
+    top:calc(50% + 35px);
     left:50%;
     transform:translate(-50%, -50%);
     overflow:hidden;
@@ -37,10 +37,10 @@
 {
     position:relative;
     background-color: #151515bd;
-    padding: 30px;
+    padding: calc(7px + 3vw);
     text-align:center;
     color:white;
-    width: calc(130px + 30vw);
+    width: calc(70px + 60vw);
 }
 .desc-header
 {
@@ -51,6 +51,7 @@
 .desc-txt
 {
     margin-top:calc(20px + 0.6vw);
+    font-size: calc(12px + 1vw);
 }
 .circle
 {
