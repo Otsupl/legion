@@ -144,9 +144,9 @@
 			function change_img(arrow) 
 			{
 				var direction = (arrow.classList.contains('left') ? -1 : 1);
-					var id = document.getElementsByClassName('full-img')[0].getAttribute('img_id')+direction;
-					full_image.innerHTML = '';
-					otworz(full_view, document.getElementById(id));
+				var current_id = document.getElementsByClassName('full-img')[0].getAttribute('img_id')
+				var id = +(document.getElementsByClassName('full-img')[0].getAttribute('img_id')) + direction;
+				otworz(full_view, document.getElementById(id));
 			}
 			document.getElementsByClassName("arrow")[0].addEventListener("click", function(e){change_img(e.target || e.srcElement)});
 			document.getElementsByClassName("arrow")[1].addEventListener("click", function(e){change_img(e.target || e.srcElement)});
@@ -166,8 +166,12 @@
 				full_img.src = "img/inner-photos/compressed/"+e.getAttribute('img_name');
 				full_img.setAttribute('img_id', e.getAttribute('id'));
 				full_img.classList.add('full-img');
+				
+				console.log("full_img: ");
+				console.log(full_img);
 				full_img.onload = function()
 				{
+					full_image.innerHTML = '';
 					full_image.appendChild(full_img);
 
 					co.style.visibility = "visible";
