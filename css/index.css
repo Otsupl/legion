@@ -193,7 +193,7 @@
 #trdesc
 {
     color: white;
-    margin: 40px auto 20px auto;
+    margin: 0 auto;
     font-size: calc(13px + 1vw);
     padding: 0 3px;
 }
@@ -381,7 +381,10 @@ button
         width: calc(100% - 350px);
         float: right;
     }
-
+    #trdesc>p 
+    {
+        margin-top:0;
+    }
 
     #trphoto
     {
