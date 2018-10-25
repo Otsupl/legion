@@ -74,10 +74,10 @@
 			
 			function isJpg($file)
 			{
-				if(substr($file, -3) == 'jpg') return true;
+				if(substr($file, -3) == 'jpg' || substr($file, -4) == 'jpeg') return true;
 				return false;
 			}
-			$position = $fake_img = $all_fake_img = $poprzedni = 0;
+			$position = $fake_img = $poprzedni = 0;
 			for($i=0; $i < 2; $i++) 
 			{
 				echo '<div class="divider">';
