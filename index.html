@@ -308,7 +308,7 @@
 					for(let i=0; i<photos.length; i++)
 					{
 						if(scrolled < windowHeight)
-							photos[i].style.top = 0.4*scrolled + 'px';
+							photos[i].style.setProperty("top", "calc(50% + " + 0.4*scrolled + "px)", "important");
 					}
 				}
 				else
@@ -320,7 +320,6 @@
 				}
 			}
 			window.addEventListener("load",()=>{
-				bind_images();
 				update_view();
 			});
 			window.addEventListener('scroll',()=>
