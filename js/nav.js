@@ -1,4 +1,4 @@
-document.getElementById('outerburger').addEventListener('click',()=>
+document.getElementById('outerburger').addEventListener('click',function()
 {
     document.getElementById("menu").classList.toggle('nav-open');
 	document.getElementById('burger').classList.toggle('menu');
@@ -14,7 +14,7 @@ function nav()
 			document.getElementById('nav').classList.remove('nav-active');
 	}
 }
-window.addEventListener('load',()=>
+window.addEventListener('load',function()
 {
 	if(!document.getElementById('nav').classList.contains('nav-transparent'))
 	{
@@ -22,7 +22,7 @@ window.addEventListener('load',()=>
 	}
 	nav();
 });
-window.addEventListener('scroll',()=>
+window.addEventListener('scroll',function()
 {
 	nav();
 });

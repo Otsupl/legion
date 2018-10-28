@@ -250,13 +250,13 @@
 		<script src="js/simpleslider.min.js"></script>
 		<script src="js/descs.js"></script>
         <script>
-			document.getElementById('cennik_button').addEventListener('click',(evt)=>
+			document.getElementById('cennik_button').addEventListener('click',function(evt)
 			{
 				/*zapobiega sztywnemu przeskoczeniu do cennika, jeżeli działa js*/
 				evt.preventDefault();
 				skrol('cennik');
 			});
-			document.getElementById('kontakt_button').addEventListener('click',(evt)=>
+			document.getElementById('kontakt_button').addEventListener('click',function(evt)
 			{
 				evt.preventDefault();
 				skrol('kontakt');
@@ -319,10 +319,11 @@
 					}
 				}
 			}
-			window.addEventListener("load",()=>{
+			window.addEventListener("load",function()
+			{
 				update_view();
 			});
-			window.addEventListener('scroll',()=>
+			window.addEventListener('scroll',function()
 			{
 				update_view();
 			});

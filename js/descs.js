@@ -1,5 +1,6 @@
-window.addEventListener('load',()=>
+window.addEventListener('load',function()
 {
+	"use strict"
     var boran = Array.prototype.slice.call(document.getElementsByClassName('muay-boran'));
     var chi = Array.prototype.slice.call(document.getElementsByClassName('tai-chi'));
     var thai = Array.prototype.slice.call(document.getElementsByClassName('muay-thai'));
@@ -49,7 +50,7 @@ window.addEventListener('load',()=>
             co.style.visibility = "visible";
             co.style.maxWidth = co.scrollWidth + "px";
             co.style.maxHeight = co.scrollHeight + "px";
-            setTimeout(()=>{co.classList.add('active');}, 900);
+            setTimeout(function(){co.classList.add('active')}, 900);
         }
     }
     function zamknij(co)
@@ -59,7 +60,7 @@ window.addEventListener('load',()=>
             przyciemniacz.classList.remove('aktywny');
             co.style.maxWidth = null;
             co.style.maxHeight = null;
-            setTimeout(()=>{
+            setTimeout(function(){
                     przyciemniacz.style.visibility='hidden';
                     co.style.visibility = "hidden";
                     co.classList.remove('active');

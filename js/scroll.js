@@ -10,7 +10,7 @@ function isIndex()
 {
 	return document.getElementById("photo_container") ? true : false;
 }
-window.addEventListener('scroll',()=>
+window.addEventListener('scroll',function()
 {
 	if (
 		isIndex() ? 
