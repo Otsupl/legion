@@ -7,7 +7,7 @@
     height: 70px;
     background-color: #0b0b0b;
     padding: 10px;
-    color:#808080ab;
+    color:#595959;
     z-index: 10;
     transition: 0.3s;
 	position:fixed;
@@ -40,7 +40,7 @@
 	margin-top: 13px;
 	width: 30px;
 	height: 4px;
-	background-color: #808080ab;
+	background-color: #595959;
 }
 .menu.icon:before {
 	position: absolute;
@@ -48,7 +48,7 @@
 	left: 0;
 	width: 30px;
 	height: 4px;
-	background-color: #808080ab;
+	background-color: #595959;
 }
 .menu.icon:after {
 	position: absolute;
@@ -56,7 +56,7 @@
 	left: 0;
 	width: 30px;
 	height: 4px;
-	background-color: #808080ab;
+	background-color: #595959;
 }
 .close.icon {
 	position: absolute;
@@ -70,7 +70,7 @@
 	left:-5px;
 	width: 40px;
 	height: 4px;
-	background-color: #808080ab;
+	background-color: #595959;
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
@@ -80,7 +80,7 @@
 	left:-5px;
 	width: 40px;
 	height: 4px;
-	background-color: #808080ab;
+	background-color: #595959;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
