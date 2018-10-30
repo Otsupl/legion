@@ -28,7 +28,7 @@
     height: 35vh;
     text-align:center;
     width:100%;
-    background-color:#1b1b1bab;
+    background-color: rgba(27, 27, 27, 0.67);
 }
 #phototext
 {
