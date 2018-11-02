@@ -276,7 +276,7 @@ button
 
 .pitemdesc
 {
-    margin: 15px 10px;
+    margin: 15px 0px;
     color: #baab00;
 }
 .pitem-gym
@@ -292,6 +292,28 @@ button
 .pitemprice
 {
     font-size: calc(30px + 1.7vw);
+}
+#ok_system
+{
+    display:table;
+    text-align:center;
+    align-items:center;
+}
+#ok_system>div
+{
+    vertical-align: middle;
+    color:white;
+    font-size: calc(15px + 1.7vw);
+}
+.ok-img-container
+{
+    display:table-cell;
+    width: 50%;
+}
+.ok-text
+{
+    display:table-cell;
+    width:50%;
 }
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
