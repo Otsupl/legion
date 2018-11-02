@@ -1,7 +1,7 @@
 #przyciemniacz
 {
 	position:fixed;
-	background-color: #000000ed;
+	background-color: rgba(0, 0, 0, 0.9);
 	visibility: hidden;
 	opacity: 0;
 	z-index: 4;
@@ -36,7 +36,7 @@
 .desc
 {
     position:relative;
-    background-color: #151515bd;
+    background-color: rgba(21, 21, 21, 0.75);
     padding: calc(7px + 3vw);
     text-align:center;
     color:white;
