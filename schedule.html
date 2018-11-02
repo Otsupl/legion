@@ -78,7 +78,7 @@
 						<td><div class="inner-hours">17:15</div></td>
 						<td class="muay-boran">MUAY BORAN<br>60min.</td>
 						<td class="tai-chi">TAI CHI<br>60min.</td>
-						<td class="muay-boran">MUAY BORAN<br>60min.</td>
+						<td></td>
 						<td class="muay-boran">MUAY BORAN<br>60min.</td>
 						<td class="tai-chi">TAI CHI<br>60min.</td>
 						<td></td>
@@ -87,26 +87,17 @@
 						<td><div class="inner-hours">18:15</div></td>
 						<td class="muay-thai">MUAY THAI<br>75min.</td>
 						<td class="krav-maga">KRAV MAGA<br>75min.</td>
-						<td class="tai-chi">TAI CHI WUDANG<br>60min.</td>
+						<td></td>
 						<td class="muay-thai">MUAY THAI<br>75min.</td>
-						<td class="tai-chi">TAI CHI WUDANG<br>60min.</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td><div class="inner-hours">19:15</div></td>
-						<td></td>
-						<td></td>
-						<td class="teakwondo">TEAKWONDO TRADYCYJNE<br>60min.</td>
-						<td></td>
-						<td></td>
+						<td class="krav-maga">KRAV MAGA<br>75min.</td>
 						<td></td>
 					</tr>
 					<tr>
 						<td><div class="inner-hours">19:30</div></td>
-						<td class="teakwondo">TEAKWONDO INTRO<br>75min</td>
-						<td class="montifera">Montifera Crus.<br>75min</td>
 						<td></td>
-						<td class="montifera">Montifera Crus.<br>75min</td>
+						<td></td>
+						<td></td>
+						<td class="montifera">Montifera Crus<br>75min</td>
 						<td></td>
 						<td></td>
 					</tr>
@@ -154,7 +145,7 @@
 				</div>
 			</div>
 
-			<div id="teakwondo-desc" class="outerdesc">
+			<!--<div id="teakwondo-desc" class="outerdesc">
 				<div class="desc">
 					<div class="desc-header">Teakwondo</div>
 					<div class="desc-txt">Teakwondo wywodzi się z Korei. Kształtuje charakter, siłę fizyczną, sprawność ruchową, &nbsp;także pozytywnie wpływa na&nbsp;zdrowie. Podstawą tego stylu są&nbsp;kopnięcia, co zapewnia widowiskową i&nbsp;energiczną walkę.</div>
@@ -162,7 +153,7 @@
 						<div class="close-desc close icon"></div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 
 			<div id="crus-desc" class="outerdesc">
 				<div class="desc">
@@ -216,7 +207,11 @@
 					innerhours[i].style.marginTop = '-' + innerhours[i].parentElement.scrollHeight/2 + 'px';
 				}
 			}
-			setHoursHeight();
+			
+			window.addEventListener('load', function(event)
+			{
+				setHoursHeight();
+			});
 			/*żeby wysokość się dopasowała po zmianie wielkości okna*/
 			window.addEventListener('resize', function(event)
 			{
