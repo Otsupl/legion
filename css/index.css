@@ -62,17 +62,17 @@
 #freebanner
 {
     text-align: center;
-    background-color:#4e0707;
     padding: 10px 5px;
 }
 
 #freebanner h3
 {
-   color:#d6d6d6;
+   color:#baab00;
    margin: calc(6px + 0.7vw) 3vw;
    font-size:15px;
    font-size: calc(13px + 1vw);
    line-height: 1.5em;
+   font-family: 'Cinzel', serif;
 }
 
 #description-section h3
