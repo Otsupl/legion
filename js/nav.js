@@ -1,4 +1,4 @@
-document.getElementById('outerburger').addEventListener('click',function()
+document.getElementById('burgeract').addEventListener('click',function()
 {
     document.getElementById("menu").classList.toggle('nav-open');
 	document.getElementById('burger').classList.toggle('menu');
