@@ -299,12 +299,12 @@ button
 {
     vertical-align: middle;
     color:white;
-    font-size: calc(15px + 1.7vw);
+    font-size: calc(15px + 1.5vw);
 }
 .ok-img-container
 {
     display:table-cell;
-    width: 50%;
+    width: 20%;
 }
 .ok-text
 {
