@@ -11,14 +11,17 @@
     z-index: 10;
     transition: 0.3s;
 	position:fixed;
-	text-align:left;
+	text-align:center;
 }
 
 #logo
 {
-    color: #baab00;
-    font-size: 30px;
-    line-height: 50px;
+    display: inline-block;
+}
+
+#logoimg
+{
+    width: 80px;
     float: left;
 }
 
@@ -141,13 +144,12 @@
         height: 90px;
         width:100% !important;
         color: white;
+        text-align: left;
     }
     #nav::after
         {clear:both}
     #logo
     {
-        float:left;
-        font-size:2em;
         margin-left:10px;
     }
     #outerburger
