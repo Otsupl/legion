@@ -34,10 +34,11 @@
 #burgeract
 {
     width: 100px;
-    height: 100px;
+    height: 83px;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 11;
 }
 #outerburger
 {
@@ -46,7 +47,7 @@
 	top: 16px;
 	right: 10px;
 	cursor:pointer;
-	z-index:11;
+	z-index: 12;
 	margin:10px;
 	height:30px;
 	width: 30px;
@@ -113,7 +114,7 @@
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 83px;
     font-weight: 700;
     font-family: 'Cinzel', serif;
 }
