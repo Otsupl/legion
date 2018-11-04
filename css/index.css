@@ -63,12 +63,12 @@
 {
     text-align: center;
     padding: 10px 5px;
-    background-color: #240909;
+    background-color: #460f0f;
 }
 
 #freebanner h3
 {
-   color:#baab00;
+   color:#fffbca;
    margin: calc(6px + 0.7vw) 3vw;
    font-size:15px;
    font-size: calc(13px + 1vw);

@@ -32,7 +32,7 @@
 		<meta name="application-name" content="Legion">
 		<meta name="msapplication-TileColor" content="#baab00">
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-		<meta name="theme-color" content="#baab00">
+		<meta name="theme-color" content="#131313">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="manifest" href="manifest.json">
