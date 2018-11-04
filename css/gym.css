@@ -6,7 +6,7 @@ body
 }
 #gyminfo h2
 {
-    font-size: calc(20px + 2vw);
+    font-size: calc(17px + 2vw);
     color: white;
     font-family: 'Cinzel', serif;
     font-weight: 700;
@@ -31,7 +31,7 @@ body
 #gyminfo p
 {
     width: 80%;
-    font-size: calc(10px + 0.8vw);
+    font-size: calc(12px + 0.77vw);
     color: rgb(175, 175, 175);
     margin-left: auto;
     margin-right: auto;
