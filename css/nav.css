@@ -7,7 +7,7 @@
     height: 83px;
     background-color: #0b0b0b;
     padding: 10px;
-    color:#595959;
+    color:rgb(141, 141, 141);
     z-index: 10;
     transition: 0.3s;
 	position:fixed;
