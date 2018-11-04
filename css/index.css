@@ -160,6 +160,7 @@
 #trdesc
 {
     color: white;
+    width: 82%;
     margin: 0 auto;
     font-size: calc(13px + 1vw);
     padding: 0 3px;

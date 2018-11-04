@@ -36,7 +36,7 @@ body
 #gyminfo p
 {
     width: 80%;
-    font-size: calc(10px + 1.3vw);
+    font-size: calc(10px + 0.8vw);
     color: rgb(175, 175, 175);
     margin-left: auto;
     margin-right: auto;
@@ -46,7 +46,6 @@ body
 {
     width: 100%;
     height: calc(100px + 25vw);
-    owerflow:hidden;
 }
 
 #slidercontainer img
@@ -59,80 +58,17 @@ body
 
 #scprice
 {
-  font-family: 'Lato',sans-serif;
+    font-family: 'Lato',sans-serif;
 }
 
 #priceelem
 {
-  outline: 1px white solid;
-  width: 40%;
-  margin: 0 auto 0 auto;
+    outline: 1px white solid;
+    width: 40%;
+    margin: 0 auto 0 auto;
+    transition: 0.2s;
 }
 
-.parts
-{
-    width: 90%;
-    height: calc(120px + 60vw);
-    margin: calc(5px + 0.2vw) auto 0 auto;
-}
-
-.parts:first-child
-{
-    border-bottom: 1px rgba(255, 255, 255, 0.096) dashed;
-}
-
-.parts::after
-{
-    clear: both;
-}
-
-.part
-{
-    float: left;
-    width: 50%;
-    height: 100%;
-    color: white;
-    font-size: calc(16px + 1.7vw);
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-}
-
-.part:first-child
-{
-    padding-top: 26%;
-}
-
-.part:nth-child(2)
-{
-    font-size: calc(8px + 1.5vw);
-    padding-top: calc(10px + 12vw);
-}
-
-.part .num
-{
-    font-size: calc(18px + 2.3vw);
-    color: #baab00;
-}
-
-.part li
-{
-    margin-bottom: calc(5px + 0.2vw);
-}
-
-.part i
-{
-    font-size: calc(45px + 15vw) !important;
-    margin-bottom: 20px;
-}
-
-.part #card
-{
-    color: rgb(131, 30, 30);
-}
-.part #sil
-{
-    color: rgb(202, 138, 0);
-}
 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
@@ -140,53 +76,10 @@ body
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
-
-    #gear::after
+    #priceelem
     {
-        clear: both;
+        width: 20%;
     }
-
-    #gear
-    {
-        margin: 50px 0 50px 0;
-    }
-
-    .parts
-    {
-        float: left;
-        width: 50%;
-        height: 48vw;
-        padding-bottom: 10px;
-    }
-
-    .parts:first-child
-    {
-        border-right: 1px rgba(255, 255, 255, 0.096) dashed;
-        border-bottom: none;
-    }
-
-    .part i
-    {
-        font-size: calc(70px + 6vw) !important;
-        margin-bottom: 15px;
-    }
-
-    .part
-    {
-        font-size: calc(8px + 1.7vw);
-    }
-
-    .part:nth-child(2)
-    {
-        font-size: calc(6px + 1.8vw);
-    }
-
-    .part .num
-    {
-        font-size: calc(17px + 2.1vw);
-    }
-
-
 }
 
 
@@ -195,7 +88,6 @@ body
 
     #slidercontainer
     {
-        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -207,16 +99,7 @@ body
 
     #gyminfo p
     {
-        width: 65%;
-    }
-
-    #gear
-    {
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+        width: 55%;
 }
 
 /* Extra enormous devices (TV, 1700px and up) */
