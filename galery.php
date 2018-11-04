@@ -42,7 +42,7 @@
 		<!-- Nawigacja -->
 		<nav id="navbar">
             <div id="nav">
-				<a href='/' id="logo"><img id="logoimg" src='./img/logo.png'/><br><span id="logotxt">LEGION</span></a>
+				<a href='/' id="logo"><img id="logoimg" src='img/logo_full_size_compressed.png'/><br><span id="logotxt">LEGION</span></a>
 				<div id ="burgeract">
 					<div id="outerburger">
 						<div id="burger" class="menu icon"></div>
