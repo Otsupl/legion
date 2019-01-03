@@ -95,14 +95,18 @@ th,td
     {background-color:#b43200}
 .muay-boran:hover
     {background-color:#ce3900}
-.montifera
+.shaolin
     {background-color:#734500}
-.montifera:hover
+.shaolin:hover
     {background-color:#823d00}
 .wolna-sala
-    {background-color: #88005e;}
+    {background-color: #690047}
 .wolna-sala:hover
-    {background-color:#b80032}
+    {background-color: #74004f}
+.zawodnicy
+    {background-color: #690047}
+.zawodnicy:hover
+    {background-color: #74004f}
 td:first-child
 {
     background-color:#e3d200;
