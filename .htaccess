@@ -828,7 +828,7 @@ FileETag None
 
   # CSS
 
-    ExpiresByType text/css                              "access plus 1 week"
+    ExpiresByType text/css                              "access plus 60 seconds"
 
 
   # Data interchange
@@ -852,14 +852,14 @@ FileETag None
 
   # HTML
 
-    ExpiresByType text/html                             "access plus 1 week"
+    ExpiresByType text/html                             "access plus 60 seconds"
 
 
   # JavaScript
 
-    ExpiresByType application/javascript                "access plus 1 week"
-    ExpiresByType application/x-javascript              "access plus 1 week"
-    ExpiresByType text/javascript                       "access plus 1 week"
+    ExpiresByType application/javascript                "access plus 60 seconds"
+    ExpiresByType application/x-javascript              "access plus 60 seconds"
+    ExpiresByType text/javascript                       "access plus 60 seconds"
 	
 	<FilesMatch "^(sw.js)$">
 		ExpiresByType application/javascript            "access plus 60 seconds"
@@ -958,8 +958,8 @@ FileETag None
 # using something like `*.css?v231`, please see:
 # http://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
-# <IfModule mod_rewrite.c>
-#     RewriteEngine On
-#     RewriteCond %{REQUEST_FILENAME} !-f
-#     RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
-# </IfModule>
+ <IfModule mod_rewrite.c>
+     RewriteEngine On
+     RewriteCond %{REQUEST_FILENAME} !-f
+     RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
+ </IfModule>
