@@ -12,7 +12,7 @@ h1
     font-family: 'Cinzel', serif;
     padding: 0 10px 0 10px;
 }
-button
+a.img-download
 {
     padding: 15px;
     background: #baab00;
@@ -24,7 +24,7 @@ button
     font-weight: 700;
     margin-top: 20px;
 }
-button:hover 
+a.img-download:hover 
 {
     background: #f5e000;
 }
@@ -74,13 +74,21 @@ th,td
     padding:10px;
     border-spacing: 0;
     text-align:center;
+    font-weight: bold;
+}
+td{
+    color:white;
 }
 .muay-thai
     {background-color:#920000}
 .muay-thai:hover
     {background-color:#bd0000}
+.muay-thai-family
+    {background-color:#00bd29c7}
+.muay-thai-family:hover
+    {background-color:#00bd29}
 .krav-maga
-    {background-color:#202020;color:#d9d9d9}
+    {background-color:#202020;/* color:#d9d9d9; */}
 .krav-maga:hover
     {background-color:#2a2a2a}
 .teakwondo
@@ -94,6 +102,10 @@ th,td
 .muay-boran
     {background-color:#b43200}
 .muay-boran:hover
+    {background-color:#ce3900}
+.montifera
+    {background-color:#b43200}
+.montifera:hover
     {background-color:#ce3900}
 .shaolin
     {background-color:#734500}
@@ -121,5 +133,6 @@ td[class]:hover
     background-color:#e3d200;
     width: calc(100px + 7vw + 8px);
     margin-left: -8px;
+    color: black!important;
     margin-top: -10px;
 }

@@ -249,70 +249,6 @@ button
     cursor: pointer;
 }
 
-#prices h3 
-{
-    color: white;
-    font-size: 2em;
-    font-weight: 700;
-    font-family: 'Cinzel', serif;
-}
-
-.pitem
-{
-    display: block;
-    width: 80%;
-    margin: 20px auto;
-    padding: calc(7px + 1vw);
-    border: 1px solid white;
-    color: white;
-}
-
-.pitemhead
-{
-    font-size: calc(30px + 1.5vw);
-}
-
-.pitemdesc
-{
-    margin: 15px 0px;
-    color: #baab00;
-}
-.pitem-gym
-{
-    margin: 15px 10px;
-    color: #da0000;
-    font-weight:700;
-}
-.pitem-gym>a>span
-{
-    color: #baab00;
-}
-.pitemprice
-{
-    font-size: calc(30px + 1.7vw);
-}
-#ok_system
-{
-    display:table;
-    text-align:center;
-    align-items:center;
-}
-#ok_system>div
-{
-    vertical-align: middle;
-    color:white;
-    font-size: calc(15px + 1.5vw);
-}
-.ok-img-container
-{
-    display:table-cell;
-    width: 20%;
-}
-.ok-text
-{
-    display:table-cell;
-    width:50%;
-}
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
 
@@ -402,36 +338,6 @@ button
         height: 30px;
         line-height: 30px;
         font-size: calc(12px + 0.5vw);
-    }
-    #priceitems
-    {
-        display: table;
-        width: 100%;
-        border-spacing: 1.66vw;
-        table-layout: fixed;
-        margin-bottom: 2vw;
-    }
-
-    .pitem
-    {
-        display: table-cell;
-        border-spacing: 0;
-        position: relative;
-    }
-    .pitemhead
-    {
-        font-size: calc(16px + 1vw);
-    }
-    .pitemprice
-    {
-        font-size: calc(15px + 1.6vw);
-    }
-    #priceitems::after
-        {clear:both}
-        
-    .pitemdesc, .pitem-gym
-    {
-        font-size: calc(12px + 0.7vw);
     }
 }
 

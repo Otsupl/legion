@@ -320,10 +320,10 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
 
     # (1)
-    RewriteEngine On
+    #RewriteEngine On
 
     # (2)
-    Options +FollowSymlinks
+    #Options +FollowSymlinks
 
     # (3)
     # Options +SymLinksIfOwnerMatch
@@ -335,10 +335,10 @@ AddDefaultCharset utf-8
     # RewriteOptions <options>
 
     # (6)
-    RewriteCond %{HTTPS} =on
-    RewriteRule ^ - [env=proto:https]
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^ - [env=proto:http]
+    #RewriteCond %{HTTPS} =on
+    #RewriteRule ^ - [env=proto:https]
+    #RewriteCond %{HTTPS} !=on
+    #RewriteRule ^ - [env=proto:http]
 
 </IfModule>
 
@@ -362,15 +362,6 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-	
-	RewriteCond %{HTTPS} !=on
-	RewriteRule ^(.*)$ https://legion.info.pl/$1 [R=301,L]
-	
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 	
 	# ----------------------------------------------------------------------
 	#Redirect traffic from pretty links
@@ -837,7 +828,7 @@ FileETag None
 
   # CSS
 
-    ExpiresByType text/css                              "access plus 60 seconds"
+    ExpiresByType text/css                              "access plus 1 week"
 
 
   # Data interchange
@@ -861,14 +852,14 @@ FileETag None
 
   # HTML
 
-    ExpiresByType text/html                             "access plus 60 seconds"
+    ExpiresByType text/html                             "access plus 1 week"
 
 
   # JavaScript
 
-    ExpiresByType application/javascript                "access plus 60 seconds"
-    ExpiresByType application/x-javascript              "access plus 60 seconds"
-    ExpiresByType text/javascript                       "access plus 60 seconds"
+    ExpiresByType application/javascript                "access plus 1 week"
+    ExpiresByType application/x-javascript              "access plus 1 week"
+    ExpiresByType text/javascript                       "access plus 1 week"
 	
 	<FilesMatch "^(sw.js)$">
 		ExpiresByType application/javascript            "access plus 60 seconds"

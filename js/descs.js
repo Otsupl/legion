@@ -4,11 +4,14 @@ window.addEventListener('load',function()
     var boran = Array.prototype.slice.call(document.getElementsByClassName('muay-boran'));
     var chi = Array.prototype.slice.call(document.getElementsByClassName('tai-chi'));
     var thai = Array.prototype.slice.call(document.getElementsByClassName('muay-thai'));
+    var thai_family = Array.prototype.slice.call(document.getElementsByClassName('muay-thai-family'));
     var maga = Array.prototype.slice.call(document.getElementsByClassName('krav-maga'));
+    var montifera = Array.prototype.slice.call(document.getElementsByClassName('montifera'));
+    var teakwondo = Array.prototype.slice.call(document.getElementsByClassName('teakwondo'));
     var sala = Array.prototype.slice.call(document.getElementsByClassName('wolna-sala'));
     var shaolin = Array.prototype.slice.call(document.getElementsByClassName('shaolin'));
     var zawodnicy = Array.prototype.slice.call(document.getElementsByClassName('zawodnicy'));
-    var wszystko =  boran.concat(boran, chi, thai, maga, sala, shaolin, zawodnicy);
+    var wszystko =  boran.concat(boran, chi, thai, thai_family, maga, teakwondo, montifera, sala, shaolin, zawodnicy);
 
     for (let i = 0; i < wszystko.length; i++) 
     {
@@ -18,9 +21,12 @@ window.addEventListener('load',function()
             this.classList.contains("muay-boran") ? desc_class = "boran" :
             this.classList.contains("tai-chi") ? desc_class = "chi" :
             this.classList.contains("muay-thai") ? desc_class = "thai" :
+            this.classList.contains("muay-thai-family") ? desc_class = "thai" :
             this.classList.contains("krav-maga") ? desc_class = "maga" :
+            this.classList.contains("teakwondo") ? desc_class = "teakwondo" :
             this.classList.contains("wolna-sala") ? desc_class = "sala" :
             this.classList.contains("shaolin") ? desc_class = "shaolin" :
+            this.classList.contains("montifera") ? desc_class = "crus" :
             this.classList.contains("zawodnicy") ? desc_class = "zawodnicy" : desc_class = "";
             desc_class += '-desc';
             let desc = document.getElementById(desc_class);
