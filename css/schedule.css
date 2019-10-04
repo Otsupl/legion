@@ -83,14 +83,14 @@ td{
     {background-color:#920000}
 .muay-thai:hover
     {background-color:#bd0000}
-.muay-thai-family
+.muay-thai-family, .krav-maga
     {background-color:#00bd29c7}
-.muay-thai-family:hover
+.muay-thai-family:hover, .krav-maga:hover
     {background-color:#00bd29}
-.krav-maga
-    {background-color:#202020;/* color:#d9d9d9; */}
-.krav-maga:hover
-    {background-color:#2a2a2a}
+/*.krav-maga
+    {background-color:#202020;*//* color:#d9d9d9; *//*}*/
+/*.krav-maga:hover
+    {background-color:#2a2a2a}*/
 .teakwondo
     {background-color:#004194}
 .teakwondo:hover
