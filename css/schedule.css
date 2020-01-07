@@ -84,9 +84,9 @@ td{
 .muay-thai:hover
     {background-color:#bd0000}
 .muay-thai-family, .krav-maga
-    {background-color:#00bd29c7}
+    {background-color:#886400c7}
 .muay-thai-family:hover, .krav-maga:hover
-    {background-color:#00bd29}
+    {background-color:#be8c00c7}
 /*.krav-maga
     {background-color:#202020;*//* color:#d9d9d9; *//*}*/
 /*.krav-maga:hover
@@ -107,10 +107,10 @@ td{
     {background-color:#b43200}
 .montifera:hover
     {background-color:#ce3900}
-.shaolin
+/*.shaolin
     {background-color:#734500}
 .shaolin:hover
-    {background-color:#823d00}
+    {background-color:#823d00}*/
 .wolna-sala
     {background-color: #690047}
 .wolna-sala:hover
