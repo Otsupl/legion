@@ -9,8 +9,7 @@
 		
 		$name=filter('name');
 		$password=filter('password');
-		
-		require_once 'php/database.php';
+		require_once 'database.php';
 		try
 		{
 			$adminQuery = $db->prepare('SELECT id, name, password FROM admins WHERE name = :name');
@@ -21,6 +20,7 @@
 			
 			if($admin && password_verify($password, $admin['password']))
 			{
+				echo "aaaa";
 				$_SESSION['logged_in'] = true;
 				$_SESSION['admin_id'] = $admin['id'];
 				$_SESSION['admin_name'] = $admin['name'];
@@ -51,7 +51,7 @@
 
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/footer.css" type="text/css">
-        <link rel="stylesheet" href="css/administracja_grafik.css" type="text/css">
+        <link rel="stylesheet" href="css/admin.css" type="text/css">
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
