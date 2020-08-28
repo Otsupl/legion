@@ -85,48 +85,50 @@ td{
     {background-color:#bd0000}
 .muay-thai-family, .krav-maga
     {background-color:#886400c7}
-.muay-thai-family:hover, .krav-maga:hover
-    {background-color:#be8c00c7}
+/* .muay-thai-family:hover, .krav-maga:hover
+    {background-color:#be8c00c7} */
 /*.krav-maga
     {background-color:#202020;*//* color:#d9d9d9; *//*}*/
 /*.krav-maga:hover
     {background-color:#2a2a2a}*/
+.dzieci
+    {background-color:#008f94}
 .teakwondo
     {background-color:#004194}
-.teakwondo:hover
-    {background-color:#0058a5}
+/* .teakwondo:hover
+    {background-color:#0058a5} */
 .tai-chi
     {background-color:#115600}
-.tai-chi:hover
-    {background-color:#146500}
+/* .tai-chi:hover
+    {background-color:#146500} */
 .muay-boran
     {background-color:#b43200}
-.muay-boran:hover
-    {background-color:#ce3900}
+/* .muay-boran:hover
+    {background-color:#ce3900} */
 .montifera
     {background-color:#b43200}
-.montifera:hover
-    {background-color:#ce3900}
-/*.shaolin
-    {background-color:#734500}
-.shaolin:hover
-    {background-color:#823d00}*/
+/* .montifera:hover
+    {background-color:#ce3900} */
+.kung-fu
+    {background-color:#ff8800}
+/* .kung-fu:hover
+    {background-color:#823d00} */
 .wolna-sala
     {background-color: #690047}
-.wolna-sala:hover
-    {background-color: #74004f}
+/* .wolna-sala:hover
+    {background-color: #74004f} */
 .zawodnicy
     {background-color: #690047}
-.zawodnicy:hover
-    {background-color: #74004f}
+/* .zawodnicy:hover
+    {background-color: #74004f} */
 td:first-child
 {
     background-color:#e3d200;
     width: calc(100px + 7vw + 8px);
     padding:0;
 }
-td[class]:hover
-{cursor:pointer}
+/* td[class]:hover
+{cursor:pointer} */
 .inner-hours
 {
     position:absolute;
